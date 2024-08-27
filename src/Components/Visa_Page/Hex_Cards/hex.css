@@ -1,0 +1,124 @@
+
+ .hex-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 37.87px; 
+}
+
+.hex-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: -89px; 
+}
+
+.hex {
+    position: relative;
+    width: 100px; 
+    height: 57.74px;
+    margin: 24.87px 4px;
+    background-color: #521616;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+}
+
+.hex:nth-child(odd) {
+    margin-left: 0; 
+}
+
+.hex:before {
+    content: "";
+    position: absolute;
+    top: -28.87px;
+    left: 0;
+    width: 100px;
+    height: 57.74px;
+    background-color: inherit;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transform: rotate(60deg);
+}
+
+.hex-in {
+    width: 100%;
+    height: 100%;
+    background-color: #823434;
+    clip-path: inherit;
+    position: relative;
+}
+
+.hex-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    clip-path: inherit;
+}
+
+@media (min-width: 609px) {
+    .hex {
+        width: 110px;
+        height:130.29px;
+        background-color: aqua;
+    }
+
+    .hex:before {
+        width: 130px;
+        height: 50.29px;
+    }
+}
+
+@media (min-width: 640px) {
+    .hex {
+        width: 110px;
+        height: 130.29px;
+        background-color: aqua;
+    }
+
+    .hex:before {
+        width: 130px;
+        height: 50.29px;
+    }
+}
+
+@media (min-width: 768px) {
+    .hex {
+        width: 150px;
+        height: 170.61px;
+    
+    }
+
+    .hex:before {
+        width: 150px;
+        height: 130.61px;
+        
+    }
+}
+
+@media (min-width: 1024px) {
+    .hex {
+        width: 200px;
+        height: 215.94px;
+    }
+
+    .hex:before {
+        width: 180px;
+        height: 170.94px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
