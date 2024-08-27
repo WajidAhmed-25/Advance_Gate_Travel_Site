@@ -15,7 +15,7 @@ export default function Visa(){
 
 return(
     <>
-    
+    <div className="overflow-x-hidden">
 
     <My_Banner/> 
 
@@ -28,6 +28,8 @@ return(
 <Cards_Visa/>
 
 <Populars/>
+
+</div>
 
 
 
