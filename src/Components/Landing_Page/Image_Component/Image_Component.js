@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default function Image_Component(){
 
 
@@ -55,9 +56,12 @@ export default function Image_Component(){
             </p>
  
             <div class="mt-4">
-                <a href="#"
+                {/* <a href="#"
                     class="inline-block w-full text-center text-lg font-medium text-white bg-blue-500 border-solid border-2  py-2 px-6 rounded-lg hover:text-white hover:bg-blue-700   hover:shadow-md md:w-48">Read
-                    More</a>
+                    More</a> */}
+                        <Link to="/visa" className="inline-block w-full px-6 py-2 text-lg font-medium text-center text-white bg-blue-500 border-2 border-solid rounded-lg hover:text-white hover:bg-blue-700 hover:shadow-md md:w-48">
+  Visa Options &#8250;
+</Link>
             </div>
         </div>
    
