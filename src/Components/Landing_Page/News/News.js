@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const articles = [
     {
@@ -102,7 +104,8 @@ const News = () => {
       <div class="flex flex-wrap justify-center gap-6 mt-16 ">
     <a class="relative" href="#">
         <span class="absolute top-0 left-0 mt-1 ml-1 h-full w-full rounded bg-black"></span>
-        <span class="fold-bold relative inline-block h-full w-full rounded border-2 border-black bg-white px-12 py-2.5 text-base font-bold text-black transition duration-100 hover:bg-blue-500 hover:text-gray-900">Read More</span>
+        <Link to="/visa" class="fold-bold relative inline-block h-full w-full rounded border-2 border-black bg-white px-12 py-2.5 text-base font-bold text-black transition duration-100 hover:bg-blue-500 hover:text-gray-900">Read More</Link>
+    
     </a>
 
 </div>
