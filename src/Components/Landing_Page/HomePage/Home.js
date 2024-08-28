@@ -1,53 +1,25 @@
 
-
-
 import React from 'react';
-import { FaTelegram, FaInstagram, FaFacebook, FaWhatsapp, FaUser } from 'react-icons/fa';
-import { IoChevronDown } from 'react-icons/io5';
-import InfoSection from '../InfoPage/Info';
+import './Home.css'
+
+import video from './v1.mp4';
+
+
 const My_Home = () => {
   return (
     <div className="flex flex-col min-h-screen ">
   
 
-{/* 
-<header className="flex flex-wrap items-center justify-between px-4 py-2 text-sm bg-gray-100">
-  <div className="flex space-x-4">
-    <span className="text-gray-600">+92 1234567930</span>
-    <span className="hidden text-gray-600 sm:inline">+92 1234567930</span>
-  </div>
-  <div className="flex items-center space-x-4">
-    <FaTelegram className="w-5 h-5 text-blue-400" />
-    <FaInstagram className="w-5 h-5 text-pink-500" />
-    <FaFacebook className="w-5 h-5 text-blue-600" />
-    <FaWhatsapp className="w-5 h-5 text-green-500" />
-    <div className="items-center hidden space-x-1 text-gray-600 md:flex">
-      <FaUser className="w-4 h-4" />
-      <span>Hi Jane Doe!</span>
-    </div>
-    <div className="flex items-center space-x-1 text-gray-600">
-      <span>ENG</span>
-      <IoChevronDown className="w-4 h-4" />
-    </div>
-    <div className="flex items-center space-x-1 text-gray-600">
-      <span>USD</span>
-      <IoChevronDown className="w-4 h-4" />
-    </div>
-  </div>
-</header> */}
+  <div className="video_div"> 
+  <video 
+    className="absolute object-cover min-w-full min-h-full"
+    src={video}
+    autoPlay
+    muted
+    loop
+  ></video>
 
 
-
-      <div
-        style={{
-          backgroundImage:
-            'url("https://images.hdqwalls.com/download/passenger-plane-in-clouds-view-from-far-away-26-1920x1080.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '100vh',
-          width: '100%',
-        }}
-      >
 
 
 <nav className="w-full px-4 py-2 pt-4 bg-transparent xxs:pt-3 xs:pt-4 sm:pt-6 md:pt-8 lg:pt-10 xxs:py-2 sm:py-3 md:py-4 lg:py-5 xxs:px-2 sm:px-6">
@@ -114,7 +86,7 @@ const My_Home = () => {
       </a>
     </li>
   </ul>
-</nav>
+</nav> 
 
 
 
@@ -198,7 +170,10 @@ const My_Home = () => {
             </div>
           </div>
         </main>
-      </div>
+
+
+        
+       </div>
 
 
 
