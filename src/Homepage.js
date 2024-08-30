@@ -20,7 +20,7 @@ export default function My_HomePage(){
 
 return(
     <>
-    
+    <div className='overflow-x-hidden'>
 
     <My_Home/>
 <InfoSection/>
@@ -37,7 +37,7 @@ return(
  <br/>
  <Newsletter/> 
 
-    
+ </div>
     </>
 )
 

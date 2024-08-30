@@ -1,108 +1,117 @@
-// import React, { useState } from 'react';
-// import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 
-// const destinations = [
-//   { name: 'Washington', discount: '15%', price: '900$',pic_url: 'https://images.unsplash.com/photo-1530789253388-582c481c54b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
-//   { name: 'Venice', discount: '20%', price: '1003$',pic_url: 'https://images.unsplash.com/photo-1707343848552-893e05dba6ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
-//   { name: 'Province of Como', discount: '30%', price: '1200$' ,pic_url:'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
+// import React, { useState, useEffect } from "react";
+// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-// ];
+// export default function Main_Slider() {
+//   const slides = [
+//     {
+//       id: 1,
+//       title: "Venice",
+//       date: "SA 16.05",
+//       price: "1003$",
+//       oldPrice: "1200$",
+//       discount: "20%",
+//       description: "01 Stop. On the Way, 2h 50mins. One way.",
+//       imageUrl: "https://images.pexels.com/photos/208701/pexels-photo-208701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
+//     },
+//     {
+//       id: 2,
+//       title: "Washington",
+//       date: "FR 10.07",
+//       price: "1999$",
+//       oldPrice: "2500$",
+//       discount: "20%",
+//       description: "Non-stop. Direct flight. Round trip.",
+//       imageUrl: "https://images.pexels.com/photos/2606395/pexels-photo-2606395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
+//     },
+//     {
+//       id: 3,
+//       title: "Province of Como",
+//       date: "MO 20.09",
+//       price: "1705$",
+//       oldPrice: "2100$",
+//       discount: "20%",
+//       description: "02 Stops. On the Way, 3h 20mins. One way.",
+//       imageUrl: "https://images.pexels.com/photos/23719842/pexels-photo-23719842/free-photo-of-kanal-w-wenecji.jpeg?auto=compress&cs=tinysrgb&w=600", 
+//     },
+//   ];
 
-// const Main_Slider = () => {
-//   const [currentIndex, setCurrentIndex] = useState(1);
+//   const [currentSlide, setCurrentSlide] = useState(0);
+
 //   const nextSlide = () => {
-//     setCurrentIndex((prevIndex) => (prevIndex + 1) % destinations.length);
+//     setCurrentSlide((prev) => (prev + 1) % slides.length);
 //   };
 
 //   const prevSlide = () => {
-//     setCurrentIndex((prevIndex) => (prevIndex - 1 + destinations.length) % destinations.length);
+//     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 //   };
 
+//   // Autoplay functionality using useEffect
+//   useEffect(() => {
+//     const interval = setInterval(nextSlide, 3000); // Change slides every 3 seconds
+//     return () => clearInterval(interval); // Clean up the interval on unmount
+//   }, []);
+
 //   return (
-//     <div className="w-full px-2 py-12 sm:px-4 lg:px-8">
+//     <div className="w-full bg-green-400">
+//       <h1 className="mb-6 text-3xl font-bold text-center">Destination Gallery</h1>
 
-// <div className="flex items-center justify-center w-full">
-//   <h1 className="text-center text-black font-bold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]">
-//     Special Monthly Offers
-//   </h1>
-// </div>
-// <div className="flex justify-center ">
-//   <div className="h-[3px] w-[200px] bg-blue-400 mt-[16px]"></div>
-// </div>
+//       <div className="relative w-full h-[500px] flex justify-center items-center overflow-hidden">
+//         {slides.map((slide, index) => {
+//           const isCurrentSlide = index === currentSlide;
+//           const isPreviousSlide = index === (currentSlide - 1 + slides.length) % slides.length;
+//           const isNextSlide = index === (currentSlide + 1) % slides.length;
 
+//           let positionClass = "translate-x-[100%]";
+//           if (isCurrentSlide) positionClass = "translate-x-[0%] scale-[1.15] z-20 -mx-8 ";
+//           else if (isPreviousSlide) positionClass = "translate-x-[-60%] scale-[0.9] z-10";
+//           else if (isNextSlide) positionClass = "translate-x-[60%] scale-[0.9] z-10";
 
-//       <div className="relative mt-16 ">
-//         <div className="relative overflow-hidden h-[450px]">
-//           <div 
-//             className="flex max-w-full transition-transform duration-300 ease-in-out -space-x-36"
-//             style={{
-//               transform: `translateX(-${currentIndex * 33.33}%)`,
-//             marginLeft: '27%'
-//             }}
-//           >
-
-
-// {destinations.map((destination, index) => (
-//   <div 
-//     key={index} 
-//     className={`flex-shrink-0 w-[50%] transition-all duration-300 ${
-//       index === currentIndex ? 'scale-100 opacity-100 filter-none' : 'scale-75 opacity-50 filter-blur'
-//     }`}
-//   >
-
-//     <div className="relative overflow-hidden rounded-lg aspect-w-16 aspect-h-12">
-//       <img
-//         src={destination.pic_url}
-//         alt={destination.name}
-//         className={`object-cover w-full h-full transition-filter duration-300  ${
-//           index !== currentIndex ? 'blur-sm' : 'blur-0'
-//         }`}
-//       />
-//       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-//         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-//           <h3 className="text-4xl font-bold">{destination.name}</h3>
-//           <button className="px-4 py-2 mt-2 text-sm font-semibold bg-blue-600 rounded">
-//             Details
-//           </button>
-//           <p className="mt-2 text-xl">{destination.price}</p>
-//         </div>
-//       </div>
-//       <div className="absolute top-0 right-0 px-2 py-1 text-sm font-semibold text-white bg-red-600">
-//         {destination.discount} OFF
-//       </div>
-//     </div>
-//   </div>
-// ))}
-
-
-//           </div>
-//         </div>
-        
+//           return (
+//             <div
+//               key={slide.id}
+//               className={`absolute transition-all duration-700 ease-in-out ${positionClass}`}
+//             >
+//               <div
+//                 className="w-[40vw] h-[400px] bg-cover bg-center rounded-xl shadow-lg flex flex-col justify-between p-8 shadow-xl"
+//                 style={{ backgroundImage: `url(${slide.imageUrl})` }}
+//               >
+//                 <div className="flex justify-end">
+//                   <span className="bg-red-600 text-white text-xs sm:text-sm px-2 py-1 rounded">
+//                     {slide.discount}
+//                   </span>
+//                 </div>
+//                 <div>
+//                   <h2 className="text-xl sm:text-2xl md:text-4xl text-white font-bold">{slide.title}</h2>
+//                   <span className="block bg-blue-600 text-white text-xs sm:text-sm px-2 py-1 rounded inline-block my-2">
+//                     {slide.date}
+//                   </span>
+//                   <div className="text-white">
+//                     <span className="line-through text-red-400 text-sm sm:text-base md:text-lg">{slide.oldPrice}</span>
+//                     <span className="text-lg sm:text-xl md:text-2xl font-bold"> {slide.price}</span>
+//                   </div>
+//                   <p className="text-white text-sm sm:text-base md:text-lg">{slide.description}</p>
+//                 </div>
+//               </div>
+//             </div>
+//           );
+//         })}
 //         <button
+//           className="absolute left-4 text-blue-600 text-3xl z-30"
 //           onClick={prevSlide}
-//           className="absolute z-10 p-2 text-white -translate-y-1/2 bg-blue-700 rounded-full shadow-lg left-4 top-1/2"
 //         >
-//           <ChevronLeftIcon className="w-6 h-6" />
+//           <FaArrowLeft />
 //         </button>
 //         <button
+//           className="absolute right-4 text-blue-600 text-3xl z-30"
 //           onClick={nextSlide}
-//           className="absolute z-10 p-2 text-white -translate-y-1/2 bg-blue-700 rounded-full shadow-lg right-4 top-1/2"
 //         >
-//           <ChevronRightIcon className="w-6 h-6" />
+//           <FaArrowRight />
 //         </button>
-        
 //       </div>
-  
-
-//       <div className="flex justify-center ">
-//   <div className="h-[3.4px] w-[400px] bg-blue-400 -mt-12 -ml-16"></div>
-// </div>
-
 //     </div>
 //   );
-// };
-
-// export default Main_Slider;
+// }
 
 
 
@@ -110,132 +119,132 @@
 
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
+import React, { useState, useEffect } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
+export default function Main_Slider() {
+  const slides = [
+    {
+      id: 1,
+      title: "Venice",
+      date: "SA 16.05",
+      price: "1003$",
+      oldPrice: "1200$",
+      discount: "20%",
+      description: "01 Stop. On the Way, 2h 50mins. One way.",
+      imageUrl: "https://images.pexels.com/photos/208701/pexels-photo-208701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 2,
+      title: "Washington",
+      date: "FR 10.07",
+      price: "1999$",
+      oldPrice: "2500$",
+      discount: "20%",
+      description: "Non-stop. Direct flight. Round trip.",
+      imageUrl: "https://images.pexels.com/photos/2606395/pexels-photo-2606395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 3,
+      title: "Province of Como",
+      date: "MO 20.09",
+      price: "1705$",
+      oldPrice: "2100$",
+      discount: "20%",
+      description: "02 Stops. On the Way, 3h 20mins. One way.",
+      imageUrl: "https://images.pexels.com/photos/23719842/pexels-photo-23719842/free-photo-of-kanal-w-wenecji.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+  ];
 
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-
-///// ===============================================================================================================================/////
-
-
-
-
-import React, { useState } from 'react';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
-
-const destinations = [
-  { name: 'Washington', discount: '15%', price: '900$',pic_url: 'https://images.unsplash.com/photo-1530789253388-582c481c54b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
-  { name: 'Venice', discount: '20%', price: '1003$',pic_url: 'https://images.unsplash.com/photo-1707343848552-893e05dba6ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
-  { name: 'Province of Como', discount: '30%', price: '1200$' ,pic_url:'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
-
-];
-
-const Main_Slider = () => {
-  const [currentIndex, setCurrentIndex] = useState(1);
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % destinations.length);
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + destinations.length) % destinations.length);
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  // Autoplay functionality using useEffect
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 4000); 
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="w-full px-2 py-12 sm:px-4 lg:px-8">
-
-<div className="flex items-center justify-center w-full">
-  <h1 className="text-center text-black font-bold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]">
-    Special Monthly Offers
-  </h1>
-</div>
-<div className="flex justify-center ">
-  <div className="h-[3px] w-[200px] bg-blue-400 mt-[16px]"></div>
-</div>
+    <div className="w-full  pt-2">
 
 
-      <div className="relative mt-16 ">
-        <div className="relative overflow-hidden h-[450px]">
-          <div 
-            className="flex max-w-full transition-transform duration-300 ease-in-out -space-x-36"
-            style={{
-              transform: `translateX(-${currentIndex * 30.33}%)`,
-            marginLeft: '27%'
-            }}
-          >
+  <h2 className="pb-2 mt-16 text-4xl font-bold text-center">Destination Gallery</h2>
+  <div class="w-[300px] h-1 mx-auto mt-2 mb-4  bg-blue-600/70"></div>
 
+  <p className="text-lg text-center text-gray-600  mb-8">These popular destinations have a lot to offer</p>
 
-{destinations.map((destination, index) => (
-  <div 
-    key={index} 
-    className={`flex-shrink-0 w-[50%] transition-all duration-300 ${
-      index === currentIndex ? 'scale-100 opacity-100 filter-none' : 'scale-75 opacity-50 filter-blur'
-    }`}
-  >
+      <div className="relative w-full h-[500px] flex justify-center items-center overflow-hidden">
+        {slides.map((slide, index) => {
+          const isCurrentSlide = index === currentSlide;
+          const isPreviousSlide = index === (currentSlide - 1 + slides.length) % slides.length;
+          const isNextSlide = index === (currentSlide + 1) % slides.length;
 
-    <div className="relative overflow-hidden rounded-lg aspect-w-16 aspect-h-12">
-      <img
-        src={destination.pic_url}
-        alt={destination.name}
-        className={`object-cover w-full h-full transition-filter duration-300  ${
-          index !== currentIndex ? 'blur-sm' : 'blur-0'
-        }`}
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-          <h3 className="text-4xl font-bold">{destination.name}</h3>
-          <button className="px-4 py-2 mt-2 text-sm font-semibold bg-blue-600 rounded">
-            Details
-          </button>
-          <p className="mt-2 text-xl">{destination.price}</p>
-        </div>
-      </div>
-      <div className="absolute top-0 right-0 px-2 py-1 text-sm font-semibold text-white bg-red-600">
-        {destination.discount} OFF
-      </div>
-    </div>
-  </div>
-))}
+          let positionClass = "translate-x-[100%]";
+          let blurClass = "blur-sm";
 
+          if (isCurrentSlide) {
+            positionClass = "translate-x-[0%] scale-[1.15] z-20 -mx-8";
+            blurClass = "blur-none"; // Remove blur for the current slide
+          } else if (isPreviousSlide) {
+            positionClass = "translate-x-[-60%] scale-[0.9] z-10";
+          } else if (isNextSlide) {
+            positionClass = "translate-x-[60%] scale-[0.9] z-10";
+          }
 
-          </div>
-        </div>
-        
+          return (
+            <div
+              key={slide.id}
+              className={`absolute transition-all duration-700 ease-in-out ${positionClass}`}
+            >
+              <div
+                className={`w-[40vw] h-[400px] bg-cover bg-center rounded-xl shadow-lg flex flex-col justify-between p-8 shadow-xl transition-all duration-500 ease-in-out hover:blur-none ${blurClass}`}
+                style={{ backgroundImage: `url(${slide.imageUrl})` }}
+              >
+                <div className="flex justify-end">
+                  <span className="bg-red-600 text-white text-xs sm:text-sm px-2 py-1 rounded">
+                    {slide.discount}
+                  </span>
+                </div>
+                <div>
+                  <h2 className="text-xl sm:text-2xl md:text-4xl text-white font-bold" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>{slide.title}</h2>
+                  <span className="block bg-blue-600 text-white text-xs sm:text-sm px-2 py-1 rounded inline-block my-2">
+                    {slide.date}
+                  </span>
+                  <div className="text-white">
+                    <span className="line-through text-red-400 text-sm sm:text-base md:text-lg" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>{slide.oldPrice}</span>
+                    <span className="text-lg sm:text-xl md:text-2xl font-bold" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}> {slide.price}</span>
+                  </div>
+                  <p className="text-white text-sm sm:text-base md:text-lg" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>{slide.description}</p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
         <button
+          className="absolute left-4 text-blue-600 text-3xl z-30"
           onClick={prevSlide}
-          className="absolute z-10 p-2 text-white -translate-y-1/2 bg-blue-700 rounded-full shadow-lg left-4 top-1/2"
         >
-          <ChevronLeftIcon className="w-6 h-6" />
+          <FaArrowLeft />
         </button>
         <button
+          className="absolute right-4 text-blue-600 text-3xl z-30"
           onClick={nextSlide}
-          className="absolute z-10 p-2 text-white -translate-y-1/2 bg-blue-700 rounded-full shadow-lg right-4 top-1/2"
         >
-          <ChevronRightIcon className="w-6 h-6" />
+          <FaArrowRight />
         </button>
-        
       </div>
-  
-
-      <div className="flex justify-center ">
-  <div className="h-[3.4px] w-[400px] bg-blue-400 -mt-12 -ml-4"></div>
-</div>
-
     </div>
   );
-};
-
-export default Main_Slider;
-
-
-
-
-
-
-
-
-
-
-
-
+}

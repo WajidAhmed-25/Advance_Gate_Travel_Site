@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Visa from './Visa';
 import Visa_Application from './Visa_Application';
+import Main_Slider from './Components/Landing_Page/Main_Slider/Main_Slider';
 
 
 
@@ -30,6 +31,8 @@ function App() {
       </Routes>
       <Footer/>
     </Router>
+
+
 
 
 

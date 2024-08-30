@@ -1,7 +1,4 @@
-
-
 // import React, { useState } from 'react';
-
 // const testimonials = [
 //   {
 //     id: 1,
@@ -25,7 +22,6 @@
 //     rating: 5,
 //   }
 // ];
-
 // const StarRating = ({ rating }) => (
 //   <div className="flex justify-center mt-4">
 //     {[...Array(5)].map((_, i) => (
@@ -35,23 +31,22 @@
 //     ))}
 //   </div>
 // );
-
 // const TestimonialCarousel = () => {
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
+//   const [currentIndex, setCurrentIndex] = useState(1);
 //   const nextTestimonial = () => {
 //     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
 //   };
-
 //   const prevTestimonial = () => {
 //     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
 //   };
-
 //   return (
 //     <div className="max-w-5xl px-4 py-12 mx-auto">
-//       <h2 className="mb-12 text-4xl font-bold text-center">Our Happy Customers</h2>
-//       <div className="relative flex items-center justify-center">
-        
+//     <div class="text-center my-16 mb-24 ">
+//   <h2 class="text-3xl md:text-4xl font-bold text-black">Unforgettable Adventures Await</h2>
+//   <div class="w-[500px] h-1 mx-auto mt-6 mb-4 bg-blue-600"></div>
+//   <p class="text-lg text-center text-gray-600">Explore breathtaking destinations and create memories that last a lifetime!</p>
+// </div>
+//       <div className="relative flex items-center justify-center ">
 //         <button 
 //           onClick={prevTestimonial} 
 //           className="absolute left-0 z-10 flex items-center justify-center w-10 h-10 p-2 text-xl text-white transform -translate-y-1/2 bg-blue-600 rounded-full shadow-md hover:bg-blue-700 top-1/2"
@@ -67,7 +62,6 @@
 //             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
 //           </svg>
 //         </button>
-
 //         <div className="flex items-center justify-center w-full -space-x-56">
 //           {testimonials.map((testimonial, index) => (
 //             <div
@@ -78,22 +72,31 @@
 //                   : 'scale-90 z-0 opacity-50 blur-sm translate-x-4'
 //               }`}
 //             >
-//               <div className='w-full p-6 bg-[#0050CB] rounded-3xl -rotate-3 '>
-                
-//               <div className="relative w-full p-8 shadow-lg rotate-3 bg-gradient-to-r from-[#568ADA] to-[#568ADA] rounded-3xl">
-//                 <div className="absolute transform -translate-x-1/2 -top-12 left-[50%]">
-//                   <img src={testimonial.avatar} alt={testimonial.name} className="w-20 h-20 border-4 border-white rounded-full" />
+//               {index === currentIndex && (
+//                 <div className='w-full p-6 bg-[#0050CB] rounded-3xl -rotate-3'>
+//                   <div className="relative w-full p-8 shadow-lg rotate-3 bg-gradient-to-r from-[#568ADA] to-[#568ADA] rounded-3xl">
+//                     <div className="absolute transform -translate-x-1/2 -top-12 left-[50%]">
+//                       <img src={testimonial.avatar} alt={testimonial.name} className="w-20 h-20 border-4 border-white rounded-full" />
+//                     </div>
+//                     <h3 className="mt-6 mb-4 font-semibold text-center text-white">{testimonial.name}</h3>
+//                     <p className="mb-4 text-sm text-center text-white">{testimonial.content}</p>
+//                     <StarRating rating={testimonial.rating} />
+//                   </div>
 //                 </div>
-//                 <h3 className="mt-6 mb-4 font-semibold text-center text-white">{testimonial.name}</h3>
-//                 <p className="mb-4 text-sm text-center text-white">{testimonial.content}</p>
-//                 <StarRating rating={testimonial.rating} />
-//               </div>
-// </div>
-              
+//               )}
+//               {index !== currentIndex && (
+//                 <div className="relative w-full p-8 shadow-lg bg-gradient-to-r from-[#568ADA] to-[#568ADA] rounded-3xl">
+//                   <div className="absolute transform -translate-x-1/2 -top-12 left-[50%]">
+//                     <img src={testimonial.avatar} alt={testimonial.name} className="w-20 h-20 border-4 border-white rounded-full" />
+//                   </div>
+//                   <h3 className="mt-6 mb-4 font-semibold text-center text-white">{testimonial.name}</h3>
+//                   <p className="mb-4 text-sm text-center text-white">{testimonial.content}</p>
+//                   <StarRating rating={testimonial.rating} />
+//                 </div>
+//               )}
 //             </div>
 //           ))}
 //         </div>
-
 //         <button 
 //           onClick={nextTestimonial} 
 //           className="absolute right-0 z-10 flex items-center justify-center w-10 h-10 p-2 text-xl text-white transform -translate-y-1/2 bg-blue-600 rounded-full shadow-md hover:bg-blue-700 top-1/2"
@@ -109,12 +112,10 @@
 //             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
 //           </svg>
 //         </button>
-
 //       </div>
 //     </div>
 //   );
 // };
-
 // export default TestimonialCarousel;
 
 
@@ -122,7 +123,15 @@
 
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+///---------------------------------------------------------------------------------------------------------------------///
+
+
+
+
 
 
 
@@ -175,18 +184,14 @@ const TestimonialCarousel = () => {
 
   return (
     <div className="max-w-5xl px-4 py-12 mx-auto">
-    
-      <div class="text-center my-8 mb-24">
-  <h2 class="text-3xl md:text-4xl font-bold text-black">
-    Our Happy Customers
-  </h2>
-  <div class="w-64 h-1 mx-auto mt-8 bg-blue-200"></div>
-</div>
-
-      <div className="relative flex items-center justify-center ">
-        
-        <button 
-          onClick={prevTestimonial} 
+      <div className="text-center my-16 mb-24">
+        <h2 className="text-3xl md:text-4xl font-bold text-black">Unforgettable Adventures Await</h2>
+        <div className="w-[500px] h-1 mx-auto mt-6 mb-4 bg-blue-600"></div>
+        <p className="text-lg text-center text-gray-600">Explore breathtaking destinations and create memories that last a lifetime!</p>
+      </div>
+      <div className="relative flex items-center justify-center">
+        <button
+          onClick={prevTestimonial}
           className="absolute left-0 z-10 flex items-center justify-center w-10 h-10 p-2 text-xl text-white transform -translate-y-1/2 bg-blue-600 rounded-full shadow-md hover:bg-blue-700 top-1/2"
         >
           <svg
@@ -200,7 +205,6 @@ const TestimonialCarousel = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-
         <div className="flex items-center justify-center w-full -space-x-56">
           {testimonials.map((testimonial, index) => (
             <div
@@ -210,38 +214,30 @@ const TestimonialCarousel = () => {
                   ? 'scale-100 z-10 opacity-100 blur-0 translate-x-0'
                   : 'scale-90 z-0 opacity-50 blur-sm translate-x-4'
               }`}
+              style={{ zIndex: index === currentIndex ? 20 : 0 }}
             >
-              {index === currentIndex && (
-                <div className='w-full p-6 bg-[#0050CB] rounded-3xl -rotate-3'>
-                  <div className="relative w-full p-8 shadow-lg rotate-3 bg-gradient-to-r from-[#568ADA] to-[#568ADA] rounded-3xl">
-                    <div className="absolute transform -translate-x-1/2 -top-12 left-[50%]">
-                      <img src={testimonial.avatar} alt={testimonial.name} className="w-20 h-20 border-4 border-white rounded-full" />
-                    </div>
-                    <h3 className="mt-6 mb-4 font-semibold text-center text-white">{testimonial.name}</h3>
-                    <p className="mb-4 text-sm text-center text-white">{testimonial.content}</p>
-                    <StarRating rating={testimonial.rating} />
-                  </div>
-                </div>
-              )}
-
-              {index !== currentIndex && (
-                <div className="relative w-full p-8 shadow-lg bg-gradient-to-r from-[#568ADA] to-[#568ADA] rounded-3xl">
+              <div className="relative w-full p-6 bg-[#0050CB] rounded-3xl -rotate-3">
+                <div className="relative w-full p-8 shadow-lg rotate-3 bg-gradient-to-r from-[#568ADA] to-[#568ADA] rounded-3xl">
                   <div className="absolute transform -translate-x-1/2 -top-12 left-[50%]">
-                    <img src={testimonial.avatar} alt={testimonial.name} className="w-20 h-20 border-4 border-white rounded-full" />
+                    <img
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      className="w-20 h-20 border-4 border-white rounded-full"
+                    />
                   </div>
                   <h3 className="mt-6 mb-4 font-semibold text-center text-white">{testimonial.name}</h3>
                   <p className="mb-4 text-sm text-center text-white">{testimonial.content}</p>
                   <StarRating rating={testimonial.rating} />
                 </div>
-              )}
-              
+              </div>
             </div>
           ))}
         </div>
-
-        <button 
-          onClick={nextTestimonial} 
-          className="absolute right-0 z-10 flex items-center justify-center w-10 h-10 p-2 text-xl text-white transform -translate-y-1/2 bg-blue-600 rounded-full shadow-md hover:bg-blue-700 top-1/2"
+        <button
+          onClick={nextTestimonial}
+          className={`absolute right-0 flex items-center justify-center w-10 h-10 p-2 text-xl text-white transform -translate-y-1/2 bg-blue-600 rounded-full shadow-md hover:bg-blue-700 top-1/2 ${
+            currentIndex === testimonials.length - 1 ? 'z-0' : 'z-10'
+          }`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -254,10 +250,24 @@ const TestimonialCarousel = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </button>
-
       </div>
     </div>
   );
 };
 
 export default TestimonialCarousel;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
