@@ -45,20 +45,20 @@ const My_Home = () => {
     </li>
     <li className="pb-1">
       <a
-        href="#"
+        href="/visa"
         className="text-white transition-all duration-200 hover:border-b-2 hover:text-blue-600 hover:scale-125 hover:border-white"
         style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
     >
-        ABOUT US
+        Visa Portal
       </a>
     </li>
     <li className="pb-1">
     <a
-        href="#"
+        href="/visa_application"
         className="text-white transition-all duration-200 hover:border-b-2 hover:scale-125 hover:border-white hover:text-blue-600"
         style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
     >
-        CHARTER FLIGHTS
+        Visa Application
       </a>
     </li>
     <li className="pb-1">
