@@ -66,7 +66,7 @@ const News = () => {
         </div>
         <div className="grid max-w-lg gap-8 mx-auto mt-20 lg:max-w-none lg:grid-cols-3">
           {articles.map((article, index) => (
-            <div key={index} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
+            <div key={index} className="flex flex-col overflow-hidden border-2 rounded-lg shadow-lg border-black/20">
               <div className="flex-shrink-0">
                 <img className="object-cover w-full h-48" src={article.imageUrl} alt="" />
               </div>

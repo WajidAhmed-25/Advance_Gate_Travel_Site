@@ -100,43 +100,43 @@ export default function Visa_Application_Banner(){
     <nav className='pt-12 '>
       <ul className="flex flex-wrap justify-center space-x-0 md:space-x-12">
         <li className="px-2 mb-2 md:px-0 ">
-          <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white hover:underline hover:font-semibold">
-            HOME
+          <a href="/" className=" hover:lg:text-[20px] text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white hover:underline hover:font-semibold">
+            Home
           </a>
         </li>
         <li className="px-2 mb-4 md:px-0">
-          <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
-            ABOUT US
+          <a href="/visa" className="text-[14px] hover:lg:text-[20px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
+           Visa Portal
           </a>
         </li>
         <li className="px-2 mb-4 md:px-0">
-          <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
-            CHARTER FLIGHTS
+          <a href="/visa_application" className=" hover:lg:text-[20px] text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
+            Visa Application
           </a>
         </li>
         <li className="px-2 mb-4 md:px-0">
-          <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
-            REGULAR FLIGHTS
+          <a href="#" className=" hover:lg:text-[20px] text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
+            Regular Flights
           </a>
         </li>
         <li className="px-2 mb-4 md:px-0">
-          <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
-            NEWS
+          <a href="#" className=" hover:lg:text-[20px] text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
+            News
           </a>
         </li>
         <li className="px-2 mb-4 md:px-0">
-          <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
-            BLOG
+          <a href="#" className=" hover:lg:text-[20px] text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
+            Blog
           </a>
         </li>
         <li className="px-2 mb-4 md:px-0">
-          <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
-            CONTACT US
+          <a href="#" className=" hover:lg:text-[20px] text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
+            Contact Us
           </a>
         </li>
         <li className="px-2 mb-4 md:px-0">
-          <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
-            DESTINATION
+          <a href="#" className=" hover:lg:text-[20px] text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[18px] hover:underline-offset-8 font-normal text-white  hover:underline hover:font-semibold">
+            Destination
           </a>
         </li>
       </ul>

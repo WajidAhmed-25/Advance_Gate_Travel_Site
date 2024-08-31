@@ -30,7 +30,7 @@ export default function My_Banner(){
 
 
 
-<div className="relative flex flex-col items-center justify-center  z-10 bg-center bg-no-repeat bg-cover h-[880px] " style={{ backgroundImage: `url('https://images.unsplash.com/photo-1614427771426-50fa133eebcf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')` }}>
+<div className="relative flex flex-col items-center justify-center  z-10 bg-center bg-no-repeat bg-cover h-[800px] " style={{ backgroundImage: `url('https://images.unsplash.com/photo-1614427771426-50fa133eebcf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')` }}>
  
 <div class="absolute inset-0 bg-white opacity-60"></div>
  
@@ -40,43 +40,43 @@ export default function My_Banner(){
     <nav className='pt-4 '>
       <ul className="flex flex-wrap justify-center space-x-0 md:space-x-12">
         <li className="px-2 mb-2 md:px-0 ">
-          <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[22px] hover:underline-offset-8 font-normal text-black hover:underline hover:font-semibold">
-            HOME
+          <a href="/" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[22px] hover:underline-offset-8 font-normal text-black hover:underline hover:font-semibold">
+            Home
+          </a>
+        </li>
+        <li className="px-2 mb-4 md:px-0">
+          <a href="/visa" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[22px] hover:underline-offset-8 font-normal text-black hover:underline hover:font-semibold">
+          Visa Portal
+          </a>
+        </li>
+        <li className="px-2 mb-4 md:px-0">
+          <a href="/visa_application" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[22px] hover:underline-offset-8 font-normal text-black hover:underline hover:font-semibold">
+            Visa Application
           </a>
         </li>
         <li className="px-2 mb-4 md:px-0">
           <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[22px] hover:underline-offset-8 font-normal text-black hover:underline hover:font-semibold">
-            ABOUT US
+            Regular Flights
           </a>
         </li>
         <li className="px-2 mb-4 md:px-0">
           <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[22px] hover:underline-offset-8 font-normal text-black hover:underline hover:font-semibold">
-            CHARTER FLIGHTS
+            News
           </a>
         </li>
         <li className="px-2 mb-4 md:px-0">
           <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[22px] hover:underline-offset-8 font-normal text-black hover:underline hover:font-semibold">
-            REGULAR FLIGHTS
+            Blog
           </a>
         </li>
         <li className="px-2 mb-4 md:px-0">
           <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[22px] hover:underline-offset-8 font-normal text-black hover:underline hover:font-semibold">
-            NEWS
+            Contact Us
           </a>
         </li>
         <li className="px-2 mb-4 md:px-0">
           <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[22px] hover:underline-offset-8 font-normal text-black hover:underline hover:font-semibold">
-            BLOG
-          </a>
-        </li>
-        <li className="px-2 mb-4 md:px-0">
-          <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[22px] hover:underline-offset-8 font-normal text-black hover:underline hover:font-semibold">
-            CONTACT US
-          </a>
-        </li>
-        <li className="px-2 mb-4 md:px-0">
-          <a href="#" className="text-[14px] xxs:text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lgg:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[22px] hover:underline-offset-8 font-normal text-black hover:underline hover:font-semibold">
-            DESTINATION
+            Destination
           </a>
         </li>
       </ul>
@@ -90,7 +90,7 @@ export default function My_Banner(){
 
 
   
-      <div className="relative z-10 lg:-mt-24    text-center text-white w-[80%] max-md:mt-40 max-md:mb-4 max-md:w-[60%] ">
+      <div className="relative z-10 lg:-mt-32    text-center text-white w-[80%] max-md:mt-40 max-md:mb-4 max-md:w-[60%] ">
        
       <div className="text-center">
   <h1 className="text-3xl xxs:text-3xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-[67px] font-medium text-gray-900">

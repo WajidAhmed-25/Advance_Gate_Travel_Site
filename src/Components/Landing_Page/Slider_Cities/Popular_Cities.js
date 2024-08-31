@@ -36,32 +36,14 @@ const PopularSelections = () => {
       <img
         src={item.image}
         alt={item.title}
-        className="object-cover w-[80%] h-[60%] rounded-lg transition-transform duration-300 ease-in-out hover:scale-125 cursor-pointer"
+        className="object-cover w-[80%] h-[60%] rounded-lg transition-transform duration-300 ease-in-out hover:scale-125 cursor-pointer border-black/40 border-2"
       />
-      <div className="absolute w-full p-4 text-center text-white bottom-36">
-        {index % 2 === 0 ? (
-          <>
-            <div className="flex flex-col items-center justify-center p-4 mt-4">
-              <div className="cursor-pointer">
-                <button className="relative inline-flex items-center justify-center px-4 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out bg-white border-2 border-blue-600 rounded-full shadow-md group">
-                  <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-800 group-hover:translate-x-0 ease">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                  </span>
-                  <span className="absolute flex items-center justify-center w-full h-full text-blue-800 transition-all duration-300 transform group-hover:translate-x-full ease">Explore</span>
-                  <span className="relative invisible">Continue</span> 
-                </button>
-              </div>
-            </div>
-            <div className="p-2 mt-2 text-xl font-bold text-white bg-blue-800 rounded-md shadow-lg hover:scale-125">
+      <div className="absolute w-full p-4 text-center text-white bottom-20">
+   
+      <div className="p-2 mb-2 text-xl font-bold text-white bg-blue-800 rounded-md shadow-lg cursor-pointer hover:scale-125 ">
               {item.title}
             </div>
-          </>
-        ) : (
-          <>
-            <div className="p-2 mb-2 text-xl font-bold text-white bg-blue-800 rounded-md shadow-lg cursor-pointer hover:scale-125">
-              {item.title}
-            </div>
-            <div className="flex flex-col items-center justify-center p-4 mt-4">
+            <div className="flex flex-col items-center justify-center p-4 mt-2">
               <div className="cursor-pointer">
                 <button className="relative inline-flex items-center justify-center px-4 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out bg-white border-2 border-blue-600 rounded-full shadow-md group">
                   <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-800 group-hover:translate-x-0 ease">
@@ -72,8 +54,6 @@ const PopularSelections = () => {
                 </button>
               </div>
             </div>
-          </>
-        )}
       </div>
     </div>
   </SwiperSlide>
@@ -83,3 +63,14 @@ const PopularSelections = () => {
   );
 };
 export default PopularSelections;
+
+
+
+
+
+
+
+
+
+
+

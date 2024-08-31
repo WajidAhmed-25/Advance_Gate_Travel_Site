@@ -172,7 +172,7 @@ export default function Main_Slider() {
 
   // Autoplay functionality using useEffect
   useEffect(() => {
-    const interval = setInterval(nextSlide, 4000); 
+    const interval = setInterval(nextSlide, 3500); 
     return () => clearInterval(interval);
   }, []);
 

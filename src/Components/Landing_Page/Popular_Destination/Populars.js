@@ -77,8 +77,18 @@ function Populars() {
         
       case 'Destinations':
         return <div>
+                    <h2 class="text-4xl font-bold text-center mb-4 mt-4 transition-transform duration-500 transform hover:scale-105 cursor-default">
+   Travel Destinations
+  </h2>
+  <div class="w-[280px] h-1 mx-auto mt-2 mb-4 bg-blue-800"></div>
+
+  
           <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2 p-4">
+
     <div class="p-2 sm:w-1/2 w-full">
+
+
+
         <div class="bg-gray-100 rounded flex p-4 h-full items-center">
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                 class="text-blue-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
@@ -167,9 +177,12 @@ function Populars() {
 
 
 <div class="container mx-auto p-6">
-  <h2 class="text-4xl font-bold text-center mb-12 transition-transform duration-500 transform hover:scale-105">
+  <h2 class="text-4xl font-bold text-center mb-4 transition-transform duration-500 transform hover:scale-105">
     Our Travel Services
   </h2>
+
+  <div class="w-[270px] h-1 mx-auto mt-2 mb-12 bg-blue-800"></div>
+  
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     <div class="service-card bg-white rounded-lg shadow-lg p-6 text-center">
       <div class="text-5xl mb-4 transition-transform duration-300 transform hover:scale-110">
@@ -230,6 +243,8 @@ function Populars() {
         <h3 class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
             Frequently Asked <span class="text-blue-800">Questions</span>
         </h3>
+
+        <div class="w-[410px] h-1 mx-auto mt-4 mb-4 bg-blue-800"></div>
     </div>
 
     <div class="px-10 sm:px-16">
@@ -441,7 +456,7 @@ function Populars() {
 
 <div className='w-full mt-32 mb-8 text-center'>
 <h2 className="pb-2 mt-12 text-4xl font-bold text-center">Explore the Travel Arena</h2>
-  <div class="w-[380px] h-1 mx-auto mt-2 mb-4 bg-blue-800/70"></div>
+  <div class="w-[380px] h-1 mx-auto mt-2 mb-4 bg-blue-800"></div>
   <p className="text-lg text-center text-gray-600 ">Unveil New Destinations with Ease !</p>    
   </div>
 
