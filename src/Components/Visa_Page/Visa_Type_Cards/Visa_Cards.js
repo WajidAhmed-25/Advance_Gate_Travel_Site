@@ -9,7 +9,8 @@ export default function Visa_Cards() {
     <h1 class="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
         Accurate Travel Solutions for Travelers and Travel Managers
     </h1>
-    <div className="h-[3px] w-[880px] md:w-[700px]   sm:w-[460px]  max-xs:w-[300px] pl-4 pr-4 bg-blue-400 mt-[18px]"></div>
+    <div className="h-[3px] w-[880px] md:w-[700px]   sm:w-[460px]  max-xs:w-[300px] pl-4 pr-4 bg-blue-600/70 mt-[18px]"></div>
+ 
 </div>
 
         <div className="grid grid-cols-1 gap-8 mt-24 md:grid-cols-2 lg:grid-cols-3 max-xl:gap-6">
