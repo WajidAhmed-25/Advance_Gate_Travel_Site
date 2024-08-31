@@ -81,7 +81,7 @@ function Populars() {
     <div class="p-2 sm:w-1/2 w-full">
         <div class="bg-gray-100 rounded flex p-4 h-full items-center">
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                class="text-blue-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                 <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                 <path d="M22 4L12 14.01l-3-3"></path>
             </svg>
@@ -91,7 +91,7 @@ function Populars() {
     <div class="p-2 sm:w-1/2 w-full">
         <div class="bg-gray-100 rounded flex p-4 h-full items-center">
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                class="text-blue-800  w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                 <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                 <path d="M22 4L12 14.01l-3-3"></path>
             </svg>
@@ -101,7 +101,7 @@ function Populars() {
     <div class="p-2 sm:w-1/2 w-full">
         <div class="bg-gray-100 rounded flex p-4 h-full items-center">
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                class="text-blue-800  w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                 <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                 <path d="M22 4L12 14.01l-3-3"></path>
             </svg>
@@ -111,7 +111,7 @@ function Populars() {
     <div class="p-2 sm:w-1/2 w-full">
         <div class="bg-gray-100 rounded flex p-4 h-full items-center">
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                class="text-blue-800  w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                 <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                 <path d="M22 4L12 14.01l-3-3"></path>
             </svg>
@@ -121,7 +121,7 @@ function Populars() {
     <div class="p-2 sm:w-1/2 w-full">
         <div class="bg-gray-100 rounded flex p-4 h-full items-center">
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                class="text-blue-800  w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                 <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                 <path d="M22 4L12 14.01l-3-3"></path>
             </svg>
@@ -131,7 +131,7 @@ function Populars() {
     <div class="p-2 sm:w-1/2 w-full">
         <div class="bg-gray-100 rounded flex p-4 h-full items-center">
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                class="text-blue-800  w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                 <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                 <path d="M22 4L12 14.01l-3-3"></path>
             </svg>
@@ -141,7 +141,7 @@ function Populars() {
     <div class="p-2 sm:w-1/2 w-full">
         <div class="bg-gray-100 rounded flex p-4 h-full items-center">
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                class="text-blue-800  w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                 <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                 <path d="M22 4L12 14.01l-3-3"></path>
             </svg>
@@ -228,7 +228,7 @@ function Populars() {
 <div class="py-4 max-w-screen-sm mx-auto">
     <div class="text-center mb-16">
         <h3 class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
-            Frequently Asked <span class="text-blue-600">Questions</span>
+            Frequently Asked <span class="text-blue-800">Questions</span>
         </h3>
     </div>
 
@@ -237,7 +237,7 @@ function Populars() {
 
             <div class="flex items-start my-8">
                 <div
-                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-blue-600 text-white border-4 border-white text-xl font-semibold">
+                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-blue-800 text-white border-4 border-white text-xl font-semibold">
                     <svg width="24px" fill="white" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <g data-name="Layer 2">
                             <g data-name="menu-arrow">
@@ -258,7 +258,7 @@ function Populars() {
 
             <div class="flex items-start my-8">
                 <div
-                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-blue-600 text-white border-4 border-white text-xl font-semibold">
+                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-blue-800 text-white border-4 border-white text-xl font-semibold">
                     <svg width="24px" fill="white" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <g data-name="Layer 2">
                             <g data-name="menu-arrow">
@@ -279,7 +279,7 @@ function Populars() {
 
             <div class="flex items-start my-8">
                 <div
-                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-blue-600 text-white border-4 border-white text-xl font-semibold">
+                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-blue-800 text-white border-4 border-white text-xl font-semibold">
                     <svg width="24px" fill="white" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <g data-name="Layer 2">
                             <g data-name="menu-arrow">
@@ -325,7 +325,7 @@ function Populars() {
 <section class="px-4">
   
     <div
-        class="bg-gradient-to-br from-blue-800 via-blue-700 to-blue-800 p-4 sm:p-4 rounded-2xl w-full text-white flex items-center justify-between max-w-2xl mx-auto mt-20">
+        class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-800 p-4 sm:p-4 rounded-2xl w-full text-white flex items-center justify-between max-w-2xl mx-auto mt-20">
         <div class="flex flex-col gap-4">
             <div class="">
                 <span class="text-gray-200">Black Friday Sale</span>
@@ -357,7 +357,7 @@ function Populars() {
 
     
     <div
-        class="bg-gradient-to-br from-blue-800 via-blue-700 to-blue-800 p-2 sm:p-4  rounded-2xl w-full text-white flex items-center justify-between max-w-2xl mx-auto mt-12">
+        class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-800 p-2 sm:p-4  rounded-2xl w-full text-white flex items-center justify-between max-w-2xl mx-auto mt-12">
         <div class="flex flex-col gap-4">
             <div class="">
                 <span class="text-gray-200">Holiday Special</span>
@@ -389,7 +389,7 @@ function Populars() {
 
   
     <div
-        class="bg-gradient-to-br from-blue-800 via-blue-700 to-blue-800 p-2 sm:p-4 rounded-2xl w-full text-white flex items-center justify-between max-w-2xl mx-auto mt-12">
+        class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-800 p-2 sm:p-4 rounded-2xl w-full text-white flex items-center justify-between max-w-2xl mx-auto mt-12">
         <div class="flex flex-col gap-4">
             <div class="">
                 <span class="text-gray-200">Summer Bonanza</span>
@@ -439,10 +439,9 @@ function Populars() {
 
 
 
-<div className='w-full mt-4 text-center'>
+<div className='w-full mt-64 mb-8 text-center'>
 <h2 className="pb-2 mt-12 text-4xl font-bold text-center">Explore the Travel Arena</h2>
-  <div class="w-[380px] h-1 mx-auto mt-2 mb-4 bg-blue-600/70"></div>
-
+  <div class="w-[380px] h-1 mx-auto mt-2 mb-4 bg-blue-800/70"></div>
   <p className="text-lg text-center text-gray-600 ">Unveil New Destinations with Ease !</p>    
   </div>
 

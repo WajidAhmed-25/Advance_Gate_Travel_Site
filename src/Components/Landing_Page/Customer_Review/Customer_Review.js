@@ -183,10 +183,10 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="max-w-5xl px-4 py-12 mx-auto">
-      <div className="text-center my-16 mb-24">
-        <h2 className="text-3xl md:text-4xl font-bold text-black">Unforgettable Adventures Await</h2>
-        <div className="w-[500px] h-1 mx-auto mt-6 mb-4 bg-blue-600"></div>
+    <div className="max-w-5xl px-4 py-8 mx-auto mb-20 ">
+      <div className="my-16 mb-24 text-center">
+        <h2 className="text-3xl font-bold text-black md:text-4xl">Unforgettable Adventures Await</h2>
+        <div className="w-[500px] h-1 mx-auto mt-6 mb-4 bg-blue-800"></div>
         <p className="text-lg text-center text-gray-600">Explore breathtaking destinations and create memories that last a lifetime!</p>
       </div>
       <div className="relative flex items-center justify-center">
@@ -216,8 +216,8 @@ const TestimonialCarousel = () => {
               }`}
               style={{ zIndex: index === currentIndex ? 20 : 0 }}
             >
-              <div className="relative w-full p-6 bg-[#0050CB] rounded-3xl -rotate-3">
-                <div className="relative w-full p-8 shadow-lg rotate-3 bg-gradient-to-r from-[#568ADA] to-[#568ADA] rounded-3xl">
+              <div className="relative w-full p-6 bg-blue-800 rounded-3xl -rotate-3">
+                <div className="relative w-full p-8 shadow-lg rotate-3 bg-gradient-to-r from-[#4169a6] to-[#568ADA] rounded-3xl">
                   <div className="absolute transform -translate-x-1/2 -top-12 left-[50%]">
                     <img
                       src={testimonial.avatar}

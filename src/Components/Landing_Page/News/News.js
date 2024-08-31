@@ -48,14 +48,18 @@ const articles = [
 
 const News = () => {
   return (
-    <div className="relative px-6 pt-16 pb-20 lg:px-8 lg:pt-20 lg:pb-28">
+
+    <div className='w-full h-screen '>
+  
+    
+    <div className="relative px-6 pt-16 pb-20 bg-gray-100 lg:px-8 lg:pt-20 lg:pb-28">
       <div className="absolute inset-0">
-        <div className="bg-white h-1/3 sm:h-2/3"></div>
+        <div className="bg-gray-100 h-1/3 sm:h-2/3"></div>
       </div>
       <div className="relative mx-auto max-w-[90%] ">
-        <div className="text-center mt-8">
+        <div className="mt-8 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Latest in Travel News!</h2>
-          <div className="w-[310px] h-1 mx-auto mt-4 mb-4 bg-blue-600"></div>
+          <div className="w-[310px] h-1 mx-auto mt-4 mb-4 bg-blue-800"></div>
           <p className="max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4">
           Latest travel news, deals, and trends!
           </p>
@@ -68,7 +72,7 @@ const News = () => {
               </div>
               <div className="flex flex-col justify-between flex-1 p-6 bg-white">
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-indigo-600">
+                  <p className="text-sm font-medium text-blue-800">
                     <a href="#" className="hover:underline">{article.type}</a>
                   </p>
                   <a href="#" className="block mt-2">
@@ -110,6 +114,13 @@ const News = () => {
     </a> 
 
 </div> */}
+
+
+    </div>
+
+
+
+
 
 
     </div>

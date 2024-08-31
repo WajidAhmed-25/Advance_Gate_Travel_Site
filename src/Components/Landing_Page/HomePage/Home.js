@@ -128,7 +128,7 @@ const My_Home = () => {
 </h1>
 
   <br/>
-  <h2 className="text-3xl font-bold text-blue-600 xxs:text-3xl sm:text-4xl md:text-6xl"
+  <h2 className="text-3xl font-bold text-blue-700 xxs:text-3xl sm:text-4xl md:text-6xl"
 style={{ textShadow: ' 3px 3px 3px rgba(249 241 241 / 82%)' }}
  >
   
@@ -263,7 +263,7 @@ style={{ textShadow: ' 3px 3px 3px rgba(249 241 241 / 82%)' }}
         />
       </div>
 
-      <button className="bg-blue-600 xxs:w-[30%] xxs:mt-2 xs:w-[30%] xxs:bg-blue-600 xs:py-2.5 xxs:px-4 xs:text-[13px] xs:bg-blue-600 sm:bg-blue-600 sm:px-4 sm:py-2.5 md:px-6 md:py-4 md:bg-blue-600 lg:bg-blue-600 lg:px-8 sm:ml-2 text-white text-[11px] sm:text-sm font-medium py-4 px-6 rounded-full w-full sm:w-auto">
+      <button className="bg-blue-800 xxs:w-[30%] xxs:mt-2 xs:w-[30%] xxs:bg-blue-800 xs:py-2.5 xxs:px-4 xs:text-[13px] xs:bg-blue-800 sm:bg-blue-800 sm:px-4 sm:py-2.5 md:px-6 md:py-4 md:bg-blue-800 lg:bg-blue-800 lg:px-8 sm:ml-2 text-white text-[11px] sm:text-sm font-medium py-4 px-6 rounded-full w-full sm:w-auto">
         Search
       </button>
     </div>

@@ -15,7 +15,7 @@ const PopularSelections = () => {
   return (
   <div className="w-full h-[550px] mt-32 ">
   <h2 className="pb-2 mt-12 text-4xl font-bold text-center">Popular Selections</h2>
-  <div class="w-[300px] h-1 mx-auto mt-2 mb-4 bg-blue-600/70"></div>
+  <div class="w-[300px] h-1 mx-auto mt-2 mb-4 bg-blue-800"></div>
   <p className="text-lg text-center text-gray-600 ">Explore the Best, Experience the Extraordinary!</p>
   <Swiper
     navigation
