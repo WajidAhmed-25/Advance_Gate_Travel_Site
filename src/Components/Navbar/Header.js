@@ -21,8 +21,8 @@ export default function My_Header(){
         
         <header className="flex flex-wrap items-center justify-between px-4 py-4 text-sm bg-gray-100">
   <div className="flex space-x-4">
-    <span className="text-gray-600">+92 1234567930</span>
-    <span className="hidden text-gray-600 sm:inline">+92 1234567930</span>
+    <span className="font-bold text-gray-600">+92 1234567930</span>
+    <span className="hidden font-bold text-gray-600 sm:inline">+92 1234567930</span>
   </div>
   <div className="flex items-center space-x-4">
     <FaTelegram className="w-5 h-5 text-blue-400" />
@@ -49,18 +49,18 @@ export default function My_Header(){
   {/* Language Dropdown */}
   <div className="relative">
     <div
-      className="flex items-center space-x-1 text-gray-700 hover:text-indigo-600 cursor-pointer transition duration-200"
+      className="flex items-center space-x-1 text-gray-700 transition duration-200 cursor-pointer hover:text-indigo-600"
       onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
     >
       <span className="font-semibold">ENG</span>
       <IoChevronDown className="w-4 h-4" />
     </div>
     {showLanguageDropdown && (
-      <div className="absolute mt-2 bg-white border border-gray-300 rounded-lg shadow-lg w-16 -ml-2 z-10">
+      <div className="absolute z-10 w-16 mt-2 -ml-2 bg-white border border-gray-300 rounded-lg shadow-lg">
         {languages.map((language) => (
           <div
             key={language}
-            className="px-4 py-2 text-gray-700 cursor-pointer transition duration-200 ease-in-out transform hover:bg-blue-600 hover:text-white hover:scale-105 hover:rounded-md"
+            className="px-4 py-2 text-gray-700 transition duration-200 ease-in-out transform cursor-pointer hover:bg-blue-600 hover:text-white hover:scale-105 hover:rounded-md"
             onClick={() => {
               console.log(`Selected language: ${language}`);
               setShowLanguageDropdown(false);
@@ -76,18 +76,18 @@ export default function My_Header(){
   {/* Currency Dropdown */}
   <div className="relative">
     <div
-      className="flex items-center space-x-1 text-gray-700 hover:text-indigo-600 cursor-pointer transition duration-200"
+      className="flex items-center space-x-1 text-gray-700 transition duration-200 cursor-pointer hover:text-indigo-600"
       onClick={() => setShowCurrencyDropdown(!showCurrencyDropdown)}
     >
       <span className="font-semibold">USD</span>
       <IoChevronDown className="w-4 h-4" />
     </div>
     {showCurrencyDropdown && (
-      <div className="absolute mt-2 bg-white border border-gray-300 rounded-lg shadow-lg w-16 z-10 -ml-2">
+      <div className="absolute z-10 w-16 mt-2 -ml-2 bg-white border border-gray-300 rounded-lg shadow-lg">
         {currencies.map((currency) => (
           <div
             key={currency}
-            className="px-4 py-2 text-gray-700 cursor-pointer transition duration-200 ease-in-out transform hover:bg-blue-600  hover:text-white hover:scale-105 hover:rounded-md"
+            className="px-4 py-2 text-gray-700 transition duration-200 ease-in-out transform cursor-pointer hover:bg-blue-600 hover:text-white hover:scale-105 hover:rounded-md"
             onClick={() => {
               console.log(`Selected currency: ${currency}`);
               setShowCurrencyDropdown(false);
