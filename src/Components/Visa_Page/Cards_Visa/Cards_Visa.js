@@ -6,10 +6,11 @@ export default function Cards_Visa() {
   return (
     <>
 
+<div className='pt-2 pb-6 bg-gray-100'>
 
-<div className="mt-20 text-center">
+<div className="mt-12 text-center ">
 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Services we offer</h2>
-<div class="w-[470px] h-1 mx-auto mt-4 mb-4 bg-blue-600/70"></div>
+<div class="w-[470px] h-1 mx-auto mt-4 mb-4 bg-blue-800"></div>
 <p className="max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4">
    A One Stop Shop that can bring colors to life
 </p>
@@ -85,6 +86,7 @@ export default function Cards_Visa() {
 
 
 
+</div>
 
     </>
   );

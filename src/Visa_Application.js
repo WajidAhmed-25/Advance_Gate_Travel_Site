@@ -29,8 +29,9 @@ export default function Visa_Application(){
 
         <Contact/>
 
+        <div className="pt-2 bg-gray-100">
 <Populars/>
-        
+</div>
         
         
         

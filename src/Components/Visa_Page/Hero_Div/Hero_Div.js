@@ -26,7 +26,7 @@ export default function Hero_Divs(){
       </div>
 
       {/* Right Side Content */}
-      <div className="flex flex-col justify-center w-full p-6 text-white bg-blue-800 md:w-1/2 md:p-10">
+      <div className="flex flex-col justify-center w-full p-6 text-white bg-blue-900 md:w-1/2 md:p-10">
         <h2 className="text-sm font-semibold md:text-lg">OUR PROMISE</h2>
         <h1 className="mt-2 mb-4 text-2xl font-bold md:text-5xl md:mb-8">
           WHAT WE STAND FOR

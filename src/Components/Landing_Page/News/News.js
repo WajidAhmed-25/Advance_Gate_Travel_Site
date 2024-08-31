@@ -52,7 +52,7 @@ const News = () => {
     <div className='w-full h-screen '>
   
     
-    <div className="relative px-6 pt-16 pb-20 bg-gray-100 lg:px-8 lg:pt-20 lg:pb-28">
+    <div className="relative px-6 pt-16 pb-8 bg-gray-100 lg:px-8 lg:pt-12 lg:pb-16">
       <div className="absolute inset-0">
         <div className="bg-gray-100 h-1/3 sm:h-2/3"></div>
       </div>

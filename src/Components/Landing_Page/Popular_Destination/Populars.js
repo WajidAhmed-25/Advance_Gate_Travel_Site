@@ -439,7 +439,7 @@ function Populars() {
 
 
 
-<div className='w-full mt-64 mb-8 text-center'>
+<div className='w-full mt-32 mb-8 text-center'>
 <h2 className="pb-2 mt-12 text-4xl font-bold text-center">Explore the Travel Arena</h2>
   <div class="w-[380px] h-1 mx-auto mt-2 mb-4 bg-blue-800/70"></div>
   <p className="text-lg text-center text-gray-600 ">Unveil New Destinations with Ease !</p>    

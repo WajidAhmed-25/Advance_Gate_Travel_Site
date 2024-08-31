@@ -93,7 +93,7 @@ export default function Visa_Application_Banner(){
 
 
 
-<div className='bg-blue-600'>
+<div className='bg-blue-800'>
 
 
 <div className="container flex items-center justify-center px-4 py-3 mx-auto">
@@ -153,7 +153,7 @@ export default function Visa_Application_Banner(){
           A foreign national traveling to the United States for tourism needs a visitor visa (B-2 or combined B1/B2) unless qualifying for entry under the Visa Waiver Program. Travel for pleasure or tourism may include a short visit for vacation, visiting family and friends, or for medical treatment.
         </p>
         <div className="flex flex-col justify-center w-[40%] ml-auto mr-auto mt-8 space-y-6 lg:w-full md:w-full  items md:flex-row lg:justify-center md:space-y-0 md:space-x-16">
-          <button className="px-8 py-4 font-semibold text-white transform bg-blue-800 rounded-md hover:bg-blue-500 hover:scale-110 active:scale-95">
+          <button className="px-8 py-4 font-semibold text-white transition-all transform bg-blue-800 rounded-md hover:bg-blue-700 hover:scale-110 active:scale-95">
             APPLY NOW
           </button>
           <button className="px-8 py-4 font-semibold text-blue-800 transform bg-white rounded-md hover:bg-gray-100 hover:scale-110 active:scale-95">

@@ -123,7 +123,7 @@ export default function Hex_Cards() {
 
 <div className="mt-20 text-center">
 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Explore the True Beauty of the World</h2>
-<div class="w-[480px] h-1 mx-auto mt-4 mb-4 bg-blue-600/70"></div>
+<div class="w-[480px] h-1 mx-auto mt-4 mb-4 bg-blue-800"></div>
 <p className="max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4">
    Top Tourist Destinations On Finger Tips
 </p>

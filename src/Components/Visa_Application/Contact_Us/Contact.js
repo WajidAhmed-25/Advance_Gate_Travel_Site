@@ -11,13 +11,14 @@ export default function Contact(){
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div class="mb-4">
             <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-                <p class="text-base font-semibold uppercase tracking-wide text-blue-600 ">
+                <p class="text-base font-semibold uppercase tracking-wide text-blue-800 ">
                     Contact
                 </p>
                 <h2
                     class="font-heading mb-4 font-bold tracking-tight text-gray-900 text-3xl sm:text-5xl">
                     Get in Touch
                 </h2>
+                <div className="h-[4px] w-[880px] md:w-[230px]  sm:w-[180px]  max-xs:w-[260px] mx-auto bg-blue-800 mt-[18px]"></div>
                 <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600 ">In hac habitasse platea
                     dictumst
                 </p>
@@ -33,7 +34,7 @@ export default function Contact(){
                     </p>
                     <ul class="mb-6 md:mb-0">
                         <li class="flex">
-                            <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-600 text-gray-50">
+                            <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-800 text-gray-50">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="h-6 w-6">
@@ -51,7 +52,7 @@ export default function Contact(){
                             </div>
                         </li>
                         <li class="flex">
-                            <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-600 text-gray-50">
+                            <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-800 text-gray-50">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="h-6 w-6">
@@ -70,7 +71,7 @@ export default function Contact(){
                             </div>
                         </li>
                         <li class="flex">
-                            <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-600 text-gray-50">
+                            <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-800 text-gray-50">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="h-6 w-6">
@@ -87,7 +88,7 @@ export default function Contact(){
                         </li>
                     </ul>
                 </div>
-                <div class="card h-fit max-w-6xl p-5 md:p-12 bg-white border-2 border-blue-500 rounded-2xl shadow-xl" id="form">
+                <div class="card h-fit max-w-6xl p-5 md:p-12 bg-white border-2 border-blue-800 rounded-2xl shadow-xl" id="form">
                     <h2 class="mb-4 text-2xl font-bold ">Ready to Get Started?</h2>
                     <form id="contactForm">
                         <div class="mb-6">
@@ -104,7 +105,7 @@ export default function Contact(){
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="w-[30%] font-semibold  transform hover:scale-110 active:scale-95  bg-blue-600 text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send Message</button>
+                            <button type="submit" class="w-[30%] font-semibold  transform hover:scale-110 active:scale-95  bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send Message</button>
                         </div>
                     </form>
                 </div>

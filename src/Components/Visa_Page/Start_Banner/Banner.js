@@ -90,12 +90,12 @@ export default function My_Banner(){
 
 
   
-      <div className="relative z-10 lg:-mt-20    text-center text-white w-[80%] max-md:mt-40 max-md:mb-4 max-md:w-[60%] ">
+      <div className="relative z-10 lg:-mt-24    text-center text-white w-[80%] max-md:mt-40 max-md:mb-4 max-md:w-[60%] ">
        
       <div className="text-center">
   <h1 className="text-3xl xxs:text-3xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-[67px] font-medium text-gray-900">
     Visas Made
-    <span className="font-medium text-blue-700"> Easier</span>
+    <span className="font-medium text-blue-800"> Easier</span>
   </h1>
   <p className="mt-4 text-base text-gray-600 xxs:text-base xs:text-lg sm:text-lg md:text-xl lg:text-2xl">
     Accurate and Expedited Visa and Passport Solutions
@@ -151,40 +151,40 @@ export default function My_Banner(){
 <div className="flex flex-col items-center justify-center w-full p-4 mt-8 space-y-4 bg-white rounded-lg shadow-lg sm:p-6 md:p-8 sm:mt-10 md:mt-12 md:space-y-0 md:space-x-4 lg:space-x-8 bg-opacity-30 backdrop-blur-md md:flex-row">
   <div className="flex flex-col w-full md:w-[22%] lg:w-[18%]">
     <label className="text-xs font-semibold text-gray-700 md:text-sm">My Passport is from</label>
-    <select value={passportCountry} onChange={(e) => setPassportCountry(e.target.value)} className="p-2.5 mt-1 text-center text-white bg-blue-700 md:mt-2">
+    <select value={passportCountry} onChange={(e) => setPassportCountry(e.target.value)} className="p-2.5 mt-1 text-center text-white bg-blue-800 md:mt-2">
       <option>UNITED STATES (USA)</option>
     </select>
   </div>
 
   <div className="flex flex-col w-full md:w-[22%] lg:w-[18%]">
     <label className="text-xs font-semibold text-gray-700 md:text-sm">I am going to</label>
-    <select value={destination} onChange={(e) => setDestination(e.target.value)} className="p-2.5 mt-1 text-center text-white bg-blue-700 md:mt-2">
+    <select value={destination} onChange={(e) => setDestination(e.target.value)} className="p-2.5 mt-1 text-center text-white bg-blue-800 md:mt-2">
       <option>ISTANBUL, TURKEY</option>
     </select>
   </div>
 
   <div className="flex flex-col w-full md:w-[22%] lg:w-[18%]">
     <label className="text-xs font-semibold text-gray-700 md:text-sm">My purpose of trip</label>
-    <select value={tripPurpose} onChange={(e) => setTripPurpose(e.target.value)} className="p-2.5 mt-1 text-center text-white bg-blue-700 md:mt-2">
+    <select value={tripPurpose} onChange={(e) => setTripPurpose(e.target.value)} className="p-2.5 mt-1 text-center text-white bg-blue-800 md:mt-2">
       <option value="" disabled>Select One</option>
     </select>
   </div>
 
-  <div className="flex flex-col w-full md:w-[26%] lg:w-[22%]">
+  <div className="flex flex-col w-full md:w-[26%] lg:w-[23%]">
     <label className="text-xs font-semibold text-gray-700 md:text-sm">Date of Entry/Departure</label>
     <div className="relative">
       <input
         type="text"
         value={`${dates.startDate} - ${dates.endDate}`}
         onChange={() => {}}
-        className="w-full p-2.5 mt-1 text-center text-white bg-blue-700 md:mt-2"
+        className="w-full p-2.5 mt-1 text-center text-white bg-blue-800 md:mt-2"
       />
-      <FaCalendarAlt className="absolute text-white transform -translate-y-1/2 right-2 top-1/2" />
+      <FaCalendarAlt className="absolute text-white transform -translate-y-1/2 right-2 top-[55%]" />
     </div>
   </div>
 
 
-  <button class="bg-blue-700 rounded-full w-48 h-12  text-white font-semibold">
+  <button class="bg-blue-800 rounded-full w-48 h-12  text-white font-semibold">
     <div class="flex gap-3 justify-center items-center">
 
       <span class="text-md">Get Visa Options</span>
