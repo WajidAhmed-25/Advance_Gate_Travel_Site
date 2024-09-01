@@ -105,7 +105,7 @@ export default function Res_Cards() {
             <div className='w-full mt-16 text-center'>
                 <h2 className="pb-2 mt-12 text-4xl font-bold text-center">Discover Your Next Adventure</h2>
                 <div className="w-[480px] h-1 mx-auto mt-2 mb-4 bg-blue-800"></div>
-                <p className="text-lg text-center text-gray-600">
+                <p className="text-xl text-center text-gray-500">
                     Unleash your wanderlust and explore the globe with our curated travel experiences!
                 </p>
             </div>

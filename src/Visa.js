@@ -1,5 +1,6 @@
 
 
+import Newsletter from "./Components/Landing_Page/Newsletter/Newsletter";
 import Populars from "./Components/Landing_Page/Popular_Destination/Populars";
 import Cards_Visa from "./Components/Visa_Page/Cards_Visa/Cards_Visa";
 import Hero_Divs from "./Components/Visa_Page/Hero_Div/Hero_Div";
@@ -29,7 +30,11 @@ return(
 
 <Populars/>
 
+<Newsletter/>
+
 </div>
+
+
 
 
 

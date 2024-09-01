@@ -187,7 +187,7 @@ const TestimonialCarousel = () => {
       <div className="my-16 mb-24 text-center">
         <h2 className="text-3xl font-bold text-black md:text-4xl">Unforgettable Adventures Await</h2>
         <div className="w-[500px] h-1 mx-auto mt-6 mb-4 bg-blue-800"></div>
-        <p className="text-lg text-center text-gray-600">Explore breathtaking destinations and create memories that last a lifetime!</p>
+        <p className="text-xl text-center text-gray-500">Explore breathtaking destinations and create memories that last a lifetime!</p>
       </div>
       <div className="relative flex items-center justify-center">
         <button

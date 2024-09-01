@@ -49,7 +49,7 @@ const articles = [
 const News = () => {
   return (
 
-    <div className='w-full h-screen '>
+    <div className='w-full '>
   
     
     <div className="relative px-6 pt-16 pb-8 bg-gray-100 lg:px-8 lg:pt-12 lg:pb-16">

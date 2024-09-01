@@ -10,6 +10,10 @@ import TestimonialCarousel from './Components/Landing_Page/Customer_Review/Custo
 import News from './Components/Landing_Page/News/News';
 import Populars from './Components/Landing_Page/Popular_Destination/Populars';
 import Newsletter from './Components/Landing_Page/Newsletter/Newsletter';
+import Travel_Destinations from './Components/Landing_Page/Travel Destinations/Travel_Destinations';
+import Services_Corner from './Components/Landing_Page/Services_Corner/Service_Corner';
+import FAQs from './Components/Landing_Page/FAQs/FAQS';
+import Discount_Banner from './Components/Landing_Page/Discount_Banner/Discount_Banner';
 // import Footer from './Components/Footer/footer';
 // import My_Header from './Components/Navbar/Header';
 
@@ -33,9 +37,19 @@ return(
 
  <News/>
 
+ {/* <Travel_Destinations/>
+
+<Discount_Banner/>
+
+<Services_Corner/>
+
+<FAQs/> */}
+
  <Populars/> 
+ 
  <br/>
  <Newsletter/> 
+
 
  </div>
     </>

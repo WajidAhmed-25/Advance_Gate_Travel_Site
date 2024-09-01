@@ -183,7 +183,7 @@ export default function Main_Slider() {
   <h2 className="pb-2 mt-16 text-4xl font-bold text-center">Destination Gallery</h2>
   <div class="w-[300px] h-1 mx-auto mt-2 mb-4  bg-blue-800"></div>
 
-  <p className="mb-8 text-lg text-center text-gray-600">These popular destinations have a lot to offer</p>
+  <p className="mb-8 text-xl text-center text-gray-500">These popular destinations have a lot to offer</p>
 
       <div className="relative w-full h-[500px] flex justify-center items-center overflow-hidden">
         {slides.map((slide, index) => {

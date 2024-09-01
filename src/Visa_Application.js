@@ -1,3 +1,4 @@
+import Newsletter from "./Components/Landing_Page/Newsletter/Newsletter";
 import Populars from "./Components/Landing_Page/Popular_Destination/Populars";
 import PopularSelections from "./Components/Landing_Page/Slider_Cities/Popular_Cities";
 import Contact from "./Components/Visa_Application/Contact_Us/Contact";
@@ -31,8 +32,10 @@ export default function Visa_Application(){
 
         <div className="pt-2 bg-gray-100">
 <Populars/>
+
 </div>
-        
+      
+      <Newsletter/>  
         
         
         
