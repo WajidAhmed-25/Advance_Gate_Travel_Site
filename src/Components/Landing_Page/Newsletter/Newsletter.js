@@ -3,7 +3,7 @@ export default function Newsletter() {
         <>
 
     
-    <div class="bg-blue-800">
+    <div class="bg-blue-900">
     <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:py-4 lg:px-8">
         <div class="px-6 py-6 md:px-12 lg:flex lg:items-center lg:px-16">
             <div class="lg:flex-1 xl:w-0">

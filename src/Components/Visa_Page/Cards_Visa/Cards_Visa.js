@@ -17,7 +17,7 @@ export default function Cards_Visa() {
 </div>
     
     
-<div className='mt-16 mb-32 '>
+<div className='mt-16 mb-32 cursor-pointer '>
 
 
 <div class="container2 gap-24">

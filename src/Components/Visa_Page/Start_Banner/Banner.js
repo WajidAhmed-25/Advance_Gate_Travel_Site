@@ -186,7 +186,7 @@ export default function My_Banner() {
         <div className="absolute inset-0 bg-white opacity-60"></div>
         <div className="absolute top-0 left-0 w-full">
           <div className="container flex items-center justify-center px-4 py-3 mx-auto">
-            <nav className="pt-4">
+            {/* <nav className="pt-4">
               <ul className="flex flex-wrap justify-center space-x-0 md:space-x-12">
                 
 
@@ -235,7 +235,59 @@ export default function My_Banner() {
 
                 
               </ul>
-            </nav>
+            </nav> */}
+            <nav className='pt-6 '>
+      <ul className="flex flex-wrap justify-center space-x-0 md:space-x-20">
+        
+      <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
+  <a
+    href="/"
+    className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"
+    style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
+ >
+    <span className="text-xl font-semibold text-black hover:text-white"> Home</span>
+  </a>
+</li>
+  <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
+    <a
+    href="/visa"
+    className="relative hover:scale-125 transition-all duration-300 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-blue-600 before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-blue-600 after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"
+    style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
+  >
+    <span className="text-xl font-semibold text-black hover:text-white">Visa Portal</span>
+  </a>
+  </li>
+  <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
+    <a href="/visa_application" className="relative hover:scale-125 transition-all duration-300 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-blue-600 before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-blue-600 after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}>
+      <span className="text-xl font-semibold text-black hover:text-white">Visa Application</span>
+    </a>
+  </li>
+  <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
+    <a href="#" className="relative hover:scale-125 transition-all duration-300 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-blue-600 before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-blue-600 after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"   style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}>
+      <span className="text-xl font-semibold text-black hover:text-white">Regular Flights</span>
+    </a>
+  </li>
+  <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
+    <a href="#" className="relative hover:scale-125 transition-all duration-300 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-blue-600 before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-blue-600 after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"   style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}>
+      <span className="text-xl font-semibold text-black hover:text-white">News</span>
+    </a>
+  </li>
+  <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
+    <a href="#" className="relative hover:scale-125 transition-all duration-300 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-blue-600 before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-blue-600 after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"   style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}>
+      <span className="text-xl font-semibold text-black hover:text-white">Blog</span>
+    </a>
+  </li>
+  <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
+ 
+  <a href="#" className="relative hover:scale-125 transition-all duration-300 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-blue-600 before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-blue-600 after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"
+    style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
+ >
+    <span className="text-xl font-semibold text-black hover:text-white">Destination</span>
+  </a>
+</li>
+
+</ul>
+    </nav>
           </div>
         </div>
         <div className="relative z-10 lg:-mt-32 text-center text-white w-[80%] max-md:mt-40 max-md:mb-4 max-md:w-[60%]">

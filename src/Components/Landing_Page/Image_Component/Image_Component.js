@@ -8,11 +8,11 @@ import p5 from './w5.jpg'
 
 export default function Image_Component(){
     const destinations = [
-        { name: "Lahore", image: p1, flag: "🇵🇰" },
-        { name: "Islamabad", image: p2, flag: "🇵🇰" },
-        { name: "Dubai", image:p3, flag: "🇦🇪" },
-        { name: "Karachi", image: p4, flag: "🇵🇰" },
-        { name: "Makkah", image: p5, flag: "🇸🇦" },
+        { name: "Toronto", image: p1, flag: "🇵🇰" },
+        { name: "UK", image: p2, flag: "🇵🇰" },
+        { name: "Australia", image:p3, flag: "🇦🇪" },
+        { name: "Venice", image: p4, flag: "🇵🇰" },
+        { name: "Rome", image: p5, flag: "🇸🇦" },
       ];
       const DestinationCard = ({ name, country, image }) => (
         <div
@@ -20,7 +20,7 @@ export default function Image_Component(){
           style={{ backgroundImage: `url(${image})` }}
         >
           <div className="absolute top-0 left-0 p-2 text-white bg-black bg-opacity-50 rounded-tl-lg rounded-br-lg">
-            {name} <span className="ml-2">{country}</span>
+          <span className='text-xl'>{name} </span>  <span className="ml-2">{country}</span>
           </div>
         </div>
       );

@@ -21,101 +21,101 @@ Travel Destinations
 <div class="p-2 sm:w-1/2  mt-4 w-full ">
 
 
-<div class="bg-gray-100 rounded flex p-6 h-full items-center">
+<div class="bg-gray-100 border-blue-900/40 border-2 rounded flex p-4 h-full items-center">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
     class="text-blue-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
     <path d="M22 4L12 14.01l-3-3"></path>
 </svg>
-<span class="font-medium">Switzerland</span>
+<span class="font-medium text-xl">Switzerland</span>
 </div>
 </div>
 
 
 
 <div class="p-2 sm:w-1/2 w-full mt-4">
-<div class="bg-gray-100 rounded flex p-4 h-full items-center">
+<div class="bg-gray-100 border-blue-900/40 border-2 rounded flex p-4 h-full items-center">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
     class="text-blue-800  w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
     <path d="M22 4L12 14.01l-3-3"></path>
 </svg>
-<span class="font-medium">Turkey</span>
+<span class="font-medium text-xl">Turkey</span>
 </div>
 </div>
 
 
 
 <div class="p-2 sm:w-1/2 w-full mt-4">
-<div class="bg-gray-100 rounded flex p-6 h-full items-center">
+<div class="bg-gray-100 border-blue-900/40 border-2 rounded flex p-4 h-full items-center">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
     class="text-blue-800  w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
     <path d="M22 4L12 14.01l-3-3"></path>
 </svg>
-<span class="font-medium">UK</span>
+<span class="font-medium text-xl">UK</span>
 </div>
 </div>
 
 
 <div class="p-2 sm:w-1/2 w-full mt-4">
-<div class="bg-gray-100 rounded flex p-4 h-full items-center">
+<div class="bg-gray-100 border-blue-900/40 border-2 rounded flex p-4 h-full items-center">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
     class="text-blue-800  w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
     <path d="M22 4L12 14.01l-3-3"></path>
 </svg>
-<span class="font-medium">Finland</span>
+<span class="font-medium text-xl">Finland</span>
 </div>
 </div>
 
 
 <div class="p-2 sm:w-1/2 w-full mt-4">
-<div class="bg-gray-100 rounded flex p-6 h-full items-center">
+<div class="bg-gray-100 border-blue-900/40 border-2 rounded flex p-4 h-full items-center">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
     class="text-blue-800  w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
     <path d="M22 4L12 14.01l-3-3"></path>
 </svg>
-<span class="font-medium">Europe</span>
+<span class="font-medium text-xl">Europe</span>
 </div>
 </div>
 
 
 
 <div class="p-2 sm:w-1/2 w-full mt-4">
-<div class="bg-gray-100 rounded flex p-4 h-full items-center">
+<div class="bg-gray-100 border-blue-900/40 border-2 rounded flex p-4 h-full items-center">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
     class="text-blue-800  w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
     <path d="M22 4L12 14.01l-3-3"></path>
 </svg>
-<span class="font-medium">North America</span>
+<span class="font-medium text-xl">North America</span>
 </div>
 </div>
 
 
 <div class="p-2 sm:w-1/2 w-full mt-4">
-<div class="bg-gray-100 rounded flex p-6 h-full items-center">
+<div class="bg-gray-100 border-blue-900/40 border-2 rounded flex p-4 h-full items-center">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
     class="text-blue-800  w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
     <path d="M22 4L12 14.01l-3-3"></path>
 </svg>
-<span class="font-medium">America</span>
+<span class="font-medium text-xl">America</span>
 </div>
 </div>
 
 
 
 <div class="p-2 sm:w-1/2 w-full mt-4">
-<div class="bg-gray-100 rounded flex p-4 h-full items-center">
+<div class="bg-gray-100 border-blue-900/40 border-2 rounded flex p-4 h-full items-center">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
     class="text-blue-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
     <path d="M22 4L12 14.01l-3-3"></path>
 </svg>
-<span class="font-medium">Australia</span>
+<span class="font-medium text-xl">Australia</span>
 </div>
 </div>
 </div>

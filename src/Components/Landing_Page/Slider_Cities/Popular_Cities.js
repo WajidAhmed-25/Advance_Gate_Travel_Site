@@ -13,50 +13,6 @@ const data = [
 ];
 const PopularSelections = () => {
   return (
-//   <div className="w-full h-[550px] mt-32 ">
-//   <h2 className="pb-2 mt-12 text-4xl font-bold text-center">Popular Selections</h2>
-//   <div class="w-[300px] h-1 mx-auto mt-2 mb-4 bg-blue-800"></div>
-//   <p className="text-lg text-center text-gray-600 ">Explore the Best, Experience the Extraordinary!</p>
-//   <Swiper
-//     navigation
-//     modules={[Navigation, Autoplay]}
-//     spaceBetween={2}
-//     slidesPerView={3}
-//     loop={true}
-//     autoplay={{
-//       delay: 3000,
-//       disableOnInteraction: false,
-//     }}
-//     className="w-full h-[65vh] mt-0"
-//     style={{ padding: '0 20px' }} 
-//   >
-// {data.map((item, index) => (
-//   <SwiperSlide key={index} className="flex justify-center p-4">
-//     <div className="relative flex items-center justify-center w-full h-full">
-//       <img
-//         src={item.image}
-//         alt={item.title}
-//         className="object-cover w-[90%] h-[50%] rounded-lg transition-transform duration-300 ease-in-out hover:scale-125 cursor-pointer border-black/40 border-2"
-//       />
-//       <div className="absolute w-full p-4 text-center text-white bottom-[25%]">
-   
-//       <div className="p-2 text-xl font-bold text-white bg-blue-800 rounded-md shadow-lg cursor-pointer hover:scale-125 ">
-//               {item.title}
-//             </div>
-         
-//       </div>
-//     </div>
-//   </SwiperSlide>
-// ))}
-//   </Swiper>
-// </div>
-
-
-
-
-
-
-
 
 <div className="w-full h-[550px] mt-24 ">
 <h2 className="pb-2 mt-12 text-4xl font-bold text-center">Popular Selections</h2>
@@ -65,13 +21,21 @@ const PopularSelections = () => {
 <Swiper
   navigation
   modules={[Navigation, Autoplay]}
-  spaceBetween={12} // Reduced the gap between slides
+  spaceBetween={12} 
   slidesPerView={3}
   loop={true}
   autoplay={{
     delay: 3000,
     disableOnInteraction: false,
   }}
+
+  pagination={{
+    clickable: true,
+   
+ }}
+
+
+
   className="w-full h-[70vh]  "
   style={{ padding: '0 15px' }} 
 >
