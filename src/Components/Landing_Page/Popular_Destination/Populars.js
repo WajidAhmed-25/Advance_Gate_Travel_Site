@@ -25,7 +25,9 @@ function Populars() {
 <FAQs/> */}
 
 <Travel_Destinations/>
+<div className="pt-8 pb-6 bg-white">
 <Discount_Banner/>
+</div>
 <Services_Corner/>
 <FAQs/>
     

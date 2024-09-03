@@ -23,7 +23,7 @@ function App() {
 
 
 <Router>
-  <My_Header/>
+  <My_Header/> 
       <Routes>
         <Route path="/" element={ <My_HomePage/>} />
         <Route path="/visa" element={ <Visa/>} />

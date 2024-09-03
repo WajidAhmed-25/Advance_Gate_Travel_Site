@@ -24,19 +24,11 @@ export default function Visa_Application_Banner(){
 
 
 <div className="container flex items-center justify-center px-4 py-3 mx-auto">
-<nav className='pt-6 '>
+{/* <nav className='pt-6 '>
       <ul className="flex flex-wrap justify-center space-x-0 md:space-x-12">
 
 
 
-{/* <li className="px-2 mb-2 md:px-0">
-  <a
-    href="/"
-    className="relative transition-all duration-300 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"
-  >
-    <span className="text-xl text-white transition-all duration-300 hover:scale-125 "> Home</span>
-  </a>
-</li> */}
 
 <li className="px-2 mb-2 md:px-0">
   <a
@@ -88,7 +80,7 @@ export default function Visa_Application_Banner(){
     </a>
   </li>
 </ul>
-    </nav>
+    </nav> */}
   </div>
 
 <div className="relative flex flex-col items-center justify-between h-auto p-4 text-white pt-28 lg:flex-row">

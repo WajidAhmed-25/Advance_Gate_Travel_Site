@@ -1,96 +1,22 @@
 import './hex.css';
 
-// export default function Hex_Cards(){
-
-//     const images = [
- 
-//         'https://picsum.photos/id/1040/300/300',
-//         '',
-//         'https://picsum.photos/id/136/300/300',
-//         'https://picsum.photos/id/1039/300/300',
-//         'https://picsum.photos/id/110/300/300',
-//         'https://picsum.photos/id/1047/300/300',
-//         'https://picsum.photos/id/1057/300/300',
-//         'https://picsum.photos/id/1040/300/300',
-//         'https://picsum.photos/id/106/300/300',
-//         'https://picsum.photos/id/136/300/300',
-//         'https://picsum.photos/id/1039/300/300',
-//         'https://picsum.photos/id/110/300/300',
-//         'https://picsum.photos/id/1047/300/300',
-//         'https://picsum.photos/id/1057/300/300',
-//         'https://picsum.photos/id/1057/300/300',
-//         'https://picsum.photos/id/1057/300/300',
-//         'https://picsum.photos/id/1057/300/300',
-//       ];
-
-
-
-
-//     return (
-//         <div className="flex flex-wrap justify-center mb-64">
-//             <div className="hex-grid">
-//                 <div className="hex-row">
-//                     {images.slice(0, 4).map((image, index) => (
-//                         <div key={index} className="hex">
-//                             <div className="hex-in">
-                                
-                               
-// <div
-//     className="relative transition duration-300 ease-in-out cursor-pointer hex-bg grayscale hover:grayscale-0"
-//     style={{ backgroundImage: `url(${image})` }}
-// >
-//     <div className="absolute inset-0 flex items-center justify-center text-2xl font-semibold text-white underline transition duration-300 ease-in-out opacity-0 hover:opacity-100">
-//         Australia
-//     </div>
-// </div>
-
-
-//                             </div>
-//                         </div>
-//                     ))}
-//                 </div>
-//                 <div className="hex-row">
-//                     {images.slice(4, 9).map((image, index) => (
-//                         <div key={index} className="hex">
-//                             <div className="hex-in">
-//                             <div
-//     className="relative transition duration-300 ease-in-out cursor-pointer hex-bg grayscale hover:grayscale-0"
-//     style={{ backgroundImage: `url(${image})` }}
-// >
-//     <div className="absolute inset-0 flex items-center justify-center text-2xl font-semibold text-white underline transition duration-300 ease-in-out opacity-0 hover:opacity-100">
-//         Australia
-//     </div>
-// </div>
-
-//                             </div>
-//                         </div>
-//                     ))}
-//                 </div>
-//                 <div className="hex-row">
-//                     {images.slice(9, 13).map((image, index) => (
-//                         <div key={index} className="hex">
-//                             <div className="hex-in">
-//                             <div
-//     className="relative transition duration-300 ease-in-out cursor-pointer hex-bg grayscale hover:grayscale-0"
-//     style={{ backgroundImage: `url(${image})` }}
-// >
-//     <div className="absolute inset-0 flex items-center justify-center text-2xl font-semibold text-white underline transition duration-300 ease-in-out opacity-0 hover:opacity-100">
-//         Australia
-//     </div>
-// </div>
-
-//                             </div>
-//                         </div>
-//                     ))}
-//                 </div>
-//             </div>
-//         </div>
-//     );
-
-
-// }
-
-
+import v1 from './brazil.jpg'
+import v2 from './canada.jpg'
+import v3 from  './denmark.jpg'
+import v4 from  './Egypt.jpg'
+import v5 from  './France.jpg' 
+import v6 from  './Germany.jpg'
+import v7 from  './India.jpg'
+import v8 from  './Japan.jpg'
+import v9 from  './Kenya.jpg'
+import v10 from  './Mexico.jpg'
+import v11 from  './Norway.jpg'
+import v12 from  './Russia.jpg'
+import v13 from  './spain.jpg'
+import v14 from  './Turkey.jpg'
+import v15 from  './UK.jpg'
+import v16 from  './US.jpg'
+import v17 from  './sydney.jpg'
 
 
 
@@ -98,23 +24,24 @@ import './hex.css';
 
 export default function Hex_Cards() {
     const cards = [
-        { image: 'https://tse2.mm.bing.net/th?id=OIP.SSlQmNy6Hp3dRwd3b15ASAAAAA&pid=Api&P=0&h=220', name: 'Australia' },
-        { image: 'https://tse1.mm.bing.net/th?id=OIP.yHMrNImXtiuCn7jod9cJjgHaFk&pid=Api&P=0&h=220', name: 'Brazil' },
-        { image: 'https://tse4.mm.bing.net/th?id=OIP.7ahTLhKHkeH-lKuQyynXzwHaEi&pid=Api&P=0&h=220', name: 'Canada' },
-        { image: 'https://tse4.mm.bing.net/th?id=OIP.IXeMFlE1tMbqJeYPLgmdVQHaFj&pid=Api&P=0&h=220', name: 'Denmark' },
-        { image: 'https://tse4.mm.bing.net/th?id=OIP.Aek8nylf3f_86XD0XoNVswHaE8&pid=Api&P=0&h=220', name: 'Egypt' },
-        { image: 'https://tse1.mm.bing.net/th?id=OIP.hGZpiUclt8coc2rTbexEOwHaFj&pid=Api&P=0&h=220', name: 'France' },
-        { image: 'https://tse4.mm.bing.net/th?id=OIP.S9T_bvJuZRdN_8-PQSsWogHaE7&pid=Api&P=0&h=220', name: 'Germany' },
-        { image: 'https://tse4.mm.bing.net/th?id=OIP.dOnPPG2QVHadeR55NQBf8gHaE6&pid=Api&P=0&h=220', name: 'India' },
-        { image: 'https://tse3.mm.bing.net/th?id=OIP.Gclw3e0lP15QOCHuJZv7OQHaE8&pid=Api&P=0&h=220', name: 'Japan' },
-        { image: 'https://tse1.mm.bing.net/th?id=OIP.tNTO8eQP7lL4O7GLVjy8ygHaFA&pid=Api&P=0&h=220', name: 'Kenya' },
-        { image: 'https://tse2.mm.bing.net/th?id=OIP.pk6AE2qkNoQTxz9eJkMK0QAAAA&pid=Api&P=0&h=220', name: 'Mexico' },
-        { image: 'https://tse4.mm.bing.net/th?id=OIP.JN4d63dWA94RyygFrvfh6AHaE7&pid=Api&P=0&h=220', name: 'Norway' },
-        { image: 'https://tse1.mm.bing.net/th?id=OIP.FREYiGr7b9xIugK_H3c91gHaFG&pid=Api&P=0&h=220', name: 'Russia' },
-        { image: 'https://tse3.mm.bing.net/th?id=OIP.dAwzhzqtbaSExZuea05SlQHaFS&pid=Api&P=0&h=220', name: 'Spain' },
-        { image: 'https://tse3.mm.bing.net/th?id=OIP.a1pWiKtZkzibHXbr50pXKgHaEx&pid=Api&P=0&h=220', name: 'Turkey' },
-        { image: 'https://tse2.mm.bing.net/th?id=OIP.aqXrnWXh3IZI7ode4D_p1QHaE7&pid=Api&P=0&h=220', name: 'United Kingdom' },
-        { image: 'https://tse2.mm.bing.net/th?id=OIP.XvLBG_j6JKVoq0fY_ONNvwAAAA&pid=Api&P=0&h=220', name: 'United States' },
+   
+        { image:v1 , name: 'Brazil' },
+        { image:v2 , name: 'Canada' },
+        { image: v3, name: 'Denmark' },
+        { image: v4, name: 'Egypt' },
+        { image:v5 , name: 'France' },
+        { image: v6, name: 'Germany' },
+        { image: v7, name: 'India' },
+        { image: v8 , name: 'Japan' },
+        { image: v9, name: 'Kenya' },
+        { image: v10, name: 'Mexico' },
+        { image: v11 , name: 'Norway' },
+        { image: v12, name: 'Russia' },
+        { image: v13, name: 'Spain' },
+        { image: v14, name: 'Turkey' },
+        { image: v15 , name: 'United Kingdom' },
+        { image: v16, name: 'United States' },
+        { image:v17, name: 'Australia' },
     ];
 
     return (
@@ -140,8 +67,8 @@ export default function Hex_Cards() {
                                     className="relative transition duration-300 ease-in-out cursor-pointer hex-bg brightness-[70%] hover:brightness-100"
                                     style={{ backgroundImage: `url(${card.image})` }}
                                 >
-                                    <div className="absolute inset-0 flex items-center justify-center text-2xl font-semibold text-white underline transition duration-300 ease-in-out opacity-0 hover:opacity-100">
-                                        {card.name}
+                                    <div className="absolute inset-0 flex items-center justify-center text-3xl font-semibold text-white transition duration-100 ease-in-out opacity-0 hover:opacity-100"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+                                        {card.name}  
                                     </div>
                                 </div>
                             </div>
@@ -156,7 +83,7 @@ export default function Hex_Cards() {
                                     className="relative transition duration-300 ease-in-out cursor-pointer hex-bg brightness-[70%] hover:brightness-100"
                                     style={{ backgroundImage: `url(${card.image})` }}
                                 >
-                                    <div className="absolute inset-0 flex items-center justify-center text-2xl font-semibold text-white underline transition duration-300 ease-in-out opacity-0 hover:opacity-100">
+                                    <div className="absolute inset-0 flex items-center justify-center text-3xl font-semibold text-white transition duration-300 ease-in-out opacity-0 hover:opacity-100" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
                                         {card.name}
                                     </div>
                                 </div>
@@ -172,7 +99,7 @@ export default function Hex_Cards() {
                                     className="relative transition duration-300 ease-in-out cursor-pointer hex-bg brightness-[70%] hover:brightness-100"
                                     style={{ backgroundImage: `url(${card.image})` }}
                                 >
-                                    <div className="absolute inset-0 flex items-center justify-center text-2xl font-semibold text-white underline transition duration-300 ease-in-out opacity-0 hover:opacity-100">
+                                    <div className="absolute inset-0 flex items-center justify-center text-3xl font-semibold text-white transition duration-300 ease-in-out opacity-0 hover:opacity-100"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
                                         {card.name}
                                     </div>
                                 </div>

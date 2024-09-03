@@ -29,6 +29,11 @@
     margin-left: 0; 
 }
 
+
+
+
+
+
 .hex:before {
     content: "";
     position: absolute;
@@ -56,6 +61,16 @@
     background-position: center;
     clip-path: inherit;
 }
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 609px) {
     .hex {

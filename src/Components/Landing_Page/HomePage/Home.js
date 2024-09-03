@@ -3,6 +3,7 @@ import React from 'react';
 import './Home.css'
 import { useState } from 'react';
 import DatePicker from 'react-datepicker';
+import logoos from './fdf.png'
 import 'react-datepicker/dist/react-datepicker.css';
 
 
@@ -31,149 +32,54 @@ const My_Home = () => {
 
 
 
+{/* <div className='flex items-center justify-between px-8 bg-blue-900 border-b-4 border-white/80'>
 
-{/* <nav className="w-full px-4 py-2 pt-4 bg-transparent xxs:pt-3 xs:pt-4 sm:pt-6 md:pt-8 lg:pt-10 xxs:py-2 sm:py-3 md:py-4 lg:py-5 xxs:px-2 sm:px-6">
-  <ul className="flex flex-wrap justify-center text-xs font-medium xxs:space-x-1 xs:space-x-2 sm:space-x-4 md:space-x-6 lg:space-x-8 xl:space-x-10 xxs:text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-lg">
-    <li className="pb-1">
-    <a
-        href="#"
-        className="text-xl text-white transition-all duration-200 hover:border-b-2 hover:scale-125 hover:border-white hover:text-blue-600 "
-        style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
-    >
-        HOME
-      </a>
-    </li>
-    <li className="pb-1">
-      <a
-        href="/visa"
-        className="text-xl text-white transition-all duration-200 ext-white hover:border-b-2 hover:text-blue-600 hover:scale-125 hover:border-white"
-        style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
-    >
-        Visa Portal
-      </a>
-    </li>
-    <li className="pb-1">
-    <a
-        href="/visa_application"
-        className="text-xl text-white transition-all duration-200 hover:border-b-2 hover:scale-125 hover:border-white hover:text-blue-600"
-        style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
-    >
-        Visa Application
-      </a>
-    </li>
-    <li className="pb-1">
-    <a
-        href="#"
-        className="text-xl text-white transition-all duration-200 hover:border-b-2 hover:scale-125 hover:border-white hover:text-blue-600"
-        style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
-    >
-        REGULAR FLIGHTS
-      </a>
-    </li>
-    <li className="pb-1">
-    <a
-        href="#"
-        className="text-xl text-white transition-all duration-200 hover:border-b-2 hover:scale-125 hover:border-white hover:text-blue-600"
-        style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
-    >
-        NEWS
-      </a>
-    </li>
-    <li className="pb-1">
-    <a
-        href="#"
-        className="text-xl text-white transition-all duration-200 hover:border-b-2 hover:scale-125 hover:border-white hover:text-blue-600"
-        style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
-    >
-        BLOG
-      </a>
-    </li>
-    <li className="pb-1">
-    <a
-        href="#"
-        className="text-xl text-white transition-all duration-200 hover:border-b-2 hover:scale-125 hover:border-white hover:text-blue-600"
-        style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
-    >
-        CONTACT US
-      </a>
-    </li>
-    <li className="pb-1">
-    <a
-        href="#"
-        className="text-xl text-white transition-all duration-200 hover:border-b-2 hover:scale-125 hover:border-white hover:text-blue-600"
-        style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
-    >
-        DESTINATION
-      </a>
-    </li>
+  <div className='flex-shrink-0 mt-1 mb-2'>
+    <img src={logoos} alt="Logo" className="w-32 h-28 " />
+  </div>
+
+
+  
+<nav className='pt-6 pb-2'>
+  <ul className="flex flex-wrap justify-center space-x-0 sm:space-x-2 md:space-x-4 lg:space-x-8 xl:space-x-6">
+    {[
+      { href: "/", text: "Home" },
+      { href: "/visa", text: "Visa Portal" },
+      { href: "/visa_application", text: "Visa Application" },
+      { href: "#", text: "Regular Flights" },
+      { href: "#", text: "News" },
+      { href: "#", text: "Blog" },
+      { href: "#", text: "Contact Us" },
+      { href: "#", text: "Destination" }
+    ].map((item, index) => (
+      <li key={index} className="px-12 mb-4 transition-all duration-300 sm:px-2 hover:scale-125">
+        <a
+          href={item.href}
+          className="relative hover:scale-125 transition-all duration-300 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"
+          style={{ textShadow: '2px 2px 2px rgba(0, 0, 0, 0.4)' }}
+        >
+          <span className="text-sm font-semibold text-white sm:text-base md:text-lg lg:text-xl hover:text-white">
+            {item.text}
+          </span>
+        </a>
+      </li>
+    ))}
   </ul>
-</nav>  */}
+</nav>
 
-<nav className='pt-6 '>
-      <ul className="flex flex-wrap justify-center space-x-0 md:space-x-12">
-        
-      <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
-  <a
-    href="/"
-    className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"
-    style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
- >
-    <span className="text-xl font-semibold text-white hover:text-blue-600"> Home</span>
-  </a>
-</li>
-  <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
-    <a
-    href="/visa"
-    className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"
-    style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
-  >
-    <span className="text-xl font-semibold text-white hover:text-blue-600">Visa Portal</span>
-  </a>
-  </li>
-  <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
-    <a href="/visa_application" className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}>
-      <span className="text-xl font-semibold text-white hover:text-blue-600">Visa Application</span>
-    </a>
-  </li>
-  <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
-    <a href="#" className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"   style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}>
-      <span className="text-xl font-semibold text-white hover:text-blue-600">Regular Flights</span>
-    </a>
-  </li>
-  <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
-    <a href="#" className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"   style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}>
-      <span className="text-xl font-semibold text-white hover:text-blue-600">News</span>
-    </a>
-  </li>
-  <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
-    <a href="#" className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"   style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}>
-      <span className="text-xl font-semibold text-white hover:text-blue-600">Blog</span>
-    </a>
-  </li>
-  <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
-    <a href="#" className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"   style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}>
-      <span className="text-xl font-semibold text-white hover:text-blue-600">Contact Us</span>
-    </a>
-  </li>
 
-  <li className="px-2 mb-4 transition-all duration-300 md:px-0 hover:scale-125">
-  <a
-    href="#"
-    className="relative hover:scale-125 transition-all duration-300 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"
-    style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)' }}
- >
-    <span className="text-xl font-semibold text-white hover:text-blue-600">Destination</span>
-  </a>
-</li>
 
-</ul>
-    </nav>
 
+
+
+
+    
+</div> */}
 
 
         <main className="flex-grow bg-transparent bg-opacity-50 bg-center bg-cover ">
          
-          <div className="container px-4 py-16 mx-auto mt-8 xxs:mt-2 md:-mt-8 sm:mt-20 xs:mt-12 max-xxs:mt-4">
+          <div className="container px-4 py-16 mx-auto mt-8 xxs:mt-2 md:-mt-2 sm:mt-20 xs:mt-12 max-xxs:mt-4">
             
             <div className="px-4 mb-8 text-center xxs:mb-4 ">
               
@@ -199,30 +105,33 @@ style={{ textShadow: ' 3px 3px 3px rgba(249 241 241 / 82%)' }}
   </p>
 </div>
             <div className="max-w-4xl mx-auto bg-transparent">
-            <div className="flex flex-wrap justify-center py-3 mt-6 mb-2 space-x-3 sm:space-x-6 md:space-x-8 lg:space-x-12">
-  <button className="font-semibold text-white text-[11px] sm:text-[12px] md:text-[13px] lg:text-[15px] hover:text-blue-600 transition-all duration-200 hover:scale-125"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+
+         
+         <div className="flex flex-wrap justify-center py-3 mt-6 mb-2 space-x-3 sm:space-x-6 md:space-x-8 lg:space-x-12">
+  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Hotel
   </button>
-  <button className="font-semibold text-white text-[11px] sm:text-[12px] md:text-[13px] lg:text-[15px] hover:text-blue-600 transition-all duration-200 hover:scale-125"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Tour
   </button>
-  <button className="font-semibold text-white text-[11px] sm:text-[12px] md:text-[13px] lg:text-[15px] hover:text-blue-600 transition-all duration-200 hover:scale-125"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Activity
   </button>
-  <button className="font-semibold text-white text-[11px] sm:text-[12px] md:text-[13px] lg:text-[15px] hover:text-blue-600 transition-all duration-200 hover:scale-125"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Holiday Rentals
   </button>
-  <button className="font-semibold text-white text-[11px] sm:text-[12px] md:text-[13px] lg:text-[15px] hover:text-blue-600 transition-all duration-200 hover:scale-125"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Car
   </button>
-  <button className="font-semibold text-white text-[11px] sm:text-[12px] md:text-[13px] lg:text-[15px] hover:text-blue-600 transition-all duration-200 hover:scale-125"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Cruise
   </button>
-  <button className="font-semibold text-white text-[11px] sm:text-[12px] md:text-[13px] lg:text-[15px] hover:text-blue-600 transition-all duration-200 hover:scale-125"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Flights
   </button>
 </div>
-         
+
+
 
 
          

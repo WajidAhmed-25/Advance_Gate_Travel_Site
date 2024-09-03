@@ -16,7 +16,7 @@ export default function Image_Component(){
       ];
       const DestinationCard = ({ name, country, image }) => (
         <div
-          className="relative z-10 w-full h-64 transition-all duration-300 bg-center bg-cover rounded-lg shadow-lg cursor-pointer hover:scale-110"
+          className="relative z-10 w-full transition-all duration-300 bg-center bg-cover rounded-lg shadow-lg cursor-pointer h-96 hover:scale-110"
           style={{ backgroundImage: `url(${image})` }}
         >
           <div className="absolute top-0 left-0 p-2 text-white bg-black bg-opacity-50 rounded-tl-lg rounded-br-lg">

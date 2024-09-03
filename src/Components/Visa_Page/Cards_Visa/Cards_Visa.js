@@ -28,12 +28,12 @@ export default function Cards_Visa() {
     </div>
     <div class="content">
       <div>
-        <h2 className='font-semibold tracking-wide underline underline-offset-8'>Fast Passport Renewal</h2>
-        <p>Need your passport quickly? we can renew your US passport in a day.  
+        <h2 className='font-semibold tracking-wide underline underline-offset-8'  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Fast Passport Renewal</h2>
+        <p  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Need your passport quickly? we can renew your US passport in a day.   
         </p>
         <div class="flex gap-4 flex-wrap justify-center">
  
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border-b-4 border-blue-700 rounded transform transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-110">Explore</button>
+    <button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border-b-4 border-blue-700 rounded transform transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-110">Explore</button>
 </div>
       </div>
     </div>
@@ -44,14 +44,14 @@ export default function Cards_Visa() {
     </div>
     <div class="content">
       <div>
-        <h2 className='font-semibold tracking-wide underline underline-offset-8' >Visa Check Quick</h2>
-        <p>US Passport Holders: See if your destination requires a visa.
+        <h2 className='font-semibold tracking-wide underline underline-offset-8'  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Visa Check Quick</h2>
+        <p  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>US Passport Holders: See if your destination requires a visa.
         </p>
 
 
         <div class="flex gap-4 flex-wrap justify-center">
  
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border-b-4 border-blue-700 rounded transform transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-110">Explore</button>
+    <button   class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border-b-4 border-blue-700 rounded transform transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-110">Explore</button>
 </div>
         
       </div>
@@ -63,13 +63,13 @@ export default function Cards_Visa() {
     </div>
     <div class="content">
       <div>
-        <h2 className='font-semibold tracking-wide underline underline-offset-8'>Fast Passport Renewal</h2>
-        <p>Add the travel visa widget to your website to  make it easy for your customers to find out if they need a visa for an upcoming trip.
+        <h2 className='font-semibold tracking-wide underline underline-offset-8'  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Fast Passport Renewal</h2>
+        <p  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Add the travel visa widget to your website to  make it easy for your customers to find out if they need a visa for an upcoming trip.
         </p>
 
         <div class="flex gap-4 flex-wrap justify-center">
  
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border-b-4 border-blue-700 rounded transform transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-110">Explore</button>
+    <button   class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border-b-4 border-blue-700 rounded transform transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-110">Explore</button>
 </div>
 
         

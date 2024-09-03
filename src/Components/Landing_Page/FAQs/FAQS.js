@@ -139,7 +139,7 @@ export default function FAQs() {
                                     onClick={() => handleToggle(index)}
                                     className="flex items-center justify-between w-full px-4 py-5 sm:p-6"
                                 >
-                                    <span className="flex text-lg font-semibold text-black">{item.question}</span>
+                                    <span className="flex text-lg font-semibold text-blue-900">{item.question}</span>
                                     <svg
                                         id={`arrow${index + 1}`}
                                         xmlns="http://www.w3.org/2000/svg"
