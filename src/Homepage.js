@@ -37,14 +37,6 @@ return(
 
  <News/>
 
- {/* <Travel_Destinations/>
-
-<Discount_Banner/>
-
-<Services_Corner/>
-
-<FAQs/> */}
-
  <Populars/> 
  
  <br/>
