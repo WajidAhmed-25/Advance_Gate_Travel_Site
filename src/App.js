@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Visa from './Visa';
 import Visa_Application from './Visa_Application';
 import Main_Slider from './Components/Landing_Page/Main_Slider/Main_Slider';
+import Travel_Reg_Form from './Components/Travel_Form/Travel_Reg_Form';
 
 
 
@@ -28,6 +29,8 @@ function App() {
         <Route path="/" element={ <My_HomePage/>} />
         <Route path="/visa" element={ <Visa/>} />
         <Route path="/visa_application" element={ <Visa_Application/>} />
+        <Route path="/application_form" element={<Travel_Reg_Form/>}/>
+        
       </Routes>
       <Footer/>
     </Router>
