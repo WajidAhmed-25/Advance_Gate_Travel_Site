@@ -1,4 +1,4 @@
-
+import { add } from 'date-fns';
 import React, { useState } from 'react';
 const PersonalInformation = () => {
   const [personalInfo, setPersonalInfo] = useState({
@@ -68,7 +68,6 @@ const MaritalStatus = () => {
     childrenDetails: [{ name: '', dob: '', nationality: '' }]
   });
   const [hasChildren, setHasChildren] = useState(null);
-
   const handleChildrenDetailsChange = (index, field, value) => {
     const updatedChildrenDetails = [...maritalStatus.childrenDetails];
     updatedChildrenDetails[index] = {
@@ -77,13 +76,11 @@ const MaritalStatus = () => {
     };
     setMaritalStatus({ ...maritalStatus, childrenDetails: updatedChildrenDetails });
   };
-
   const handleChildrenSelect = (e) => {
     const numberOfChildren = parseInt(e.target.value);
     const updatedChildrenDetails = Array(numberOfChildren).fill({ name: '', dob: '', nationality: '' });
     setMaritalStatus({ ...maritalStatus, numberOfChildren, childrenDetails: updatedChildrenDetails });
   };
-
   return (
     <div>
       <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Marital Status</h3>
@@ -100,6 +97,7 @@ const MaritalStatus = () => {
         <input
           type="text"
           placeholder="Spouse's Full Name"
+          // className= "w-full p-2 border border-gray-300 rounded input-field"
           className="w-full p-2 border border-gray-300 rounded input-field"
           value={maritalStatus.spouseName}
           onChange={(e) => setMaritalStatus({ ...maritalStatus, spouseName: e.target.value })}
@@ -108,6 +106,7 @@ const MaritalStatus = () => {
         <input
           type="date"
           placeholder="Spouse's Date of Birth"
+          // className= "w-full p-2 border border-gray-300 rounded input-field"
           className="w-full p-2 border border-gray-300 rounded input-field"
           value={maritalStatus.spouseDob}
           onChange={(e) => setMaritalStatus({ ...maritalStatus, spouseDob: e.target.value })}
@@ -116,6 +115,7 @@ const MaritalStatus = () => {
         <input
           type="text"
           placeholder="Spouse's Nationality"
+          // className= "w-full p-2 border border-gray-300 rounded input-field"
           className="w-full p-2 border border-gray-300 rounded input-field"
           value={maritalStatus.spouseNationality}
           onChange={(e) => setMaritalStatus({ ...maritalStatus, spouseNationality: e.target.value })}
@@ -124,6 +124,7 @@ const MaritalStatus = () => {
         <input
           type="text"
           placeholder="Spouse's Highest Level of Education"
+          // className= "w-full p-2 border border-gray-300 rounded input-field"
           className="w-full p-2 border border-gray-300 rounded input-field"
           value={maritalStatus.Spouse_Highest_Level_of_Education}
           onChange={(e) => setMaritalStatus({ ...maritalStatus, Spouse_Highest_Level_of_Education: e.target.value })}
@@ -132,7 +133,6 @@ const MaritalStatus = () => {
         <label className="mt-6 font-medium text-blue-900">Do you have children?</label>
         <div className="flex gap-8 mt-2 mb-4">
           <button
-            type="button"
             className={`px-4 py-2 ${hasChildren === true ? 'bg-blue-800 text-white' : 'bg-gray-300'}`}
             onClick={() => {
               setHasChildren(true);
@@ -146,7 +146,6 @@ const MaritalStatus = () => {
             Yes
           </button>
           <button
-            type="button"
             className={`px-4 py-2 ${hasChildren === false ? 'bg-blue-800 text-white' : 'bg-gray-300'}`}
             onClick={() => setHasChildren(false)}
           >
@@ -160,6 +159,7 @@ const MaritalStatus = () => {
             <select
               value={maritalStatus.numberOfChildren}
               onChange={handleChildrenSelect}
+              // className="input-field "
               className="w-[13%] p-2 border text-center border-gray-300 rounded input-field ml-4"
             >
               {[...Array(10).keys()].map(i => (
@@ -208,9 +208,8 @@ const MaritalStatus = () => {
         )}
       </div>
     </div>
-  );
+  )
 }
-
 const Education = () => {
   const [education, setEducation] = useState({
     highestDegree: '',
@@ -376,11 +375,11 @@ const EmploymentFinance = () => {
         />
         <label className="mt-2 font-medium text-blue-900">Current Salary</label>
         <input
-          type="text"
+          type="number"
           placeholder="Current Salary"
           className="w-full p-2 border border-gray-300 rounded input-field"
-         value={employment.salary}
-         onChange={(e) => setEmployment({ ...employment, salary: e.target.value })}
+          value={employment.salary}
+          onChange={(e) => setEmployment({ ...employment, salary: e.target.value })}
         />
         <label className="mt-2 font-medium text-blue-900">Employment History (Past 5 years)</label>
         <input
@@ -392,7 +391,7 @@ const EmploymentFinance = () => {
         />
         <label className="mt-2 font-medium text-blue-900">Bank Statement (Last 6 Month)</label>
         <input
-          type="text"
+          type="number"
           placeholder="Bank Balance"
           className="w-full p-2 border border-gray-300 rounded input-field"
           value={employment.bankBalance}
@@ -400,10 +399,10 @@ const EmploymentFinance = () => {
         />
         <label className="mt-2 font-medium text-blue-900">Financial Status (Balance Available/Cash or how much you can show off)</label>
         <input
-          type="text"
+          type="number"
           placeholder="Bank Balance"
           className="w-full p-2 border border-gray-300 rounded input-field"
-          value={employment.financialStatus}
+          value={employment.bankBalance}
           onChange={(e) => setEmployment({ ...employment, financialStatus: e.target.value })}
         />
       </div>
@@ -470,7 +469,6 @@ const ImmigrationHistory = () => {
         </label>
         <div className="flex mt-2 space-x-4">
           <button
-                type="button"
             className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasPreviousVisas === 'yes'
               ? 'bg-blue-900 text-white'
               : 'bg-gray-200 text-blue-900'
@@ -480,7 +478,6 @@ const ImmigrationHistory = () => {
             Yes
           </button>
           <button
-                type="button"
             className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasPreviousVisas === 'no'
               ? 'bg-blue-900 text-white'
               : 'bg-gray-200 text-blue-900'
@@ -514,7 +511,6 @@ const ImmigrationHistory = () => {
         <label className="mt-4 mb-2 font-medium text-blue-900">Previous Visa Refusals:</label>
         <div className="flex mt-2 space-x-4">
           <button
-                type="button"
             className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasVisaRejections === 'yes'
               ? 'bg-blue-900 text-white'
               : 'bg-gray-200 text-blue-900'
@@ -524,7 +520,6 @@ const ImmigrationHistory = () => {
             Yes
           </button>
           <button
-                type="button"
             className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasVisaRejections === 'no'
               ? 'bg-blue-900 text-white'
               : 'bg-gray-200 text-blue-900'
@@ -582,7 +577,6 @@ const HealthSecurity = () => {
       <label className="mt-4 font-medium text-blue-900">Do you have any significant health issues?</label>
       <div className="flex mt-6 mb-6 space-x-6">
         <button
-              type="button"
           className={`px-4 py-2 font-medium rounded ${healthSecurity.hasHealthIssues === 'yes' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'
             }`}
           onClick={() => setHealthSecurity({ ...healthSecurity, hasHealthIssues: 'yes' })}
@@ -590,14 +584,12 @@ const HealthSecurity = () => {
           Yes
         </button>
         <button
-              type="button"
           className={`px-4 py-2 font-medium rounded ${healthSecurity.hasHealthIssues === 'no' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'
             }`}
           onClick={() => setHealthSecurity({ ...healthSecurity, hasHealthIssues: 'no' })}
         >
           No
         </button>
-        
       </div>
       {/* Conditional input for health issues */}
       {healthSecurity.hasHealthIssues === 'yes' && (
@@ -616,7 +608,6 @@ const HealthSecurity = () => {
       <label className="mt-4 font-medium text-blue-900">Do you have a criminal record?</label>
       <div className="flex mt-6 mb-6 space-x-6">
         <button
-          type="button"
           className={`px-4 py-2 font-medium rounded ${healthSecurity.hasCriminalRecord === 'yes' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'
             }`}
           onClick={() => setHealthSecurity({ ...healthSecurity, hasCriminalRecord: 'yes' })}
@@ -624,7 +615,6 @@ const HealthSecurity = () => {
           Yes
         </button>
         <button
-          type="button"
           className={`px-4 py-2 font-medium rounded ${healthSecurity.hasCriminalRecord === 'no' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'
             }`}
           onClick={() => setHealthSecurity({ ...healthSecurity, hasCriminalRecord: 'no' })}
@@ -662,7 +652,6 @@ const AdditionalInformation = () => {
         <label className="mt-2 font-medium text-blue-900">Canadian Contacts or References</label>
         <div className="flex mt-2 space-x-4">
           <button
-                type="button"
             className={`px-4 py-2 font-medium rounded ${additionalInfo.hasCanadianContacts === 'yes' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'
               }`}
             onClick={() => setAdditionalInfo({ ...additionalInfo, hasCanadianContacts: 'yes' })}
@@ -670,7 +659,6 @@ const AdditionalInformation = () => {
             Yes
           </button>
           <button
-                type="button"
             className={`px-4 py-2 font-medium rounded ${additionalInfo.hasCanadianContacts === 'no' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'
               }`}
             onClick={() => setAdditionalInfo({ ...additionalInfo, hasCanadianContacts: 'no' })}
@@ -693,7 +681,6 @@ const AdditionalInformation = () => {
         <label className="mt-2 font-medium text-blue-900">Accommodation in Canada</label>
         <div className="flex mt-2 space-x-4">
           <button
-                type="button"
             className={`px-4 py-2 font-medium rounded ${additionalInfo.hasAccommodation === 'yes' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'
               }`}
             onClick={() => setAdditionalInfo({ ...additionalInfo, hasAccommodation: 'yes' })}
@@ -701,7 +688,6 @@ const AdditionalInformation = () => {
             Yes
           </button>
           <button
-                type="button"
             className={`px-4 py-2 font-medium rounded ${additionalInfo.hasAccommodation === 'no' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'
               }`}
             onClick={() => setAdditionalInfo({ ...additionalInfo, hasAccommodation: 'no' })}
@@ -737,22 +723,10 @@ const AdditionalInformation = () => {
     </div>
   )
 }
-
-
-
-
 const Travel_Reg_Form = () => {
   const [step, setStep] = useState(1);
   const nextStep = () => setStep(step + 1);
   const prevStep = () => setStep(step - 1);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted!");
-    // You can add your form submission logic here, such as sending data to a server
-  };
-
   const renderStep = () => {
     switch (step) {
       case 1:
@@ -777,14 +751,13 @@ const Travel_Reg_Form = () => {
         return <PersonalInformation />;
     }
   };
-
   return (
     <>
       <div className='w-full mt-20 mb-4 text-center'>
-        <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">Application Form</h2>
+        <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl ">Application Form</h2>
       </div>
       <div className="container max-w-xl p-6 mx-auto mt-16 mb-24 bg-gray-100 rounded-lg shadow-md">
-        <form className="space-y-6" onSubmit={handleSubmit}>
+        <form className="space-y-6 "  >
           {renderStep()}
           <div className="flex justify-between mt-6">
             {step > 1 && (
@@ -818,75 +791,4 @@ const Travel_Reg_Form = () => {
     </>
   );
 };
-
 export default Travel_Reg_Form;
-
-// const Travel_Reg_Form = () => {
-//   const [step, setStep] = useState(1);
-//   const nextStep = () => setStep(step + 1);
-//   const prevStep = () => setStep(step - 1);
-//   const renderStep = () => {
-//     switch (step) {
-//       case 1:
-//         return <PersonalInformation />;
-//       case 2:
-//         return <MaritalStatus />;
-//       case 3:
-//         return <Education />;
-//       case 4:
-//         return <TravelInformation />;
-//       case 5:
-//         return <EmploymentFinance />;
-//       case 6:
-//         return <TiesToHomeCountry />;
-//       case 7:
-//         return <ImmigrationHistory />;
-//       case 8:
-//         return <HealthSecurity />;
-//       case 9:
-//         return <AdditionalInformation />;
-//       default:
-//         return <PersonalInformation />;
-//     }
-//   };
-//   return (
-//     <>
-//       <div className='w-full mt-20 mb-4 text-center'>
-//         <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl ">Application Form</h2>
-//       </div>
-//       <div className="container max-w-xl p-6 mx-auto mt-16 mb-24 bg-gray-100 rounded-lg shadow-md">
-//         <form className="space-y-6 "  >
-//           {renderStep()}
-//           <div className="flex justify-between mt-6">
-//             {step > 1 && (
-//               <button
-//                 type="button"
-//                 onClick={prevStep}
-//                 className="px-4 py-2 font-semibold text-blue-900 bg-gray-300 rounded hover:bg-gray-500 hover:text-white hover:text-semibold"
-//               >
-//                 Previous
-//               </button>
-//             )}
-//             {step < 9 ? (
-//               <button
-//                 type="button"
-//                 onClick={nextStep}
-//                 className="px-4 py-2 text-white bg-blue-900 rounded hover:bg-blue-700"
-//               >
-//                 Next
-//               </button>
-//             ) : (
-//               <button
-//                 type="submit"
-//                 className="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600"
-//               >
-//                 Submit
-//               </button>
-//             )}
-//           </div>
-//         </form>
-//       </div>
-//     </>
-//   );
-// };
-// export default Travel_Reg_Form;
