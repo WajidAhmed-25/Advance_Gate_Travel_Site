@@ -557,8 +557,9 @@ const ImmigrationHistory = () => {
     "Canada", "USA", "UK", "Australia", "Germany", "France", 
     "Italy", "Spain", "New Zealand", "Japan", "China", "India", 
     "Brazil", "South Africa", "Mexico", "Switzerland", "Sweden", 
-    "Netherlands", "Russia", "Singapore"
+    "Netherlands", "Russia", "Singapore", "Other"
   ];
+
   const [immigrationHistory, setImmigrationHistory] = useState({
     previousApplications: '',
     visaRejections: '',
@@ -568,8 +569,10 @@ const ImmigrationHistory = () => {
     hasVisaRejections: '',
     refusalCountry: '',
     refusalDate: '',
-    refusalReason: ''
+    refusalReason: '',
+    otherCountryName: '' // New state for custom country name input
   });
+
   return (
     <div>
       <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Immigration History</h3>
@@ -614,6 +617,21 @@ const ImmigrationHistory = () => {
                 <option key={country} value={country}>{country}</option>
               ))}
             </select>
+
+            {/* Show custom input field if "Other" is selected */}
+            {immigrationHistory.visaCountries === 'Other' && (
+              <>
+                <label className="mt-2 font-medium text-blue-900">Enter Country Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter Country Name"
+                  className="w-full p-2 border border-gray-300 rounded input-field"
+                  value={immigrationHistory.otherCountryName}
+                  onChange={(e) => setImmigrationHistory({ ...immigrationHistory, otherCountryName: e.target.value })}
+                />
+              </>
+            )}
+
             <label className="mt-2 font-medium text-blue-900">When (Date)</label>
             <input
               type="date"
@@ -623,6 +641,7 @@ const ImmigrationHistory = () => {
             />
           </>
         )}
+        
         {/* Previous Visa Refusals */}
         <label className="mt-4 mb-2 font-medium text-blue-900">Previous Visa Refusals:</label>
         <div className="flex mt-2 space-x-4">
@@ -647,6 +666,7 @@ const ImmigrationHistory = () => {
             No
           </button>
         </div>
+
         {/* Conditional fields for "Yes" in Visa Refusals */}
         {immigrationHistory.hasVisaRejections === 'yes' && (
           <>
@@ -661,6 +681,21 @@ const ImmigrationHistory = () => {
                 <option key={country} value={country}>{country}</option>
               ))}
             </select>
+
+            {/* Show custom input field if "Other" is selected for refusal */}
+            {immigrationHistory.refusalCountry === 'Other' && (
+              <>
+                <label className="mt-2 font-medium text-blue-900">Enter Country Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter Country Name"
+                  className="w-full p-2 border border-gray-300 rounded input-field"
+                  value={immigrationHistory.otherCountryName}
+                  onChange={(e) => setImmigrationHistory({ ...immigrationHistory, otherCountryName: e.target.value })}
+                />
+              </>
+            )}
+
             <label className="mt-2 font-medium text-blue-900">Date Applied</label>
             <input
               type="date"
