@@ -85,16 +85,15 @@ const My_Home = () => {
               
 
 
-
-<h1
-  className="mb-2 text-4xl font-bold text-white sm:text-6xl md:text-9xl xxs:text-5xl"
+ <h1
+  className="relative mb-2 text-4xl font-bold text-white sm:text-6xl md:text-9xl xxs:text-5xl -z-[1]"
  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}
 >
   Escape to Your
-</h1>
+</h1> 
 
   <br/>
-  <h2 className="text-3xl font-bold text-blue-700 xxs:text-3xl sm:text-4xl md:text-6xl"
+  <h2 className="text-3xl font-bold text-blue-700 xxs:text-3xl sm:text-4xl md:text-6xl -z-[1] relative"
 style={{ textShadow: ' 3px 3px 3px rgba(249 241 241 / 82%)' }}
  >
   

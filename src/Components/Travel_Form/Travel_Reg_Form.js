@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 const PersonalInformation = () => {
   const [personalInfo, setPersonalInfo] = useState({
     fullName: '',
@@ -966,6 +966,12 @@ const Travel_Reg_Form = () => {
   const [step, setStep] = useState(1);
   const nextStep = () => setStep(step + 1);
   const prevStep = () => setStep(step - 1);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
