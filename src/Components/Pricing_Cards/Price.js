@@ -23,7 +23,7 @@ export default function Price({ pricingData,name }) {
           >
             <h3 className="font-bold tracking-tight text-blue-900">{plan.title}</h3>
             <p className="mt-6 text-4xl font-bold tracking-tighter">{plan.price}</p>
-            <p className="mt-3 text-black/60">{plan.description}</p>
+            <p className="mt-3 font-semibold text-blue-900">{plan.description}</p>
   
             <ul className="mt-6 space-y-1.5">
               {plan.features.map((feature, featureIndex) => (
@@ -37,7 +37,7 @@ export default function Price({ pricingData,name }) {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span>{feature}</span>
+                  <span className='font-semibold text-blue-900'>{feature}</span>
                 </li>
               ))}
             </ul>
