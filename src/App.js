@@ -19,6 +19,9 @@ import UK from './Components/Countries/Uk';
 import USA from './Components/Countries/USA';
 import Turkey_Visa from './Components/Countries/Turkey';
 import Schengen_Visa from './Components/Countries/Schengen';
+import Travel_Blogs from './Components/Blogs/Blog';
+import Travel_Contact from './Components/Contact Us/Contact';
+import Assistance_Btn from './Components/Chat_Button/Assistance';
 
 
 
@@ -48,12 +51,15 @@ function App() {
         <Route path='/USA_visa' element={<USA/>}/>
         <Route path='/Turkey_visa' element={<Turkey_Visa/>}/>
         <Route path='/Shengion_visa' element={<Schengen_Visa/>}/>
+        <Route path="/Travel_Blogs" element={<Travel_Blogs/>}/>
+        <Route path="/Contact_Us" element={<Travel_Contact/>}/>
         
         
       </Routes>
+      
+<Assistance_Btn/>
       <Footer/>
     </Router>
-
 
 
 

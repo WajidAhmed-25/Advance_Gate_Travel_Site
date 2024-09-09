@@ -46,7 +46,7 @@ export default function Discount_Banner(){
   
 
     <div
-        class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900  sm:p-4  h-[200px]  rounded-2xl  text-white flex items-center justify-between w-[75%] mx-auto mt-12">
+        class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900  sm:p-4  h-[250px]  rounded-2xl  text-white flex items-center justify-between w-full mx-auto mt-12">
         <div class="flex flex-col gap-2">
             <div class="">
                 <span class="text-gray-200">Holiday Special</span>

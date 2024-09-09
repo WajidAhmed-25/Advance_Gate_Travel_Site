@@ -93,7 +93,7 @@ const My_Home = () => {
 </h1> 
 
   <br/>
-  <h2 className="text-3xl font-bold text-blue-700 xxs:text-3xl sm:text-4xl md:text-6xl -z-[1] relative"
+  <h2 className="text-3xl font-bold text-black xxs:text-3xl sm:text-4xl md:text-6xl -z-[1] relative"
 style={{ textShadow: ' 3px 3px 3px rgba(249 241 241 / 82%)' }}
  >
   
@@ -107,25 +107,25 @@ style={{ textShadow: ' 3px 3px 3px rgba(249 241 241 / 82%)' }}
 
          
          <div className="flex flex-wrap justify-center py-3 mt-6 mb-2 space-x-3 sm:space-x-6 md:space-x-8 lg:space-x-12">
-  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="font-semibold border-white/70 border-2 bg-blue-800 rounded-md p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-white transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Hotel
   </button>
-  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="font-semibold border-white/70 border-2 bg-blue-800 rounded-md p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-white transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Tour
   </button>
-  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="font-semibold border-white/70 border-2 bg-blue-800 rounded-md p-2  text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-white transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Activity
   </button>
-  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="font-semibold border-white/70 border-2 bg-blue-800 rounded-md p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-white transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Holiday Rentals
   </button>
-  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="font-semibold border-white/70 border-2 bg-blue-800 rounded-md p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-white transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Car
   </button>
-  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="font-semibold border-white/70 border-2 bg-blue-800 rounded-md p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-white transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Cruise
   </button>
-  <button className="font-semibold text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-blue-600 transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="font-semibold border-white/70 border-2 bg-blue-800 rounded-md p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:text-white transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Flights
   </button>
 </div>

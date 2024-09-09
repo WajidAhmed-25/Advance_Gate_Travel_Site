@@ -65,7 +65,7 @@ const InfoSection = () => {
           <img src={hour} alt="24/7" className="w-24 h-18" />
           <div className="flex flex-col">
             <span className="text-lg font-semibold text-blue-700">CUSTOMER CARE 24/7</span>
-            <span className="text-base">Lorem is a dummy text,and yes.</span>
+            <span className="text-base">We are here to Serve you.</span>
           </div>
         </div>
         

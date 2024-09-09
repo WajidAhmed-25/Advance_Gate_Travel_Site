@@ -87,7 +87,7 @@ export default function Visa_Application_Banner(){
       <div className="w-[70%] pb-[118px] text-center lg:w-1/2 lg:pr-8 lg:px-4  ">
         <h1 className="text-5xl font-bold md:text-6xl" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
           Online E-Visa <br />
-          <span className="block mt-4 text-black " style={{ textShadow: '0px 0px 0px rgba(0, 0, 0, 0.0)' }}>Application</span>
+          <span className="block mt-4 text-white " style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Application</span>
         </h1>
         <p className="mt-12 text-base md:text-lg">
           A foreign national traveling to the United States for tourism needs a visitor visa (B-2 or combined B1/B2) unless qualifying for entry under the Visa Waiver Program. Travel for pleasure or tourism may include a short visit for vacation, visiting family and friends, or for medical treatment.

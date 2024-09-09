@@ -71,9 +71,9 @@ export default function My_Header() {
               { href: "/visa_application", text: "Visa Application" },
               { href: "/application_form", text: "Apply Now" },
               { href: "#", text: "Destinations" },
-              { href: "#", text: "News" },
-              { href: "#", text: "Blog" },
-              { href: "#", text: "Contact Us" }
+              // { href: "#", text: "News" },
+              { href: "/Travel_Blogs", text: "Blog" },
+              { href: "/Contact_Us", text: "Contact Us" }
             ].map((item, index) => (
               <li key={index} className="relative px-12 mb-4 transition-all duration-600 sm:px-2 hover:scale-125 group">
                 {item.text === "Destinations" ? (

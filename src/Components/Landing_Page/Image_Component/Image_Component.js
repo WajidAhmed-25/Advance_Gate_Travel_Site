@@ -24,6 +24,17 @@ export default function Image_Component(){
           </div>
         </div>
       );
+
+      const DestinationCard2 = ({ name, country, image }) => (
+        <div
+          className="relative z-10 w-full transition-all duration-300 bg-center bg-cover rounded-lg shadow-lg cursor-pointer h-72 hover:scale-110"
+          style={{ backgroundImage: `url(${image})` }}
+        >
+          <div className="absolute top-0 left-0 p-2 text-white bg-black bg-opacity-50 rounded-tl-lg rounded-br-lg">
+          <span className='text-xl'>{name} </span>  <span className="ml-2">{country}</span>
+          </div>
+        </div>
+      );
     return(
         <>
 <div className="p-4 mt-20 mb-4 bg-gray-100">
@@ -43,7 +54,7 @@ export default function Image_Component(){
       </div>
       <div className="grid grid-cols-1 gap-8 mt-4 mb-16 sm:grid-cols-3">
         {destinations.slice(2, 5).map((destination, index) => (
-          <DestinationCard
+          <DestinationCard2
             key={index}
             name={destination.name}
           country={destination.country}
