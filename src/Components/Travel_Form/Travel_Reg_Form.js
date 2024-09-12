@@ -55,18 +55,25 @@ const PersonalInformation = () => {
     </div>
   );
 }
-const MaritalStatus = () => {
+const MaritalStatus = ({ onMaritalStatusChange }) => {
   const [maritalStatus, setMaritalStatus] = useState({
     maritalStatus: '',
     spouseName: '',
     spouseDob: '',
     spouseNationality: '',
-    Spouse_Highest_Level_of_Education: '',
     children: '',
     numberOfChildren: 1,
-    childrenDetails: [{ name: '', dob: '', nationality: '' }]
+    childrenDetails: [{ name: '', dob: '', nationality: '', gender: '' }]
   });
   const [hasChildren, setHasChildren] = useState(null);
+
+  const handleMaritalStatusChange = (e) => {
+    const newStatus = e.target.value;
+    setMaritalStatus({ ...maritalStatus, maritalStatus: newStatus });
+    onMaritalStatusChange(newStatus);  // Update global state
+  };
+
+
   const handleChildrenDetailsChange = (index, field, value) => {
     const updatedChildrenDetails = [...maritalStatus.childrenDetails];
     updatedChildrenDetails[index] = {
@@ -75,9 +82,10 @@ const MaritalStatus = () => {
     };
     setMaritalStatus({ ...maritalStatus, childrenDetails: updatedChildrenDetails });
   };
+
   const handleChildrenSelect = (e) => {
     const numberOfChildren = parseInt(e.target.value);
-    const updatedChildrenDetails = Array(numberOfChildren).fill({ name: '', dob: '', nationality: '' });
+    const updatedChildrenDetails = Array(numberOfChildren).fill({ name: '', dob: '', nationality: '', gender: '' });
     setMaritalStatus({ ...maritalStatus, numberOfChildren, childrenDetails: updatedChildrenDetails });
   };
   return (
@@ -87,8 +95,10 @@ const MaritalStatus = () => {
         <label className="mt-2 font-medium text-blue-900">Marital Status</label>
         <select
           className="w-full p-2 border border-gray-300 rounded input-field"
+          // value={maritalStatus.maritalStatus}
+          // onChange={(e) => setMaritalStatus({ ...maritalStatus, maritalStatus: e.target.value })}
           value={maritalStatus.maritalStatus}
-          onChange={(e) => setMaritalStatus({ ...maritalStatus, maritalStatus: e.target.value })}
+          onChange={handleMaritalStatusChange}
         >
           <option value="">Select your status</option>
           <option value="Single">Single</option>
@@ -96,7 +106,7 @@ const MaritalStatus = () => {
           <option value="Separated">Separated</option>
         </select>
         {/* Conditionally render spouse-related fields if marital status is Married or Separated */}
-        {(maritalStatus.maritalStatus === 'Married' || maritalStatus.maritalStatus === 'Separated') && (
+        {(maritalStatus.maritalStatus === 'Married' ) && (
           <>
             <label className="mt-2 font-medium text-blue-900">Spouse's Full Name</label>
             <input
@@ -122,14 +132,7 @@ const MaritalStatus = () => {
               value={maritalStatus.spouseNationality}
               onChange={(e) => setMaritalStatus({ ...maritalStatus, spouseNationality: e.target.value })}
             />
-            <label className="mt-2 font-medium text-blue-900">Spouse's Highest Level of Education</label>
-            <input
-              type="text"
-              placeholder="Spouse's Highest Level of Education"
-              className="w-full p-2 border border-gray-300 rounded input-field"
-              value={maritalStatus.Spouse_Highest_Level_of_Education}
-              onChange={(e) => setMaritalStatus({ ...maritalStatus, Spouse_Highest_Level_of_Education: e.target.value })}
-            />
+   
           </>
         )}
         {/* Do you have children? */}
@@ -186,6 +189,41 @@ const MaritalStatus = () => {
                             onChange={(e) => handleChildrenDetailsChange(index, 'name', e.target.value)}
                           />
                         </div>
+
+
+
+                        <div className="flex-1">
+                          <label className="block mb-2 font-medium text-blue-800">Gender</label>
+                          <div className="flex gap-4">
+                            <button
+                              type="button"
+                              className={`px-4 py-2 ${maritalStatus.childrenDetails[index]?.gender === 'Male' ? 'bg-blue-800 text-white' : 'bg-gray-300'}`}
+                              onClick={() => handleChildrenDetailsChange(index, 'gender', 'Male')}
+                            >
+                              Male
+                            </button>
+                            <button
+                              type="button"
+                              className={`px-4 py-2 ${maritalStatus.childrenDetails[index]?.gender === 'Female' ? 'bg-blue-800 text-white' : 'bg-gray-300'}`}
+                              onClick={() => handleChildrenDetailsChange(index, 'gender', 'Female')}
+                            >
+                              Female
+                            </button>
+                            <button
+                              type="button"
+                              className={`px-4 py-2 ${maritalStatus.childrenDetails[index]?.gender === 'Other' ? 'bg-blue-800 text-white' : 'bg-gray-300'}`}
+                              onClick={() => handleChildrenDetailsChange(index, 'gender', 'Other')}
+                            >
+                              Other
+                            </button>
+                          </div>
+                      </div>
+
+
+
+
+
+
                         <div className="flex-1">
                           <label className="block mb-2 font-medium text-blue-800">Date of Birth</label>
                           <input
@@ -205,6 +243,12 @@ const MaritalStatus = () => {
                             onChange={(e) => handleChildrenDetailsChange(index, 'nationality', e.target.value)}
                           />
                         </div>
+
+
+                 
+
+
+
                       </div>
                     </div>
                   ))}
@@ -217,7 +261,7 @@ const MaritalStatus = () => {
     </div>
   );
 };
-const Education = () => {
+const Education = ({ globalMaritalStatus }) => {
   const [education, setEducation] = useState({
     highestDegree: '',
     fieldOfStudy: '',
@@ -234,6 +278,7 @@ const Education = () => {
     <>
       <div>
         <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Education</h3>
+        {/* <p>{globalMaritalStatus}</p> */}
         <div className="grid grid-cols-1 gap-2">
           {/* Your Education Section */}
           <label className="mt-2 font-medium text-blue-900">Your Highest Degree</label>
@@ -276,8 +321,10 @@ const Education = () => {
               />
             </>
           )}
-          {/* Spouse Education Section */}
-          <label className="mt-4 font-medium text-blue-900">Spouse's Highest Degree</label>
+      
+          
+
+          {/* <label className="mt-4 font-medium text-blue-900">Spouse's Highest Degree</label>
           <select
             className="w-full p-2 border border-gray-300 rounded input-field"
             value={education.spouseHighestDegree}
@@ -289,7 +336,7 @@ const Education = () => {
             <option value="Masters" className='text-blue-900'>Masters</option>
             <option value="Uneducated" className='text-blue-900'>Uneducated</option>
           </select>
-          {/* Show additional fields for spouse if Intermediate, Bachelors, or Masters is selected */}
+          
           {degreeOptions.includes(education.spouseHighestDegree) && (
             <>
               <label className="mt-2 font-medium text-blue-900">Spouse's Field of Study</label>
@@ -316,7 +363,56 @@ const Education = () => {
                 onChange={(e) => setEducation({ ...education, spouseCompletionYear: e.target.value })}
               />
             </>
+          )} */}
+
+
+{['Married'].includes(globalMaritalStatus) && (
+            <>
+              <label className="mt-4 font-medium text-blue-900">Spouse's Highest Degree</label>
+              <select
+                className="w-full p-2 border border-gray-300 rounded input-field"
+                value={education.spouseHighestDegree}
+                onChange={(e) => setEducation({ ...education, spouseHighestDegree: e.target.value })}
+              >
+                <option value="" className="text-blue-900">Select Spouse's Degree</option>
+                <option value="Intermediate" className="text-blue-900">Intermediate</option>
+                <option value="Bachelors" className="text-blue-900">Bachelors</option>
+                <option value="Masters" className="text-blue-900">Masters</option>
+                <option value="Uneducated" className="text-blue-900">Uneducated</option>
+              </select>
+
+              {/* Show additional fields for spouse if Intermediate, Bachelors, or Masters is selected */}
+              {degreeOptions.includes(education.spouseHighestDegree) && (
+                <>
+                  <label className="mt-2 font-medium text-blue-900">Spouse's Field of Study</label>
+                  <input
+                    type="text"
+                    placeholder="Spouse's Field of Study"
+                    className="w-full p-2 border border-gray-300 rounded input-field"
+                    value={education.spouseFieldOfStudy}
+                    onChange={(e) => setEducation({ ...education, spouseFieldOfStudy: e.target.value })}
+                  />
+                  <label className="mt-2 font-medium text-blue-900">Spouse's Institution Attended</label>
+                  <input
+                    type="text"
+                    placeholder="Spouse's Institution Attended"
+                    className="w-full p-2 border border-gray-300 rounded input-field"
+                    value={education.spouseInstitution}
+                    onChange={(e) => setEducation({ ...education, spouseInstitution: e.target.value })}
+                  />
+                  <label className="mt-2 font-medium text-blue-900">Spouse's Completion Year</label>
+                  <input
+                    type="date"
+                    className="w-full p-2 border border-gray-300 rounded input-field"
+                    value={education.spouseCompletionYear}
+                    onChange={(e) => setEducation({ ...education, spouseCompletionYear: e.target.value })}
+                  />
+                </>
+              )}
+            </>
           )}
+      
+          
         </div>
       </div>
     </>
@@ -328,14 +424,18 @@ const TravelInformation = () => {
     durationOfStay: '',
     countriesTraveled: []
   });
+
   const countryList = [
-    'United States', 'Canada', 'Mexico', 'Germany', 'France', 'Italy', 'Spain', 'United Kingdom', 'China', 'Japan', 
-    'Australia', 'New Zealand', 'Brazil', 'Argentina', 'South Africa', 'Egypt', 'Russia', 'India', 'Pakistan', 
-    'Bangladesh', 'Turkey', 'Saudi Arabia', 'UAE', 'Malaysia', 'Singapore', 'Thailand', 'Indonesia', 'Vietnam', 
-    'South Korea', 'Nigeria', 'Kenya', 'Morocco', 'Greece', 'Portugal', 'Sweden', 'Norway', 'Denmark', 'Netherlands', 
+    'United States', 'Canada', 'Mexico', 'Germany', 'France', 'Italy', 'Spain', 'United Kingdom', 'China', 'Japan',
+    'Australia', 'New Zealand', 'Brazil', 'Argentina', 'South Africa', 'Egypt', 'Russia', 'India', 'Pakistan',
+    'Bangladesh', 'Turkey', 'Saudi Arabia', 'UAE', 'Malaysia', 'Singapore', 'Thailand', 'Indonesia', 'Vietnam',
+    'South Korea', 'Nigeria', 'Kenya', 'Morocco', 'Greece', 'Portugal', 'Sweden', 'Norway', 'Denmark', 'Netherlands',
     'Belgium', 'Switzerland'
   ];
+
   const [availableCountries, setAvailableCountries] = useState(countryList);
+  const [countryDetails, setCountryDetails] = useState({}); // To store details for each country
+
   const handleCountrySelect = (e) => {
     const selectedCountry = e.target.value;
     if (selectedCountry !== '' && !travelInfo.countriesTraveled.includes(selectedCountry)) {
@@ -343,16 +443,45 @@ const TravelInformation = () => {
         ...travelInfo,
         countriesTraveled: [...travelInfo.countriesTraveled, selectedCountry]
       });
+      setCountryDetails({
+        ...countryDetails,
+        [selectedCountry]: { dateVisited: '', dateReturn: '', purpose: '', duration: '' }
+      });
       setAvailableCountries(availableCountries.filter(country => country !== selectedCountry));
     }
   };
+
   const removeCountry = (country) => {
     setTravelInfo({
       ...travelInfo,
       countriesTraveled: travelInfo.countriesTraveled.filter(selected => selected !== country)
     });
     setAvailableCountries([...availableCountries, country]);
+    const newDetails = { ...countryDetails };
+    delete newDetails[country];
+    setCountryDetails(newDetails);
   };
+
+  const handleDetailChange = (country, field, value) => {
+    const updatedDetails = {
+      ...countryDetails[country],
+      [field]: value
+    };
+
+    // Auto-calculate duration if both dates are present
+    if (updatedDetails.dateVisited && updatedDetails.dateReturn) {
+      const dateVisited = new Date(updatedDetails.dateVisited);
+      const dateReturn = new Date(updatedDetails.dateReturn);
+      const duration = Math.ceil((dateReturn - dateVisited) / (1000 * 60 * 60 * 24)); // duration in days
+      updatedDetails.duration = duration >= 0 ? duration : '';
+    }
+
+    setCountryDetails({
+      ...countryDetails,
+      [country]: updatedDetails
+    });
+  };
+
   return (
     <>
       <div>
@@ -374,69 +503,122 @@ const TravelInformation = () => {
             value={travelInfo.durationOfStay}
             onChange={(e) => setTravelInfo({ ...travelInfo, durationOfStay: e.target.value })}
           />
+
           <label className="mt-2 font-medium text-blue-900">Countries Traveled in Last 10 Years</label>
           <select
-            className="w-full h-10 p-2 border border-gray-300 rounded input-field" // Adjusted height of the select dropdown
+            className="w-full h-10 p-2 border border-gray-300 rounded input-field"
             onChange={handleCountrySelect}
             value=""
           >
-            <option value="" disabled >Select Country</option>
+            <option value="" disabled>Select Country</option>
             {availableCountries.map((country, index) => (
               <option key={index} value={country}>{country}</option>
             ))}
           </select>
-          <div className="flex flex-wrap gap-2 mt-2">
-            {travelInfo.countriesTraveled.map((country, index) => (
-             <div> 
-              <h1 className='w-full mb-4 text-lg font-bold tracking-normal text-blue-900'>Selected Countries: </h1>
-              <div 
-                key={index} 
-                className="items-center inline-block px-3 py-1 text-white bg-blue-900 rounded-full"
-              >
-                {country}
-                <button
-                  className="px-2 py-1 ml-2 text-white bg-transparent rounded-full hover:bg-red-700 hover:text-white"
-                  onClick={() => removeCountry(country)}
-                >
-                  &times;
-                </button>
-              </div>
-              </div>
-            ))}
-          </div>
+
+      
+          {travelInfo.countriesTraveled.length > 0 && (
+            <div className="flex flex-wrap gap-2 mt-2">
+                  <h1 className="w-full mb-4 text-lg font-bold tracking-normal text-blue-900">Selected Countries:</h1>
+              {travelInfo.countriesTraveled.map((country, index) => (
+                <div key={index} className="w-full mb-4">
+                  <div className="items-center inline-block px-3 py-1 text-white bg-blue-900 rounded-full">
+                    {country}
+                    <button
+                      className="px-2 py-1 ml-2 text-white bg-transparent rounded-full hover:bg-red-700 hover:text-white"
+                      onClick={() => removeCountry(country)}
+                    >
+                      &times;
+                    </button>
+                  </div>
+
+                  {/* Form for each country */}
+                  <div className="mt-4">
+                    <label className="font-medium text-blue-900">Date Visited</label>
+                    <input
+                      type="date"
+                      className="w-full p-2 mb-2 border border-gray-300 rounded"
+                      value={countryDetails[country]?.dateVisited || ''}
+                      onChange={(e) => handleDetailChange(country, 'dateVisited', e.target.value)}
+                    />
+
+                    <label className="font-medium text-blue-900">Date Return</label>
+                    <input
+                      type="date"
+                      className="w-full p-2 mb-2 border border-gray-300 rounded"
+                      value={countryDetails[country]?.dateReturn || ''}
+                      onChange={(e) => handleDetailChange(country, 'dateReturn', e.target.value)}
+                    />
+
+                    <label className="font-medium text-blue-900">Duration of Stay (days)</label>
+                    <input
+                      type="text"
+                      className="w-full p-2 mb-2 border border-gray-300 rounded"
+                      value={countryDetails[country]?.duration || ''}
+                      readOnly
+                    />
+
+                    <label className="font-medium text-blue-900">Purpose</label>
+                    <input
+                      type="text"
+                      placeholder="Purpose of Travel"
+                      className="w-full p-2 mb-2 border border-gray-300 rounded"
+                      value={countryDetails[country]?.purpose || ''}
+                      onChange={(e) => handleDetailChange(country, 'purpose', e.target.value)}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </>
   );
 };
-const EmploymentFinance = () => {
+
+
+
+const countries = [
+  'United States', 'Canada', 'United Kingdom', 'Australia', 'Germany', 'France', 'India', 
+  'China', 'Japan', 'Brazil', 'South Africa', 'Mexico', 'Russia', 'Italy', 'Spain', 'Netherlands',
+  'Pakistan', 'Nigeria', 'Saudi Arabia', 'South Korea'
+];
+
+const Employment = () => {
   const [employment, setEmployment] = useState({
     employmentStatus: '',
     employerDetails: '',
     jobTitle: '',
     salary: '',
     employmentHistory: '',
-    financialStatus: '',
-    bankBalance: ''
+    jobStartDate: '',
+    jobEndDate: '',
+    country: '',
+    isCurrentJob: false,
   });
+
   // Handler for employment status change
   const handleEmploymentStatusChange = (e) => {
     const selectedStatus = e.target.value;
     setEmployment((prevState) => ({
       ...prevState,
       employmentStatus: selectedStatus,
-      // Reset fields if not employed
       employerDetails: selectedStatus === 'Employed' ? prevState.employerDetails : '',
       jobTitle: selectedStatus === 'Employed' ? prevState.jobTitle : '',
       salary: selectedStatus === 'Employed' ? prevState.salary : '',
-      employmentHistory: selectedStatus === 'Employed' ? prevState.employmentHistory : ''
+      employmentHistory: selectedStatus === 'Employed' ? prevState.employmentHistory : '',
+      jobStartDate: selectedStatus === 'Employed' ? prevState.jobStartDate : '',
+      jobEndDate: selectedStatus === 'Employed' ? prevState.jobEndDate : '',
+      country: selectedStatus === 'Employed' ? prevState.country : '',
+      isCurrentJob: selectedStatus === 'Employed' ? prevState.isCurrentJob : false,
     }));
   };
+
   return (
     <div>
-      <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Employment and Finance</h3>
+      <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Employment</h3>
       <div className="grid grid-cols-1 gap-2">
-        {/* Current Employment Status */}
         <label className="mt-2 font-medium text-blue-900">Current Employment Status</label>
         <select
           className="w-full p-2 border border-gray-300 rounded input-field"
@@ -448,10 +630,9 @@ const EmploymentFinance = () => {
           <option value="Unemployed">Unemployed</option>
           <option value="Retired">Retired</option>
         </select>
-        {/* Conditionally Rendered Fields for Employed Status */}
+
         {employment.employmentStatus === 'Employed' && (
           <>
-            {/* Employer Details */}
             <label className="mt-2 font-medium text-blue-900">Employer Details</label>
             <input
               type="text"
@@ -460,7 +641,7 @@ const EmploymentFinance = () => {
               value={employment.employerDetails}
               onChange={(e) => setEmployment({ ...employment, employerDetails: e.target.value })}
             />
-            {/* Job Title */}
+
             <label className="mt-2 font-medium text-blue-900">Job Title</label>
             <input
               type="text"
@@ -469,7 +650,7 @@ const EmploymentFinance = () => {
               value={employment.jobTitle}
               onChange={(e) => setEmployment({ ...employment, jobTitle: e.target.value })}
             />
-            {/* Current Salary */}
+
             <label className="mt-2 font-medium text-blue-900">Current Salary</label>
             <input
               type="text"
@@ -478,7 +659,7 @@ const EmploymentFinance = () => {
               value={employment.salary}
               onChange={(e) => setEmployment({ ...employment, salary: e.target.value })}
             />
-            {/* Employment History */}
+
             <label className="mt-2 font-medium text-blue-900">Employment History (Past 5 years)</label>
             <input
               type="text"
@@ -487,32 +668,107 @@ const EmploymentFinance = () => {
               value={employment.employmentHistory}
               onChange={(e) => setEmployment({ ...employment, employmentHistory: e.target.value })}
             />
+
+            <label className="mt-2 font-medium text-blue-900">Job Start Date</label>
+            <input
+              type="date"
+              className="w-full p-2 border border-gray-300 rounded input-field"
+              value={employment.jobStartDate}
+              onChange={(e) => setEmployment({ ...employment, jobStartDate: e.target.value })}
+            />
+
+            <label className="mt-2 font-medium text-blue-900">Job End Date (or Present)</label>
+            <input
+              type="date"
+              className="w-full p-2 border border-gray-300 rounded input-field"
+              value={employment.isCurrentJob ? '' : employment.jobEndDate}
+              onChange={(e) => setEmployment({ ...employment, jobEndDate: e.target.value })}
+              disabled={employment.isCurrentJob}
+            />
+
+            <div className="flex items-center mt-2">
+              <input
+                type="checkbox"
+                checked={employment.isCurrentJob}
+                onChange={(e) => setEmployment({ ...employment, isCurrentJob: e.target.checked })}
+                className="mr-2"
+              />
+              <label className="font-medium text-blue-900">This is my current job</label>
+            </div>
+
+            <label className="mt-2 font-medium text-blue-900">Country</label>
+            <select
+              className="w-full p-2 border border-gray-300 rounded input-field"
+              value={employment.country}
+              onChange={(e) => setEmployment({ ...employment, country: e.target.value })}
+            >
+              <option value="" disabled>Select Country</option>
+              {countries.map((country) => (
+                <option key={country} value={country}>
+                  {country}
+                </option>
+              ))}
+            </select>
           </>
         )}
-        {/* Bank Statement */}
+      </div>
+    </div>
+  );
+}; 
+
+
+
+
+
+
+
+const Finance = () => {
+  const [finance, setFinance] = useState({
+    financialStatus: '',
+    bankBalance: ''
+  });
+
+  
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFinance((prevState) => ({
+      ...prevState,
+      [name]: value, 
+    }));
+  };
+
+  return (
+    <div>
+      <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Finance</h3>
+      <div className="grid grid-cols-1 gap-2">
+      
+ 
         <label className="mt-2 font-medium text-blue-900">Bank Statement (Last 6 Months)</label>
         <input
           type="text"
+          name="bankBalance" 
           placeholder="Bank Balance"
+          value={finance.bankBalance} 
+          onChange={handleInputChange} 
           className="w-full p-2 border border-gray-300 rounded input-field"
-          value={employment.bankBalance}
-          onChange={(e) => setEmployment({ ...employment, bankBalance: e.target.value })}
         />
-        {/* Financial Status */}
+
         <label className="mt-2 font-medium text-blue-900">
           Financial Status (Balance Available/Cash or how much you can show off)
         </label>
         <input
           type="text"
+          name="financialStatus" 
           placeholder="Financial Status"
+          value={finance.financialStatus} 
+          onChange={handleInputChange} 
           className="w-full p-2 border border-gray-300 rounded input-field"
-          value={employment.financialStatus}
-          onChange={(e) => setEmployment({ ...employment, financialStatus: e.target.value })}
         />
       </div>
     </div>
   );
 };
+
 const TiesToHomeCountry = () => {
   const [tiesToCountry, setTiesToCountry] = useState({
     familyMembers: '',
@@ -564,14 +820,46 @@ const ImmigrationHistory = () => {
     previousApplications: '',
     visaRejections: '',
     hasPreviousVisas: '',
-    visaCountries: '',
     visaDate: '',
     hasVisaRejections: '',
     refusalCountry: '',
     refusalDate: '',
     refusalReason: '',
-    otherCountryName: '' // New state for custom country name input
+    otherCountryName: '', // For custom country name input
   });
+
+  const [selectedCountries, setSelectedCountries] = useState([]);
+  const [availableCountries, setAvailableCountries] = useState(countries);
+
+  const handleCountrySelect = (e) => {
+    const selectedCountry = e.target.value;
+    if (selectedCountry !== '' && !selectedCountries.includes(selectedCountry)) {
+      setSelectedCountries([...selectedCountries, { country: selectedCountry, visaDate: '', returnDate: '', purpose: '' }]);
+      setAvailableCountries(availableCountries.filter(country => country !== selectedCountry));
+    }
+  };
+
+  const handleRemoveCountry = (country) => {
+    setSelectedCountries(selectedCountries.filter(c => c.country !== country));
+    setAvailableCountries([...availableCountries, country]);
+  };
+
+  const handleInputChange = (index, field, value) => {
+    const updatedCountries = [...selectedCountries];
+    updatedCountries[index][field] = value;
+    setSelectedCountries(updatedCountries);
+  };
+
+  const calculateDuration = (visaDate, returnDate) => {
+    if (visaDate && returnDate) {
+      const date1 = new Date(visaDate);
+      const date2 = new Date(returnDate);
+      const diffTime = Math.abs(date2 - date1);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      return diffDays + " days";
+    }
+    return '';
+  };
 
   return (
     <div>
@@ -603,46 +891,88 @@ const ImmigrationHistory = () => {
             No
           </button>
         </div>
+
         {/* Conditional fields for "Yes" in Previous Visas */}
         {immigrationHistory.hasPreviousVisas === 'yes' && (
           <>
-            <label className="mt-2 font-medium text-blue-900">Where (Country Name)</label>
+            <label className="mt-2 font-medium text-blue-900">Select Country</label>
             <select
               className="w-full p-2 border border-gray-300 rounded input-field"
-              value={immigrationHistory.visaCountries}
-              onChange={(e) => setImmigrationHistory({ ...immigrationHistory, visaCountries: e.target.value })}
+              onChange={handleCountrySelect}
+              value=""
             >
               <option value="" disabled>Select Country</option>
-              {countries.map((country) => (
+              {availableCountries.map((country) => (
                 <option key={country} value={country}>{country}</option>
               ))}
             </select>
 
-            {/* Show custom input field if "Other" is selected */}
-            {immigrationHistory.visaCountries === 'Other' && (
+            {/* Display form for each selected country */}
+            {selectedCountries.length > 0 && (
               <>
-                <label className="mt-2 font-medium text-blue-900">Enter Country Name</label>
-                <input
-                  type="text"
-                  placeholder="Enter Country Name"
-                  className="w-full p-2 border border-gray-300 rounded input-field"
-                  value={immigrationHistory.otherCountryName}
-                  onChange={(e) => setImmigrationHistory({ ...immigrationHistory, otherCountryName: e.target.value })}
-                />
+                <h4 className="mt-4 text-xl font-bold">Countries and Visa Details</h4>
+                {selectedCountries.map((selectedCountry, index) => (
+                  <div key={index} className="p-4 mt-4 border rounded">
+                    <h5 className="p-2 mb-6 text-xl font-bold text-center w-[30%] rounded-lg ml-auto mr-auto text-white bg-blue-900">{selectedCountry.country}</h5>
+                    <label className="mt-2 mb-2 font-medium text-blue-900">Visa Date</label>
+                    <input
+                      type="date"
+                      className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
+                      value={selectedCountry.visaDate}
+                      onChange={(e) => handleInputChange(index, 'visaDate', e.target.value)}
+                    />
+
+                    <label className="mt-2 font-medium text-blue-900">Return Date</label>
+                    <input
+                      type="date"
+                      className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
+                      value={selectedCountry.returnDate}
+                      onChange={(e) => handleInputChange(index, 'returnDate', e.target.value)}
+                    />
+
+                    <label className="mt-2 font-medium text-blue-900">Duration of Stay</label>
+                    <input
+                      type="text"
+                      className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
+                      value={calculateDuration(selectedCountry.visaDate, selectedCountry.returnDate)}
+                      readOnly
+                    />
+
+                    <label className="mt-2 font-medium text-blue-900">Purpose</label>
+                    <input
+                      type="text"
+                      className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
+                      value={selectedCountry.purpose}
+                      onChange={(e) => handleInputChange(index, 'purpose', e.target.value)}
+                    />
+
+                    <button
+                      className="px-2 py-2 font-bold text-white transition-all duration-300 bg-red-800 rounded hover:scale-110"
+                      onClick={() => handleRemoveCountry(selectedCountry.country)}
+                    >
+                      Remove Country
+                    </button>
+                  </div>
+                ))}
               </>
             )}
-
-            <label className="mt-2 font-medium text-blue-900">When (Date)</label>
-            <input
-              type="date"
-              className="w-full p-2 border border-gray-300 rounded input-field"
-              value={immigrationHistory.visaDate}
-              onChange={(e) => setImmigrationHistory({ ...immigrationHistory, visaDate: e.target.value })}
-            />
           </>
         )}
-        
-        {/* Previous Visa Refusals */}
+
+        {/* Previous Visa Refusals (No changes) */}
+  
+
+
+
+
+
+
+
+
+
+
+
+
         <label className="mt-4 mb-2 font-medium text-blue-900">Previous Visa Refusals:</label>
         <div className="flex mt-2 space-x-4">
           <button
@@ -650,7 +980,7 @@ const ImmigrationHistory = () => {
             className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasVisaRejections === 'yes'
               ? 'bg-blue-900 text-white'
               : 'bg-gray-200 text-blue-900'
-              }`}
+            }`}
             onClick={() => setImmigrationHistory({ ...immigrationHistory, hasVisaRejections: 'yes' })}
           >
             Yes
@@ -696,7 +1026,7 @@ const ImmigrationHistory = () => {
               </>
             )}
 
-            <label className="mt-2 font-medium text-blue-900">Date Applied</label>
+            <label className="mt-2 font-medium text-blue-900">Date Refused</label>
             <input
               type="date"
               className="w-full p-2 border border-gray-300 rounded input-field"
@@ -714,7 +1044,11 @@ const ImmigrationHistory = () => {
           </>
         )}
       </div>
-    </div>
+
+
+</div>
+
+  
   );
 };
 const HealthSecurity = () => {
@@ -967,6 +1301,19 @@ const Travel_Reg_Form = () => {
   const nextStep = () => setStep(step + 1);
   const prevStep = () => setStep(step - 1);
 
+
+  const [globalMaritalStatus, setGlobalMaritalStatus] = useState('');
+
+
+  useEffect(() => {
+    console.log("Global Marital Status:", globalMaritalStatus);
+  }, [globalMaritalStatus]);
+
+  const handleMaritalStatusChange = (status) => {
+    setGlobalMaritalStatus(status);
+  };
+
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -983,20 +1330,22 @@ const Travel_Reg_Form = () => {
       case 1:
         return <PersonalInformation />;
       case 2:
-        return <MaritalStatus />;
+        return <MaritalStatus  onMaritalStatusChange={handleMaritalStatusChange}/>;
       case 3:
-        return <Education />;
+        return <Education globalMaritalStatus={globalMaritalStatus}/>;
       case 4:
         return <TravelInformation />;
       case 5:
-        return <EmploymentFinance />;
+        return <Employment />;
       case 6:
-        return <TiesToHomeCountry />;
+          return <Finance />;
       case 7:
-        return <ImmigrationHistory />;
+        return <TiesToHomeCountry />;
       case 8:
-        return <HealthSecurity />;
+        return <ImmigrationHistory />;
       case 9:
+        return <HealthSecurity />;
+      case 10:
         return <AdditionalInformation />;
       default:
         return <PersonalInformation />;
@@ -1020,7 +1369,7 @@ const Travel_Reg_Form = () => {
                 Previous
               </button>
             )}
-            {step < 9 ? (
+            {step < 10 ? (
               <button
                 type="button"
                 onClick={nextStep}
