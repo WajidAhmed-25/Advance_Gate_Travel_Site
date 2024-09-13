@@ -493,10 +493,10 @@ const Education = ({ globalMaritalStatus }) => {
 
         {['Married'].includes(globalMaritalStatus) && (
           <div className="mt-8">
-            <h4 className="mb-4 text-xl font-semibold text-blue-900">Spouse's Education</h4>
-            <label className="mt-2 font-medium text-blue-900">Spouse's Highest Degree(s)</label>
+            <h4 className="mb-4 text-2xl font-bold text-blue-900">Spouse's Education</h4>
+            <label className="mt-6 font-medium text-blue-900">Spouse's Highest Degree(s)</label>
             <select
-              className="w-full p-2 border border-gray-300 rounded input-field"
+              className="w-full p-2 mt-2 border border-gray-300 rounded input-field"
               onChange={(e) => handleAddEducation(e.target.value, true)}
             >
               <option value="">Select Spouse's Degree</option>
