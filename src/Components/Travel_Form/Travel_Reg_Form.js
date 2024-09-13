@@ -1,60 +1,186 @@
 import React, { useState,useEffect } from 'react';
+
+import { MapPin } from 'lucide-react';
+
 const PersonalInformation = () => {
   const [personalInfo, setPersonalInfo] = useState({
     fullName: '',
     dateOfBirth: '',
     nationality: '',
     passportNumber: '',
-    passportExpiry: ''
+    passportExpiry: '',
+    email: '',
+    contactNumber: '',
+    address: ''
   });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setPersonalInfo({ ...personalInfo, [name]: value });
+  };
+
+  const fetchLocation = () => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const { latitude, longitude } = position.coords;
+          try {
+            const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`);
+            const data = await response.json();
+            const address = data.display_name || `Lat: ${latitude}, Lon: ${longitude}`;
+            setPersonalInfo({ ...personalInfo, address });
+          } catch (error) {
+            console.error("Error fetching address:", error);
+            setPersonalInfo({ ...personalInfo, address: `Lat: ${latitude}, Lon: ${longitude}` });
+          }
+        },
+        (error) => {
+          console.error("Error getting location:", error);
+          alert("Unable to fetch location. Please ensure you've granted permission.");
+        }
+      );
+    } else {
+      alert("Geolocation is not supported by your browser.");
+    }
+  };
+
   return (
-    <div className='p-6 '>
+    <div className='p-6'>
       <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Personal Information</h3>
       <div className="grid grid-cols-1 gap-2">
-        <label className="mt-2 font-medium text-blue-900 ">Full Name</label>
+        <label className="mt-2 font-medium text-blue-900">Full Name</label>
         <input
           type="text"
+          name="fullName"
           placeholder="Full Name"
           className="w-full p-2 border border-gray-300 rounded input-field"
           value={personalInfo.fullName}
-          onChange={(e) => setPersonalInfo({ ...personalInfo, fullName: e.target.value })}
+          onChange={handleChange}
         />
-        <label className="mt-2 font-medium text-blue-900 ">Date of Birth</label>
+        <label className="mt-2 font-medium text-blue-900">Date of Birth</label>
         <input
           type="date"
+          name="dateOfBirth"
           placeholder="Date of Birth"
           className="w-full p-2 border border-gray-300 rounded input-field"
           value={personalInfo.dateOfBirth}
-          onChange={(e) => setPersonalInfo({ ...personalInfo, dateOfBirth: e.target.value })}
+          onChange={handleChange}
         />
         <label className="mt-2 font-medium text-blue-900">Nationality</label>
         <input
           type="text"
+          name="nationality"
           placeholder="Nationality"
           className="w-full p-2 border border-gray-300 rounded input-field"
           value={personalInfo.nationality}
-          onChange={(e) => setPersonalInfo({ ...personalInfo, nationality: e.target.value })}
+          onChange={handleChange}
         />
         <label className="mt-2 font-medium text-blue-900">Passport Number</label>
         <input
           type="text"
+          name="passportNumber"
           placeholder="Passport Number"
           className="w-full p-2 border border-gray-300 rounded input-field"
           value={personalInfo.passportNumber}
-          onChange={(e) => setPersonalInfo({ ...personalInfo, passportNumber: e.target.value })}
+          onChange={handleChange}
         />
         <label className="mt-2 font-medium text-blue-900">Passport Expiry Date</label>
         <input
           type="date"
+          name="passportExpiry"
           placeholder="Passport Expiry Date"
           className="w-full p-2 border border-gray-300 rounded input-field"
           value={personalInfo.passportExpiry}
-          onChange={(e) => setPersonalInfo({ ...personalInfo, passportExpiry: e.target.value })}
+          onChange={handleChange}
         />
+        <label className="mt-2 font-medium text-blue-900">Email</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          className="w-full p-2 border border-gray-300 rounded input-field"
+          value={personalInfo.email}
+          onChange={handleChange}
+        />
+        <label className="mt-2 font-medium text-blue-900">Contact Number</label>
+        <input
+          type="tel"
+          name="contactNumber"
+          placeholder="Contact Number"
+          className="w-full p-2 border border-gray-300 rounded input-field"
+          value={personalInfo.contactNumber}
+          onChange={handleChange}
+        />
+     
+     <label className="mt-2 font-medium text-blue-900">Address</label>
+        <div className="flex items-center">
+          <textarea
+            name="address"
+            placeholder="Address"
+            className="flex-grow p-2 border border-gray-300 rounded input-field"
+            value={personalInfo.address}
+            onChange={handleChange}
+            rows="3"
+          />
+          <button
+            onClick={fetchLocation}
+            className="p-2 ml-2 text-white bg-blue-900 rounded hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            title="Fetch current location"
+          >
+            <MapPin size={24} />
+          </button>
+
+     
       </div>
+    </div>
+
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const MaritalStatus = ({ onMaritalStatusChange }) => {
   const [maritalStatus, setMaritalStatus] = useState({
     maritalStatus: '',
@@ -433,21 +559,21 @@ const TravelInformation = () => {
     'Belgium', 'Switzerland'
   ];
 
-  const [availableCountries, setAvailableCountries] = useState(countryList);
+  const [availableCountries] = useState(countryList);
   const [countryDetails, setCountryDetails] = useState({}); // To store details for each country
 
   const handleCountrySelect = (e) => {
     const selectedCountry = e.target.value;
-    if (selectedCountry !== '' && !travelInfo.countriesTraveled.includes(selectedCountry)) {
+    if (selectedCountry !== '') {
+      const newCountriesTraveled = [...travelInfo.countriesTraveled, selectedCountry];
       setTravelInfo({
         ...travelInfo,
-        countriesTraveled: [...travelInfo.countriesTraveled, selectedCountry]
+        countriesTraveled: newCountriesTraveled
       });
       setCountryDetails({
         ...countryDetails,
         [selectedCountry]: { dateVisited: '', dateReturn: '', purpose: '', duration: '' }
       });
-      setAvailableCountries(availableCountries.filter(country => country !== selectedCountry));
     }
   };
 
@@ -456,7 +582,6 @@ const TravelInformation = () => {
       ...travelInfo,
       countriesTraveled: travelInfo.countriesTraveled.filter(selected => selected !== country)
     });
-    setAvailableCountries([...availableCountries, country]);
     const newDetails = { ...countryDetails };
     delete newDetails[country];
     setCountryDetails(newDetails);
@@ -516,10 +641,9 @@ const TravelInformation = () => {
             ))}
           </select>
 
-      
           {travelInfo.countriesTraveled.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-2">
-                  <h1 className="w-full mb-4 text-lg font-bold tracking-normal text-blue-900">Selected Countries:</h1>
+              <h1 className="w-full mb-4 text-lg font-bold tracking-normal text-blue-900">Selected Countries:</h1>
               {travelInfo.countriesTraveled.map((country, index) => (
                 <div key={index} className="w-full mb-4">
                   <div className="items-center inline-block px-3 py-1 text-white bg-blue-900 rounded-full">
@@ -579,40 +703,68 @@ const TravelInformation = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const countries = [
   'United States', 'Canada', 'United Kingdom', 'Australia', 'Germany', 'France', 'India', 
   'China', 'Japan', 'Brazil', 'South Africa', 'Mexico', 'Russia', 'Italy', 'Spain', 'Netherlands',
   'Pakistan', 'Nigeria', 'Saudi Arabia', 'South Korea'
 ];
 
-const Employment = () => {
-  const [employment, setEmployment] = useState({
-    employmentStatus: '',
-    employerDetails: '',
-    jobTitle: '',
-    salary: '',
-    employmentHistory: '',
-    jobStartDate: '',
-    jobEndDate: '',
-    country: '',
-    isCurrentJob: false,
-  });
 
-  // Handler for employment status change
+
+
+
+const Employment = () => {
+  const [employmentStatus, setEmploymentStatus] = useState('');
+  const [employmentRecords, setEmploymentRecords] = useState([]);
+
   const handleEmploymentStatusChange = (e) => {
     const selectedStatus = e.target.value;
-    setEmployment((prevState) => ({
-      ...prevState,
-      employmentStatus: selectedStatus,
-      employerDetails: selectedStatus === 'Employed' ? prevState.employerDetails : '',
-      jobTitle: selectedStatus === 'Employed' ? prevState.jobTitle : '',
-      salary: selectedStatus === 'Employed' ? prevState.salary : '',
-      employmentHistory: selectedStatus === 'Employed' ? prevState.employmentHistory : '',
-      jobStartDate: selectedStatus === 'Employed' ? prevState.jobStartDate : '',
-      jobEndDate: selectedStatus === 'Employed' ? prevState.jobEndDate : '',
-      country: selectedStatus === 'Employed' ? prevState.country : '',
-      isCurrentJob: selectedStatus === 'Employed' ? prevState.isCurrentJob : false,
-    }));
+    setEmploymentStatus(selectedStatus);
+    if (selectedStatus !== 'Employed') {
+      setEmploymentRecords([]);
+    }
+  };
+
+  const addEmploymentRecord = () => {
+    setEmploymentRecords([...employmentRecords, {
+      employerDetails: '',
+      jobTitle: '',
+      salary: '',
+      employmentHistory: '',
+      jobStartDate: '',
+      jobEndDate: '',
+      country: '',
+      isCurrentJob: false,
+    }]);
+  };
+
+  const updateEmploymentRecord = (index, field, value) => {
+    const updatedRecords = [...employmentRecords];
+    updatedRecords[index] = { ...updatedRecords[index], [field]: value };
+    setEmploymentRecords(updatedRecords);
   };
 
   return (
@@ -622,7 +774,7 @@ const Employment = () => {
         <label className="mt-2 font-medium text-blue-900">Current Employment Status</label>
         <select
           className="w-full p-2 border border-gray-300 rounded input-field"
-          value={employment.employmentStatus}
+          value={employmentStatus}
           onChange={handleEmploymentStatusChange}
         >
           <option value="" disabled>Select Employment Status</option>
@@ -631,90 +783,125 @@ const Employment = () => {
           <option value="Retired">Retired</option>
         </select>
 
-        {employment.employmentStatus === 'Employed' && (
+        {employmentStatus === 'Employed' && (
           <>
-            <label className="mt-2 font-medium text-blue-900">Employer Details</label>
-            <input
-              type="text"
-              placeholder="Employer Details"
-              className="w-full p-2 border border-gray-300 rounded input-field"
-              value={employment.employerDetails}
-              onChange={(e) => setEmployment({ ...employment, employerDetails: e.target.value })}
-            />
+            {employmentRecords.map((record, index) => (
+              <div key={index} className="p-4 mt-4 border border-gray-300 rounded">
+                <h4 className="mb-2 text-xl font-semibold text-blue-900">Job {index + 1}</h4>
+                <label className="mt-2 font-medium text-blue-900">Employer Details</label>
+                <input
+                  type="text"
+                  placeholder="Employer Details"
+                  className="w-full p-2 border border-gray-300 rounded input-field"
+                  value={record.employerDetails}
+                  onChange={(e) => updateEmploymentRecord(index, 'employerDetails', e.target.value)}
+                />
 
-            <label className="mt-2 font-medium text-blue-900">Job Title</label>
-            <input
-              type="text"
-              placeholder="Job Title"
-              className="w-full p-2 border border-gray-300 rounded input-field"
-              value={employment.jobTitle}
-              onChange={(e) => setEmployment({ ...employment, jobTitle: e.target.value })}
-            />
+                <label className="mt-2 font-medium text-blue-900">Job Title</label>
+                <input
+                  type="text"
+                  placeholder="Job Title"
+                  className="w-full p-2 border border-gray-300 rounded input-field"
+                  value={record.jobTitle}
+                  onChange={(e) => updateEmploymentRecord(index, 'jobTitle', e.target.value)}
+                />
 
-            <label className="mt-2 font-medium text-blue-900">Current Salary</label>
-            <input
-              type="text"
-              placeholder="Current Salary"
-              className="w-full p-2 border border-gray-300 rounded input-field"
-              value={employment.salary}
-              onChange={(e) => setEmployment({ ...employment, salary: e.target.value })}
-            />
+                <label className="mt-2 font-medium text-blue-900">Current Salary</label>
+                <input
+                  type="text"
+                  placeholder="Current Salary"
+                  className="w-full p-2 border border-gray-300 rounded input-field"
+                  value={record.salary}
+                  onChange={(e) => updateEmploymentRecord(index, 'salary', e.target.value)}
+                />
 
-            <label className="mt-2 font-medium text-blue-900">Employment History (Past 5 years)</label>
-            <input
-              type="text"
-              placeholder="Employment History"
-              className="w-full p-2 border border-gray-300 rounded input-field"
-              value={employment.employmentHistory}
-              onChange={(e) => setEmployment({ ...employment, employmentHistory: e.target.value })}
-            />
+                <label className="mt-2 font-medium text-blue-900">Employment History (Past 5 years)</label>
+                <input
+                  type="text"
+                  placeholder="Employment History"
+                  className="w-full p-2 border border-gray-300 rounded input-field"
+                  value={record.employmentHistory}
+                  onChange={(e) => updateEmploymentRecord(index, 'employmentHistory', e.target.value)}
+                />
 
-            <label className="mt-2 font-medium text-blue-900">Job Start Date</label>
-            <input
-              type="date"
-              className="w-full p-2 border border-gray-300 rounded input-field"
-              value={employment.jobStartDate}
-              onChange={(e) => setEmployment({ ...employment, jobStartDate: e.target.value })}
-            />
+                <label className="mt-2 font-medium text-blue-900">Job Start Date</label>
+                <input
+                  type="date"
+                  className="w-full p-2 border border-gray-300 rounded input-field"
+                  value={record.jobStartDate}
+                  onChange={(e) => updateEmploymentRecord(index, 'jobStartDate', e.target.value)}
+                />
 
-            <label className="mt-2 font-medium text-blue-900">Job End Date (or Present)</label>
-            <input
-              type="date"
-              className="w-full p-2 border border-gray-300 rounded input-field"
-              value={employment.isCurrentJob ? '' : employment.jobEndDate}
-              onChange={(e) => setEmployment({ ...employment, jobEndDate: e.target.value })}
-              disabled={employment.isCurrentJob}
-            />
+                <label className="mt-2 font-medium text-blue-900">Job End Date (or Present)</label>
+                <input
+                  type="date"
+                  className="w-full p-2 border border-gray-300 rounded input-field"
+                  value={record.isCurrentJob ? '' : record.jobEndDate}
+                  onChange={(e) => updateEmploymentRecord(index, 'jobEndDate', e.target.value)}
+                  disabled={record.isCurrentJob}
+                />
 
-            <div className="flex items-center mt-2">
-              <input
-                type="checkbox"
-                checked={employment.isCurrentJob}
-                onChange={(e) => setEmployment({ ...employment, isCurrentJob: e.target.checked })}
-                className="mr-2"
-              />
-              <label className="font-medium text-blue-900">This is my current job</label>
-            </div>
+                <div className="flex items-center mt-2">
+                  <input
+                    type="checkbox"
+                    checked={record.isCurrentJob}
+                    onChange={(e) => updateEmploymentRecord(index, 'isCurrentJob', e.target.checked)}
+                    className="mr-2"
+                  />
+                  <label className="font-medium text-blue-900">This is my current job</label>
+                </div>
 
-            <label className="mt-2 font-medium text-blue-900">Country</label>
-            <select
-              className="w-full p-2 border border-gray-300 rounded input-field"
-              value={employment.country}
-              onChange={(e) => setEmployment({ ...employment, country: e.target.value })}
+                <label className="mt-2 font-medium text-blue-900">Country</label>
+                <select
+                  className="w-full p-2 border border-gray-300 rounded input-field"
+                  value={record.country}
+                  onChange={(e) => updateEmploymentRecord(index, 'country', e.target.value)}
+                >
+                  <option value="" disabled>Select Country</option>
+                  {countries.map((country) => (
+                    <option key={country} value={country}>
+                      {country}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            ))}
+
+            <button
+              onClick={addEmploymentRecord}
+              className="px-2 py-4 mt-4 w-[28%] ml-auto mr-auto text-white bg-blue-900 rounded hover:bg-blue-600 hover:scale-110 font-semibold hover:transition-all hover:duration-300"
             >
-              <option value="" disabled>Select Country</option>
-              {countries.map((country) => (
-                <option key={country} value={country}>
-                  {country}
-                </option>
-              ))}
-            </select>
+            
+              Add Job
+            </button>
           </>
         )}
       </div>
     </div>
   );
-}; 
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -808,11 +995,37 @@ const TiesToHomeCountry = () => {
     </div>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const ImmigrationHistory = () => {
   const countries = [
-    "Canada", "USA", "UK", "Australia", "Germany", "France", 
-    "Italy", "Spain", "New Zealand", "Japan", "China", "India", 
-    "Brazil", "South Africa", "Mexico", "Switzerland", "Sweden", 
+    "Canada", "USA", "UK", "Australia", "Germany", "France",
+    "Italy", "Spain", "New Zealand", "Japan", "China", "India",
+    "Brazil", "South Africa", "Mexico", "Switzerland", "Sweden",
     "Netherlands", "Russia", "Singapore", "Other"
   ];
 
@@ -822,6 +1035,7 @@ const ImmigrationHistory = () => {
     hasPreviousVisas: '',
     visaDate: '',
     hasVisaRejections: '',
+    visaRejections: [],
     refusalCountry: '',
     refusalDate: '',
     refusalReason: '',
@@ -831,23 +1045,48 @@ const ImmigrationHistory = () => {
   const [selectedCountries, setSelectedCountries] = useState([]);
   const [availableCountries, setAvailableCountries] = useState(countries);
 
+
+
+  const handlePreviousVisaChange = (value) => {
+    setImmigrationHistory({
+      ...immigrationHistory,
+      hasPreviousVisas: value,
+      previousVisas: value === 'yes' ? [] : []
+    });
+  };
+
   const handleCountrySelect = (e) => {
     const selectedCountry = e.target.value;
-    if (selectedCountry !== '' && !selectedCountries.includes(selectedCountry)) {
-      setSelectedCountries([...selectedCountries, { country: selectedCountry, visaDate: '', returnDate: '', purpose: '' }]);
-      setAvailableCountries(availableCountries.filter(country => country !== selectedCountry));
+    if (selectedCountry !== '') {
+      setImmigrationHistory({
+        ...immigrationHistory,
+        previousVisas: [
+          ...immigrationHistory.previousVisas,
+          { country: selectedCountry, visaDate: '', returnDate: '', duration: '', purpose: '' }
+        ]
+      });
     }
   };
 
-  const handleRemoveCountry = (country) => {
-    setSelectedCountries(selectedCountries.filter(c => c.country !== country));
-    setAvailableCountries([...availableCountries, country]);
+  const handleInputChange = (index, field, value) => {
+    const updatedVisas = immigrationHistory.previousVisas.map((visa, i) => {
+      if (i === index) {
+        return { ...visa, [field]: value };
+      }
+      return visa;
+    });
+    setImmigrationHistory({
+      ...immigrationHistory,
+      previousVisas: updatedVisas
+    });
   };
 
-  const handleInputChange = (index, field, value) => {
-    const updatedCountries = [...selectedCountries];
-    updatedCountries[index][field] = value;
-    setSelectedCountries(updatedCountries);
+  const handleRemoveCountry = (index) => {
+    const updatedVisas = immigrationHistory.previousVisas.filter((_, i) => i !== index);
+    setImmigrationHistory({
+      ...immigrationHistory,
+      previousVisas: updatedVisas
+    });
   };
 
   const calculateDuration = (visaDate, returnDate) => {
@@ -861,196 +1100,257 @@ const ImmigrationHistory = () => {
     return '';
   };
 
+
+  const handleVisaRejectionChange = (value) => {
+    setImmigrationHistory({
+      ...immigrationHistory,
+      hasVisaRejections: value,
+      visaRejections: value === 'yes' ? [{ country: '', refusalDate: '', refusalReason: '' }] : []
+    });
+  };
+
+  const addVisaRejection = () => {
+    setImmigrationHistory({
+      ...immigrationHistory,
+      visaRejections: [...immigrationHistory.visaRejections, { country: '', refusalDate: '', refusalReason: '' }]
+    });
+  };
+
+  const updateVisaRejection = (index, field, value) => {
+    const updatedRejections = immigrationHistory.visaRejections.map((rejection, i) => {
+      if (i === index) {
+        return { ...rejection, [field]: value };
+      }
+      return rejection;
+    });
+    setImmigrationHistory({
+      ...immigrationHistory,
+      visaRejections: updatedRejections
+    });
+  };
+
+
+
+
+  
+
   return (
     <div>
       <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Immigration History</h3>
       <div className="grid grid-cols-1 gap-2">
-        {/* Previous Visas to Canada or Other Countries */}
-        <label className="mt-4 mb-2 font-medium text-blue-900">
-          Previous Visas to Canada or Other Countries:
-        </label>
-        <div className="flex mt-2 space-x-4">
-          <button
-            type="button"
-            className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasPreviousVisas === 'yes'
-              ? 'bg-blue-900 text-white'
-              : 'bg-gray-200 text-blue-900'
-              }`}
-            onClick={() => setImmigrationHistory({ ...immigrationHistory, hasPreviousVisas: 'yes' })}
-          >
-            Yes
-          </button>
-          <button
-            type="button"
-            className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasPreviousVisas === 'no'
-              ? 'bg-blue-900 text-white'
-              : 'bg-gray-200 text-blue-900'
-              }`}
-            onClick={() => setImmigrationHistory({ ...immigrationHistory, hasPreviousVisas: 'no' })}
-          >
-            No
-          </button>
-        </div>
+       
+ 
 
-        {/* Conditional fields for "Yes" in Previous Visas */}
-        {immigrationHistory.hasPreviousVisas === 'yes' && (
-          <>
-            <label className="mt-2 font-medium text-blue-900">Select Country</label>
-            <select
-              className="w-full p-2 border border-gray-300 rounded input-field"
-              onChange={handleCountrySelect}
-              value=""
-            >
-              <option value="" disabled>Select Country</option>
-              {availableCountries.map((country) => (
-                <option key={country} value={country}>{country}</option>
-              ))}
-            </select>
-
-            {/* Display form for each selected country */}
-            {selectedCountries.length > 0 && (
-              <>
-                <h4 className="mt-4 text-xl font-bold">Countries and Visa Details</h4>
-                {selectedCountries.map((selectedCountry, index) => (
-                  <div key={index} className="p-4 mt-4 border rounded">
-                    <h5 className="p-2 mb-6 text-xl font-bold text-center w-[30%] rounded-lg ml-auto mr-auto text-white bg-blue-900">{selectedCountry.country}</h5>
-                    <label className="mt-2 mb-2 font-medium text-blue-900">Visa Date</label>
-                    <input
-                      type="date"
-                      className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
-                      value={selectedCountry.visaDate}
-                      onChange={(e) => handleInputChange(index, 'visaDate', e.target.value)}
-                    />
-
-                    <label className="mt-2 font-medium text-blue-900">Return Date</label>
-                    <input
-                      type="date"
-                      className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
-                      value={selectedCountry.returnDate}
-                      onChange={(e) => handleInputChange(index, 'returnDate', e.target.value)}
-                    />
-
-                    <label className="mt-2 font-medium text-blue-900">Duration of Stay</label>
-                    <input
-                      type="text"
-                      className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
-                      value={calculateDuration(selectedCountry.visaDate, selectedCountry.returnDate)}
-                      readOnly
-                    />
-
-                    <label className="mt-2 font-medium text-blue-900">Purpose</label>
-                    <input
-                      type="text"
-                      className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
-                      value={selectedCountry.purpose}
-                      onChange={(e) => handleInputChange(index, 'purpose', e.target.value)}
-                    />
-
-                    <button
-                      className="px-2 py-2 font-bold text-white transition-all duration-300 bg-red-800 rounded hover:scale-110"
-                      onClick={() => handleRemoveCountry(selectedCountry.country)}
-                    >
-                      Remove Country
-                    </button>
-                  </div>
-                ))}
-              </>
-            )}
-          </>
-        )}
-
-        {/* Previous Visa Refusals (No changes) */}
-  
-
-
-
-
-
-
-
-
-
-
-
-
-        <label className="mt-4 mb-2 font-medium text-blue-900">Previous Visa Refusals:</label>
-        <div className="flex mt-2 space-x-4">
-          <button
-            type="button"
-            className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasVisaRejections === 'yes'
-              ? 'bg-blue-900 text-white'
-              : 'bg-gray-200 text-blue-900'
+      <div>
+      <label className="mt-4 mb-2 font-medium text-blue-900">
+        Previous Visas to Canada or Other Countries:
+      </label>
+      <div className="flex mt-2 space-x-4">
+        <button
+          type="button"
+          className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasPreviousVisas === 'yes'
+            ? 'bg-blue-900 text-white'
+            : 'bg-gray-200 text-blue-900'
             }`}
-            onClick={() => setImmigrationHistory({ ...immigrationHistory, hasVisaRejections: 'yes' })}
-          >
-            Yes
-          </button>
-          <button
-            type="button"
-            className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasVisaRejections === 'no'
-              ? 'bg-blue-900 text-white'
-              : 'bg-gray-200 text-blue-900'
-              }`}
-            onClick={() => setImmigrationHistory({ ...immigrationHistory, hasVisaRejections: 'no' })}
-          >
-            No
-          </button>
-        </div>
-
-        {/* Conditional fields for "Yes" in Visa Refusals */}
-        {immigrationHistory.hasVisaRejections === 'yes' && (
-          <>
-            <label className="mt-2 font-medium text-blue-900">Country Name</label>
-            <select
-              className="w-full p-2 border border-gray-300 rounded input-field"
-              value={immigrationHistory.refusalCountry}
-              onChange={(e) => setImmigrationHistory({ ...immigrationHistory, refusalCountry: e.target.value })}
-            >
-              <option value="" disabled>Select Country</option>
-              {countries.map((country) => (
-                <option key={country} value={country}>{country}</option>
-              ))}
-            </select>
-
-            {/* Show custom input field if "Other" is selected for refusal */}
-            {immigrationHistory.refusalCountry === 'Other' && (
-              <>
-                <label className="mt-2 font-medium text-blue-900">Enter Country Name</label>
-                <input
-                  type="text"
-                  placeholder="Enter Country Name"
-                  className="w-full p-2 border border-gray-300 rounded input-field"
-                  value={immigrationHistory.otherCountryName}
-                  onChange={(e) => setImmigrationHistory({ ...immigrationHistory, otherCountryName: e.target.value })}
-                />
-              </>
-            )}
-
-            <label className="mt-2 font-medium text-blue-900">Date Refused</label>
-            <input
-              type="date"
-              className="w-full p-2 border border-gray-300 rounded input-field"
-              value={immigrationHistory.refusalDate}
-              onChange={(e) => setImmigrationHistory({ ...immigrationHistory, refusalDate: e.target.value })}
-            />
-            <label className="mt-2 font-medium text-blue-900">Reason</label>
-            <input
-              type="text"
-              placeholder="Reason for Rejection"
-              className="w-full p-2 border border-gray-300 rounded input-field"
-              value={immigrationHistory.refusalReason}
-              onChange={(e) => setImmigrationHistory({ ...immigrationHistory, refusalReason: e.target.value })}
-            />
-          </>
-        )}
+          onClick={() => handlePreviousVisaChange('yes')}
+        >
+          Yes
+        </button>
+        <button
+          type="button"
+          className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasPreviousVisas === 'no'
+            ? 'bg-blue-900 text-white'
+            : 'bg-gray-200 text-blue-900'
+            }`}
+          onClick={() => handlePreviousVisaChange('no')}
+        >
+          No
+        </button>
       </div>
 
+      {immigrationHistory.hasPreviousVisas === 'yes' && (
+        <>
+          <label className="mt-2 font-medium text-blue-900">Select Country</label>
+          <select
+            className="w-full p-2 border border-gray-300 rounded input-field"
+            onChange={handleCountrySelect}
+            value="" // Reset the dropdown value after selection
+          >
+            <option value="" disabled>Select Country</option>
+            {countries.map((country) => (
+              <option key={country} value={country}>{country}</option>
+            ))}
+          </select>
 
-</div>
+          {/* Display form for each selected country */}
+          {immigrationHistory.previousVisas.length > 0 && (
+            <>
+              <h4 className="mt-4 text-xl font-bold">Countries and Visa Details</h4>
+              {immigrationHistory.previousVisas.map((visa, index) => (
+                <div key={index} className="p-4 mt-4 border rounded">
+                  <h5 className="p-2 mb-6 text-xl font-bold text-center w-[30%] rounded-lg ml-auto mr-auto text-white bg-blue-900">{visa.country}</h5>
+                  <label className="mt-2 mb-2 font-medium text-blue-900">Visa Date</label>
+                  <input
+                    type="date"
+                    className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
+                    value={visa.visaDate}
+                    onChange={(e) => handleInputChange(index, 'visaDate', e.target.value)}
+                  />
 
-  
+                  <label className="mt-2 font-medium text-blue-900">Return Date</label>
+                  <input
+                    type="date"
+                    className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
+                    value={visa.returnDate}
+                    onChange={(e) => handleInputChange(index, 'returnDate', e.target.value)}
+                  />
+
+                  <label className="mt-2 font-medium text-blue-900">Duration of Stay</label>
+                  <input
+                    type="text"
+                    className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
+                    value={calculateDuration(visa.visaDate, visa.returnDate)}
+                    readOnly
+                  />
+
+                  <label className="mt-2 font-medium text-blue-900">Purpose</label>
+                  <input
+                    type="text"
+                    className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
+                    value={visa.purpose}
+                    onChange={(e) => handleInputChange(index, 'purpose', e.target.value)}
+                  />
+
+                  <button
+                    className="px-2 py-2 font-bold text-white transition-all duration-300 bg-red-800 rounded hover:scale-110"
+                    onClick={() => handleRemoveCountry(index)}
+                  >
+                    Remove Country
+                  </button>
+                </div>
+              ))}
+            </>
+          )}
+        </>
+      )}
+    </div>
+
+
+    
+
+    
+
+
+
+<div>
+      <label className="mt-4 mb-2 font-medium text-blue-900">Previous Visa Refusals:</label>
+      <div className="flex mt-2 space-x-4">
+        <button
+          type="button"
+          className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasVisaRejections === 'yes'
+            ? 'bg-blue-900 text-white'
+            : 'bg-gray-200 text-blue-900'
+            }`}
+          onClick={() => handleVisaRejectionChange('yes')}
+        >
+          Yes
+        </button>
+        <button
+          type="button"
+          className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasVisaRejections === 'no'
+            ? 'bg-blue-900 text-white'
+            : 'bg-gray-200 text-blue-900'
+            }`}
+          onClick={() => handleVisaRejectionChange('no')}
+        >
+          No
+        </button>
+      </div>
+
+      {immigrationHistory.hasVisaRejections === 'yes' && (
+        <>
+          {immigrationHistory.visaRejections.map((rejection, index) => (
+            <div key={index} className="p-4 mt-4 border rounded">
+              <label className="mt-2 font-medium text-blue-900">Country Name</label>
+              <select
+                className="w-full p-2 border border-gray-300 rounded input-field"
+                value={rejection.country}
+                onChange={(e) => updateVisaRejection(index, 'country', e.target.value)}
+              >
+                <option value="" disabled>Select Country</option>
+                {countries.map((country) => (
+                  <option key={country} value={country}>{country}</option>
+                ))}
+              </select>
+
+              {rejection.country === 'Other' && (
+                <>
+                  <label className="mt-2 font-medium text-blue-900">Enter Country Name</label>
+                  <input
+                    type="text"
+                    placeholder="Enter Country Name"
+                    className="w-full p-2 border border-gray-300 rounded input-field"
+                    value={rejection.otherCountryName || ''}
+                    onChange={(e) => updateVisaRejection(index, 'otherCountryName', e.target.value)}
+                  />
+                </>
+              )}
+
+              <label className="mt-2 font-medium text-blue-900">Date Refused</label>
+              <input
+                type="date"
+                className="w-full p-2 border border-gray-300 rounded input-field"
+                value={rejection.refusalDate}
+                onChange={(e) => updateVisaRejection(index, 'refusalDate', e.target.value)}
+              />
+
+              <label className="mt-2 font-medium text-blue-900">Reason for Refusal</label>
+              <textarea
+                className="w-full p-2 border border-gray-300 rounded input-field"
+                value={rejection.refusalReason}
+                onChange={(e) => updateVisaRejection(index, 'refusalReason', e.target.value)}
+              />
+            </div>
+          ))}
+          <button
+            className="px-4 py-2 mt-4 font-medium text-white bg-blue-900 rounded hover:bg-blue-800"
+            onClick={addVisaRejection}
+          >
+            Add Another Visa Refusal
+          </button>
+        </>
+      )}
+    </div>
+
+
+      </div>
+    </div>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const HealthSecurity = () => {
   const [healthSecurity, setHealthSecurity] = useState({
     hasHealthIssues: '',
@@ -1073,7 +1373,7 @@ const HealthSecurity = () => {
   return (
     <div>
       <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Health and Security</h3>
-      {/* Significant Health Issues Section */}
+    
       <label className="mt-4 font-medium text-blue-900">Do you have any significant health issues?</label>
       <div className="flex mt-6 mb-6 space-x-6">
         <button
@@ -1091,7 +1391,7 @@ const HealthSecurity = () => {
           No
         </button>
       </div>
-      {/* Conditional input for health issues */}
+    
       {healthSecurity.hasHealthIssues === 'yes' && (
         <>
           <label className="mt-8 font-medium text-blue-900">Disease Name</label>
