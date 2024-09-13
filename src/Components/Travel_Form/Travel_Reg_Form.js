@@ -387,163 +387,320 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
     </div>
   );
 };
+
+
+
+
+
+
 const Education = ({ globalMaritalStatus }) => {
-  const [education, setEducation] = useState({
-    highestDegree: '',
-    fieldOfStudy: '',
-    institution: '',
-    completionYear: '',
-    spouseHighestDegree: '',
-    spouseFieldOfStudy: '',
-    spouseInstitution: '',
-    spouseCompletionYear: ''
-  });
-  // Degrees that will trigger showing additional fields
-  const degreeOptions = ['Intermediate', 'Bachelors', 'Masters'];
-  return (
-    <>
-      <div>
-        <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Education</h3>
-        {/* <p>{globalMaritalStatus}</p> */}
-        <div className="grid grid-cols-1 gap-2">
-          {/* Your Education Section */}
-          <label className="mt-2 font-medium text-blue-900">Your Highest Degree</label>
-          <select
-            className="w-full p-2 border border-gray-300 rounded input-field"
-            value={education.highestDegree}
-            onChange={(e) => setEducation({ ...education, highestDegree: e.target.value })}
-          >
-            <option value="" className='text-blue-900 '>Select Degree</option>
-            <option value="Intermediate" className='text-blue-900'>Intermediate</option>
-            <option value="Bachelors"className='text-blue-900'>Bachelors</option>
-            <option value="Masters"className='text-blue-900'>Masters</option>
-            <option value="Uneducated"className='text-blue-900'>Uneducated</option>
-          </select>
-          {/* Show additional fields if Intermediate, Bachelors, or Masters is selected */}
-          {degreeOptions.includes(education.highestDegree) && (
-            <>
-              <label className="mt-2 font-medium text-blue-900">Field of Study</label>
-              <input
-                type="text"
-                placeholder="Field of Study"
-                className="w-full p-2 border border-gray-300 rounded input-field"
-                value={education.fieldOfStudy}
-                onChange={(e) => setEducation({ ...education, fieldOfStudy: e.target.value })}
-              />
-              <label className="mt-2 font-medium text-blue-900">Institution Attended</label>
-              <input
-                type="text"
-                placeholder="Institution Attended"
-                className="w-full p-2 border border-gray-300 rounded input-field"
-                value={education.institution}
-                onChange={(e) => setEducation({ ...education, institution: e.target.value })}
-              />
-              <label className="mt-2 font-medium text-blue-900">Completion Year</label>
-              <input
-                type="date"
-                className="w-full p-2 border border-gray-300 rounded input-field"
-                value={education.completionYear}
-                onChange={(e) => setEducation({ ...education, completionYear: e.target.value })}
-              />
-            </>
-          )}
-      
-          
+  const [userEducationForms, setUserEducationForms] = useState([]);
+  const [spouseEducationForms, setSpouseEducationForms] = useState([]);
 
-          {/* <label className="mt-4 font-medium text-blue-900">Spouse's Highest Degree</label>
-          <select
-            className="w-full p-2 border border-gray-300 rounded input-field"
-            value={education.spouseHighestDegree}
-            onChange={(e) => setEducation({ ...education, spouseHighestDegree: e.target.value })}
-          >
-            <option value="" className='text-blue-900'>Select Spouse's Degree</option>
-            <option value="Intermediate" className='text-blue-900'>Intermediate</option>
-            <option value="Bachelors" className='text-blue-900'>Bachelors</option>
-            <option value="Masters" className='text-blue-900'>Masters</option>
-            <option value="Uneducated" className='text-blue-900'>Uneducated</option>
-          </select>
-          
-          {degreeOptions.includes(education.spouseHighestDegree) && (
-            <>
-              <label className="mt-2 font-medium text-blue-900">Spouse's Field of Study</label>
-              <input
-                type="text"
-                placeholder="Spouse's Field of Study"
-                className="w-full p-2 border border-gray-300 rounded input-field"
-                value={education.spouseFieldOfStudy}
-                onChange={(e) => setEducation({ ...education, spouseFieldOfStudy: e.target.value })}
-              />
-              <label className="mt-2 font-medium text-blue-900">Spouse's Institution Attended</label>
-              <input
-                type="text"
-                placeholder="Spouse's Institution Attended"
-                className="w-full p-2 border border-gray-300 rounded input-field"
-                value={education.spouseInstitution}
-                onChange={(e) => setEducation({ ...education, spouseInstitution: e.target.value })}
-              />
-              <label className="mt-2 font-medium text-blue-900">Spouse's Completion Year</label>
-              <input
-                type="date"
-                className="w-full p-2 border border-gray-300 rounded input-field"
-                value={education.spouseCompletionYear}
-                onChange={(e) => setEducation({ ...education, spouseCompletionYear: e.target.value })}
-              />
-            </>
-          )} */}
+  const degreeOptions = ['Intermediate', 'Bachelors', 'Masters', 'Uneducated'];
 
+  const handleAddEducation = (degree, isSpouse = false) => {
+    if (degree && degree !== 'Uneducated') {
+      const newForm = {
+        degree,
+        fieldOfStudy: '',
+        institution: '',
+        completionYear: '',
+      };
+      if (isSpouse) {
+        setSpouseEducationForms(prevForms => 
+          [...prevForms.filter(form => form.degree !== degree), newForm]
+        );
+      } else {
+        setUserEducationForms(prevForms => 
+          [...prevForms.filter(form => form.degree !== degree), newForm]
+        );
+      }
+    } else if (degree === 'Uneducated') {
+      // Clear all forms if 'Uneducated' is selected
+      if (isSpouse) {
+        setSpouseEducationForms([]);
+      } else {
+        setUserEducationForms([]);
+      }
+    }
+  };
 
-{['Married'].includes(globalMaritalStatus) && (
-            <>
-              <label className="mt-4 font-medium text-blue-900">Spouse's Highest Degree</label>
-              <select
-                className="w-full p-2 border border-gray-300 rounded input-field"
-                value={education.spouseHighestDegree}
-                onChange={(e) => setEducation({ ...education, spouseHighestDegree: e.target.value })}
-              >
-                <option value="" className="text-blue-900">Select Spouse's Degree</option>
-                <option value="Intermediate" className="text-blue-900">Intermediate</option>
-                <option value="Bachelors" className="text-blue-900">Bachelors</option>
-                <option value="Masters" className="text-blue-900">Masters</option>
-                <option value="Uneducated" className="text-blue-900">Uneducated</option>
-              </select>
+  const handleEducationChange = (index, field, value, isSpouse = false) => {
+    const updateForms = (prevForms) => {
+      const updatedForms = [...prevForms];
+      updatedForms[index] = { ...updatedForms[index], [field]: value };
+      return updatedForms;
+    };
 
-              {/* Show additional fields for spouse if Intermediate, Bachelors, or Masters is selected */}
-              {degreeOptions.includes(education.spouseHighestDegree) && (
-                <>
-                  <label className="mt-2 font-medium text-blue-900">Spouse's Field of Study</label>
-                  <input
-                    type="text"
-                    placeholder="Spouse's Field of Study"
-                    className="w-full p-2 border border-gray-300 rounded input-field"
-                    value={education.spouseFieldOfStudy}
-                    onChange={(e) => setEducation({ ...education, spouseFieldOfStudy: e.target.value })}
-                  />
-                  <label className="mt-2 font-medium text-blue-900">Spouse's Institution Attended</label>
-                  <input
-                    type="text"
-                    placeholder="Spouse's Institution Attended"
-                    className="w-full p-2 border border-gray-300 rounded input-field"
-                    value={education.spouseInstitution}
-                    onChange={(e) => setEducation({ ...education, spouseInstitution: e.target.value })}
-                  />
-                  <label className="mt-2 font-medium text-blue-900">Spouse's Completion Year</label>
-                  <input
-                    type="date"
-                    className="w-full p-2 border border-gray-300 rounded input-field"
-                    value={education.spouseCompletionYear}
-                    onChange={(e) => setEducation({ ...education, spouseCompletionYear: e.target.value })}
-                  />
-                </>
-              )}
-            </>
-          )}
-      
-          
-        </div>
+    if (isSpouse) {
+      setSpouseEducationForms(updateForms);
+    } else {
+      setUserEducationForms(updateForms);
+    }
+  };
+
+  const renderEducationForms = (forms, isSpouse = false) => (
+    forms.map((form, index) => (
+      <div key={index} className="p-4 mt-12 border border-gray-300 rounded">
+        <h4 className="p-4 mt-6 mb-10 w-[50%] ml-auto mr-auto font-semibold text-center text-white bg-blue-900 rounded-sm">{form.degree} Education</h4>
+        <label className="mt-2 font-medium text-blue-900">Field of Study</label>
+        <input
+          type="text"
+          placeholder="Field of Study"
+          className="w-full p-2 mt-2 mb-4 border border-gray-300 rounded input-field"
+          value={form.fieldOfStudy}
+          onChange={(e) => handleEducationChange(index, 'fieldOfStudy', e.target.value, isSpouse)}
+        />
+        <label className="mt-4 font-medium text-blue-900">Institution Attended</label>
+        <input
+          type="text"
+          placeholder="Institution Attended"
+          className="w-full p-2 mt-2 mb-4 border border-gray-300 rounded input-field"
+          value={form.institution}
+          onChange={(e) => handleEducationChange(index, 'institution', e.target.value, isSpouse)}
+        />
+        <label className="mt-4 font-medium text-blue-900">Completion Year</label>
+        <input
+          type="date"
+          className="w-full p-2 mt-2 mb-4 border border-gray-300 rounded input-field"
+          value={form.completionYear}
+          onChange={(e) => handleEducationChange(index, 'completionYear', e.target.value, isSpouse)}
+        />
       </div>
-    </>
+    ))
+  );
+
+  return (
+    <div>
+      <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Education</h3>
+      
+      <div className="grid grid-cols-1 gap-2">
+        <label className="mt-2 font-medium text-blue-900">Your Highest Degree(s)</label>
+        <select
+          className="w-full p-2 border border-gray-300 rounded input-field"
+          onChange={(e) => handleAddEducation(e.target.value)}
+        >
+          <option value="">Select Degree</option>
+          {degreeOptions.map((degree) => (
+            <option key={degree} value={degree} className="text-blue-900">
+              {degree}
+            </option>
+          ))}
+        </select>
+
+        {renderEducationForms(userEducationForms)}
+
+        {['Married'].includes(globalMaritalStatus) && (
+          <div className="mt-8">
+            <h4 className="mb-4 text-xl font-semibold text-blue-900">Spouse's Education</h4>
+            <label className="mt-2 font-medium text-blue-900">Spouse's Highest Degree(s)</label>
+            <select
+              className="w-full p-2 border border-gray-300 rounded input-field"
+              onChange={(e) => handleAddEducation(e.target.value, true)}
+            >
+              <option value="">Select Spouse's Degree</option>
+              {degreeOptions.map((degree) => (
+                <option key={degree} value={degree} className="text-blue-900">
+                  {degree}
+                </option>
+              ))}
+            </select>
+
+            {renderEducationForms(spouseEducationForms, true)}
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const Education = ({ globalMaritalStatus }) => {
+//   const [education, setEducation] = useState({
+//     highestDegree: '',
+//     fieldOfStudy: '',
+//     institution: '',
+//     completionYear: '',
+//     spouseHighestDegree: '',
+//     spouseFieldOfStudy: '',
+//     spouseInstitution: '',
+//     spouseCompletionYear: ''
+//   });
+
+//   const degreeOptions = ['Intermediate', 'Bachelors', 'Masters'];
+//   return (
+//     <>
+//       <div>
+//         <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Education</h3>
+//         <div className="grid grid-cols-1 gap-2">
+//           <label className="mt-2 font-medium text-blue-900">Your Highest Degree</label>
+//           <select
+//             className="w-full p-2 border border-gray-300 rounded input-field"
+//             value={education.highestDegree}
+//             onChange={(e) => setEducation({ ...education, highestDegree: e.target.value })}
+//           >
+//             <option value="" className='text-blue-900 '>Select Degree</option>
+//             <option value="Intermediate" className='text-blue-900'>Intermediate</option>
+//             <option value="Bachelors"className='text-blue-900'>Bachelors</option>
+//             <option value="Masters"className='text-blue-900'>Masters</option>
+//             <option value="Uneducated"className='text-blue-900'>Uneducated</option>
+//           </select>
+//           {degreeOptions.includes(education.highestDegree) && (
+//             <>
+//               <label className="mt-2 font-medium text-blue-900">Field of Study</label>
+//               <input
+//                 type="text"
+//                 placeholder="Field of Study"
+//                 className="w-full p-2 border border-gray-300 rounded input-field"
+//                 value={education.fieldOfStudy}
+//                 onChange={(e) => setEducation({ ...education, fieldOfStudy: e.target.value })}
+//               />
+//               <label className="mt-2 font-medium text-blue-900">Institution Attended</label>
+//               <input
+//                 type="text"
+//                 placeholder="Institution Attended"
+//                 className="w-full p-2 border border-gray-300 rounded input-field"
+//                 value={education.institution}
+//                 onChange={(e) => setEducation({ ...education, institution: e.target.value })}
+//               />
+//               <label className="mt-2 font-medium text-blue-900">Completion Year</label>
+//               <input
+//                 type="date"
+//                 className="w-full p-2 border border-gray-300 rounded input-field"
+//                 value={education.completionYear}
+//                 onChange={(e) => setEducation({ ...education, completionYear: e.target.value })}
+//               />
+//             </>
+//           )}
+      
+// {['Married'].includes(globalMaritalStatus) && (
+//             <>
+//               <label className="mt-4 font-medium text-blue-900">Spouse's Highest Degree</label>
+//               <select
+//                 className="w-full p-2 border border-gray-300 rounded input-field"
+//                 value={education.spouseHighestDegree}
+//                 onChange={(e) => setEducation({ ...education, spouseHighestDegree: e.target.value })}
+//               >
+//                 <option value="" className="text-blue-900">Select Spouse's Degree</option>
+//                 <option value="Intermediate" className="text-blue-900">Intermediate</option>
+//                 <option value="Bachelors" className="text-blue-900">Bachelors</option>
+//                 <option value="Masters" className="text-blue-900">Masters</option>
+//                 <option value="Uneducated" className="text-blue-900">Uneducated</option>
+//               </select>
+
+//               {/* Show additional fields for spouse if Intermediate, Bachelors, or Masters is selected */}
+//               {degreeOptions.includes(education.spouseHighestDegree) && (
+//                 <>
+//                   <label className="mt-2 font-medium text-blue-900">Spouse's Field of Study</label>
+//                   <input
+//                     type="text"
+//                     placeholder="Spouse's Field of Study"
+//                     className="w-full p-2 border border-gray-300 rounded input-field"
+//                     value={education.spouseFieldOfStudy}
+//                     onChange={(e) => setEducation({ ...education, spouseFieldOfStudy: e.target.value })}
+//                   />
+//                   <label className="mt-2 font-medium text-blue-900">Spouse's Institution Attended</label>
+//                   <input
+//                     type="text"
+//                     placeholder="Spouse's Institution Attended"
+//                     className="w-full p-2 border border-gray-300 rounded input-field"
+//                     value={education.spouseInstitution}
+//                     onChange={(e) => setEducation({ ...education, spouseInstitution: e.target.value })}
+//                   />
+//                   <label className="mt-2 font-medium text-blue-900">Spouse's Completion Year</label>
+//                   <input
+//                     type="date"
+//                     className="w-full p-2 border border-gray-300 rounded input-field"
+//                     value={education.spouseCompletionYear}
+//                     onChange={(e) => setEducation({ ...education, spouseCompletionYear: e.target.value })}
+//                   />
+//                 </>
+//               )}
+//             </>
+//           )}
+      
+          
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const TravelInformation = () => {
   const [travelInfo, setTravelInfo] = useState({
     purposeOfVisit: '',
