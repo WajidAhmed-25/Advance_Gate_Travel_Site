@@ -46,9 +46,9 @@ const PersonalInformation = () => {
 
   return (
     <div className='p-6'>
-      <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Personal Information</h3>
+      <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Personal Information</h3>
       <div className="grid grid-cols-1 gap-2">
-        <label className="mt-2 font-medium text-blue-900">Full Name</label>
+        <label className="mt-2 font-medium text-[#007fac]">Full Name</label>
         <input
           type="text"
           name="fullName"
@@ -57,7 +57,7 @@ const PersonalInformation = () => {
           value={personalInfo.fullName}
           onChange={handleChange}
         />
-        <label className="mt-2 font-medium text-blue-900">Date of Birth</label>
+        <label className="mt-2 font-medium text-[#007fac]">Date of Birth</label>
         <input
           type="date"
           name="dateOfBirth"
@@ -66,7 +66,7 @@ const PersonalInformation = () => {
           value={personalInfo.dateOfBirth}
           onChange={handleChange}
         />
-        <label className="mt-2 font-medium text-blue-900">Nationality</label>
+        <label className="mt-2 font-medium text-[#007fac]">Nationality</label>
         <input
           type="text"
           name="nationality"
@@ -75,7 +75,7 @@ const PersonalInformation = () => {
           value={personalInfo.nationality}
           onChange={handleChange}
         />
-        <label className="mt-2 font-medium text-blue-900">Passport Number</label>
+        <label className="mt-2 font-medium text-[#007fac]">Passport Number</label>
         <input
           type="text"
           name="passportNumber"
@@ -84,7 +84,7 @@ const PersonalInformation = () => {
           value={personalInfo.passportNumber}
           onChange={handleChange}
         />
-        <label className="mt-2 font-medium text-blue-900">Passport Expiry Date</label>
+        <label className="mt-2 font-medium text-[#007fac]">Passport Expiry Date</label>
         <input
           type="date"
           name="passportExpiry"
@@ -93,7 +93,7 @@ const PersonalInformation = () => {
           value={personalInfo.passportExpiry}
           onChange={handleChange}
         />
-        <label className="mt-2 font-medium text-blue-900">Email</label>
+        <label className="mt-2 font-medium text-[#007fac]">Email</label>
         <input
           type="email"
           name="email"
@@ -102,7 +102,7 @@ const PersonalInformation = () => {
           value={personalInfo.email}
           onChange={handleChange}
         />
-        <label className="mt-2 font-medium text-blue-900">Contact Number</label>
+        <label className="mt-2 font-medium text-[#007fac]">Contact Number</label>
         <input
           type="tel"
           name="contactNumber"
@@ -112,7 +112,7 @@ const PersonalInformation = () => {
           onChange={handleChange}
         />
      
-     <label className="mt-2 font-medium text-blue-900">Address</label>
+     <label className="mt-2 font-medium text-[#007fac]">Address</label>
         <div className="flex items-center">
           <textarea
             name="address"
@@ -124,7 +124,7 @@ const PersonalInformation = () => {
           />
           <button
             onClick={fetchLocation}
-            className="p-2 ml-2 text-white bg-blue-900 rounded hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            className="p-2 ml-2 text-white bg-[#007fac] rounded hover:bg-[#007fac]/60 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
             title="Fetch current location"
           >
             <MapPin size={24} />
@@ -216,9 +216,9 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
   };
   return (
     <div>
-      <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Marital Status</h3>
+      <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Marital Status</h3>
       <div className="grid grid-cols-1 gap-2">
-        <label className="mt-2 font-medium text-blue-900">Marital Status</label>
+        <label className="mt-2 font-medium text-[#007fac]">Marital Status</label>
         <select
           className="w-full p-2 border border-gray-300 rounded input-field"
           // value={maritalStatus.maritalStatus}
@@ -234,7 +234,7 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
         {/* Conditionally render spouse-related fields if marital status is Married or Separated */}
         {(maritalStatus.maritalStatus === 'Married' ) && (
           <>
-            <label className="mt-2 font-medium text-blue-900">Spouse's Full Name</label>
+            <label className="mt-2 font-medium text-[#007fac]">Spouse's Full Name</label>
             <input
               type="text"
               placeholder="Spouse's Full Name"
@@ -242,7 +242,7 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
               value={maritalStatus.spouseName}
               onChange={(e) => setMaritalStatus({ ...maritalStatus, spouseName: e.target.value })}
             />
-            <label className="mt-2 font-medium text-blue-900">Spouse's Date of Birth</label>
+            <label className="mt-2 font-medium text-[#007fac]">Spouse's Date of Birth</label>
             <input
               type="date"
               placeholder="Spouse's Date of Birth"
@@ -250,7 +250,7 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
               value={maritalStatus.spouseDob}
               onChange={(e) => setMaritalStatus({ ...maritalStatus, spouseDob: e.target.value })}
             />
-            <label className="mt-2 font-medium text-blue-900">Spouse's Nationality</label>
+            <label className="mt-2 font-medium text-[#007fac]">Spouse's Nationality</label>
             <input
               type="text"
               placeholder="Spouse's Nationality"
@@ -264,11 +264,11 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
         {/* Do you have children? */}
         {(maritalStatus.maritalStatus === 'Married' || maritalStatus.maritalStatus === 'Separated') && (
           <>
-            <label className="mt-6 font-medium text-blue-900">Do you have children?</label>
+            <label className="mt-6 font-medium text-[#007fac]">Do you have children?</label>
             <div className="flex gap-8 mt-2 mb-4">
               <button
                 type="button"
-                className={`px-4 py-2 ${hasChildren === true ? 'bg-blue-800 text-white' : 'bg-gray-300'}`}
+                className={`px-4 py-2 ${hasChildren === true ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'}`}
                 onClick={() => {
                   setHasChildren(true);
                   setMaritalStatus({
@@ -282,7 +282,7 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
               </button>
               <button
                 type="button"
-                className={`px-4 py-2 ${hasChildren === false ? 'bg-blue-800 text-white' : 'bg-gray-300'}`}
+                className={`px-4 py-2 ${hasChildren === false ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'}`}
                 onClick={() => setHasChildren(false)}
               >
                 No
@@ -290,7 +290,7 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
             </div>
             {hasChildren === true && (
               <div>
-                <label className="mt-4 font-medium text-blue-900">How many children?</label>
+                <label className="mt-4 font-medium text-[#007fac]">How many children?</label>
                 <select
                   value={maritalStatus.numberOfChildren}
                   onChange={handleChildrenSelect}
@@ -323,21 +323,21 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
                           <div className="flex gap-4">
                             <button
                               type="button"
-                              className={`px-4 py-2 ${maritalStatus.childrenDetails[index]?.gender === 'Male' ? 'bg-blue-800 text-white' : 'bg-gray-300'}`}
+                              className={`px-4 py-2 ${maritalStatus.childrenDetails[index]?.gender === 'Male' ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'}`}
                               onClick={() => handleChildrenDetailsChange(index, 'gender', 'Male')}
                             >
                               Male
                             </button>
                             <button
                               type="button"
-                              className={`px-4 py-2 ${maritalStatus.childrenDetails[index]?.gender === 'Female' ? 'bg-blue-800 text-white' : 'bg-gray-300'}`}
+                              className={`px-4 py-2 ${maritalStatus.childrenDetails[index]?.gender === 'Female' ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'}`}
                               onClick={() => handleChildrenDetailsChange(index, 'gender', 'Female')}
                             >
                               Female
                             </button>
                             <button
                               type="button"
-                              className={`px-4 py-2 ${maritalStatus.childrenDetails[index]?.gender === 'Other' ? 'bg-blue-800 text-white' : 'bg-gray-300'}`}
+                              className={`px-4 py-2 ${maritalStatus.childrenDetails[index]?.gender === 'Other' ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'}`}
                               onClick={() => handleChildrenDetailsChange(index, 'gender', 'Other')}
                             >
                               Other
@@ -443,8 +443,8 @@ const Education = ({ globalMaritalStatus }) => {
   const renderEducationForms = (forms, isSpouse = false) => (
     forms.map((form, index) => (
       <div key={index} className="p-4 mt-12 border border-gray-300 rounded">
-        <h4 className="p-4 mt-6 mb-10 w-[50%] ml-auto mr-auto font-semibold text-center text-white bg-blue-900 rounded-sm">{form.degree} Education</h4>
-        <label className="mt-2 font-medium text-blue-900">Field of Study</label>
+        <h4 className="p-4 mt-6 mb-10 w-[50%] ml-auto mr-auto font-semibold text-center text-white bg-[#007fac] rounded-sm">{form.degree} Education</h4>
+        <label className="mt-2 font-medium text-[#007fac]">Field of Study</label>
         <input
           type="text"
           placeholder="Field of Study"
@@ -452,7 +452,7 @@ const Education = ({ globalMaritalStatus }) => {
           value={form.fieldOfStudy}
           onChange={(e) => handleEducationChange(index, 'fieldOfStudy', e.target.value, isSpouse)}
         />
-        <label className="mt-4 font-medium text-blue-900">Institution Attended</label>
+        <label className="mt-4 font-medium text-[#007fac]">Institution Attended</label>
         <input
           type="text"
           placeholder="Institution Attended"
@@ -460,7 +460,7 @@ const Education = ({ globalMaritalStatus }) => {
           value={form.institution}
           onChange={(e) => handleEducationChange(index, 'institution', e.target.value, isSpouse)}
         />
-        <label className="mt-4 font-medium text-blue-900">Completion Year</label>
+        <label className="mt-4 font-medium text-[#007fac]">Completion Year</label>
         <input
           type="date"
           className="w-full p-2 mt-2 mb-4 border border-gray-300 rounded input-field"
@@ -473,17 +473,17 @@ const Education = ({ globalMaritalStatus }) => {
 
   return (
     <div>
-      <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Education</h3>
+      <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Education</h3>
       
       <div className="grid grid-cols-1 gap-2">
-        <label className="mt-2 font-medium text-blue-900">Your Highest Degree(s)</label>
+        <label className="mt-2 font-medium text-[#007fac]">Your Highest Degree(s)</label>
         <select
           className="w-full p-2 border border-gray-300 rounded input-field"
           onChange={(e) => handleAddEducation(e.target.value)}
         >
           <option value="">Select Degree</option>
           {degreeOptions.map((degree) => (
-            <option key={degree} value={degree} className="text-blue-900">
+            <option key={degree} value={degree} className="text-[#007fac]">
               {degree}
             </option>
           ))}
@@ -493,15 +493,15 @@ const Education = ({ globalMaritalStatus }) => {
 
         {['Married'].includes(globalMaritalStatus) && (
           <div className="mt-8">
-            <h4 className="mb-4 text-2xl font-bold text-blue-900">Spouse's Education</h4>
-            <label className="mt-6 font-medium text-blue-900">Spouse's Highest Degree(s)</label>
+            <h4 className="mb-4 text-2xl font-bold text-[#007fac]">Spouse's Education</h4>
+            <label className="mt-6 font-medium text-[#007fac]">Spouse's Highest Degree(s)</label>
             <select
               className="w-full p-2 mt-2 border border-gray-300 rounded input-field"
               onChange={(e) => handleAddEducation(e.target.value, true)}
             >
               <option value="">Select Spouse's Degree</option>
               {degreeOptions.map((degree) => (
-                <option key={degree} value={degree} className="text-blue-900">
+                <option key={degree} value={degree} className="text-[#007fac]">
                   {degree}
                 </option>
               ))}
@@ -582,23 +582,23 @@ const Education = ({ globalMaritalStatus }) => {
 //   return (
 //     <>
 //       <div>
-//         <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Education</h3>
+//         <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Education</h3>
 //         <div className="grid grid-cols-1 gap-2">
-//           <label className="mt-2 font-medium text-blue-900">Your Highest Degree</label>
+//           <label className="mt-2 font-medium text-[#007fac]">Your Highest Degree</label>
 //           <select
 //             className="w-full p-2 border border-gray-300 rounded input-field"
 //             value={education.highestDegree}
 //             onChange={(e) => setEducation({ ...education, highestDegree: e.target.value })}
 //           >
-//             <option value="" className='text-blue-900 '>Select Degree</option>
-//             <option value="Intermediate" className='text-blue-900'>Intermediate</option>
-//             <option value="Bachelors"className='text-blue-900'>Bachelors</option>
-//             <option value="Masters"className='text-blue-900'>Masters</option>
-//             <option value="Uneducated"className='text-blue-900'>Uneducated</option>
+//             <option value="" className='text-[#007fac] '>Select Degree</option>
+//             <option value="Intermediate" className='text-[#007fac]'>Intermediate</option>
+//             <option value="Bachelors"className='text-[#007fac]'>Bachelors</option>
+//             <option value="Masters"className='text-[#007fac]'>Masters</option>
+//             <option value="Uneducated"className='text-[#007fac]'>Uneducated</option>
 //           </select>
 //           {degreeOptions.includes(education.highestDegree) && (
 //             <>
-//               <label className="mt-2 font-medium text-blue-900">Field of Study</label>
+//               <label className="mt-2 font-medium text-[#007fac]">Field of Study</label>
 //               <input
 //                 type="text"
 //                 placeholder="Field of Study"
@@ -606,7 +606,7 @@ const Education = ({ globalMaritalStatus }) => {
 //                 value={education.fieldOfStudy}
 //                 onChange={(e) => setEducation({ ...education, fieldOfStudy: e.target.value })}
 //               />
-//               <label className="mt-2 font-medium text-blue-900">Institution Attended</label>
+//               <label className="mt-2 font-medium text-[#007fac]">Institution Attended</label>
 //               <input
 //                 type="text"
 //                 placeholder="Institution Attended"
@@ -614,7 +614,7 @@ const Education = ({ globalMaritalStatus }) => {
 //                 value={education.institution}
 //                 onChange={(e) => setEducation({ ...education, institution: e.target.value })}
 //               />
-//               <label className="mt-2 font-medium text-blue-900">Completion Year</label>
+//               <label className="mt-2 font-medium text-[#007fac]">Completion Year</label>
 //               <input
 //                 type="date"
 //                 className="w-full p-2 border border-gray-300 rounded input-field"
@@ -626,23 +626,23 @@ const Education = ({ globalMaritalStatus }) => {
       
 // {['Married'].includes(globalMaritalStatus) && (
 //             <>
-//               <label className="mt-4 font-medium text-blue-900">Spouse's Highest Degree</label>
+//               <label className="mt-4 font-medium text-[#007fac]">Spouse's Highest Degree</label>
 //               <select
 //                 className="w-full p-2 border border-gray-300 rounded input-field"
 //                 value={education.spouseHighestDegree}
 //                 onChange={(e) => setEducation({ ...education, spouseHighestDegree: e.target.value })}
 //               >
-//                 <option value="" className="text-blue-900">Select Spouse's Degree</option>
-//                 <option value="Intermediate" className="text-blue-900">Intermediate</option>
-//                 <option value="Bachelors" className="text-blue-900">Bachelors</option>
-//                 <option value="Masters" className="text-blue-900">Masters</option>
-//                 <option value="Uneducated" className="text-blue-900">Uneducated</option>
+//                 <option value="" className="text-[#007fac]">Select Spouse's Degree</option>
+//                 <option value="Intermediate" className="text-[#007fac]">Intermediate</option>
+//                 <option value="Bachelors" className="text-[#007fac]">Bachelors</option>
+//                 <option value="Masters" className="text-[#007fac]">Masters</option>
+//                 <option value="Uneducated" className="text-[#007fac]">Uneducated</option>
 //               </select>
 
 //               {/* Show additional fields for spouse if Intermediate, Bachelors, or Masters is selected */}
 //               {degreeOptions.includes(education.spouseHighestDegree) && (
 //                 <>
-//                   <label className="mt-2 font-medium text-blue-900">Spouse's Field of Study</label>
+//                   <label className="mt-2 font-medium text-[#007fac]">Spouse's Field of Study</label>
 //                   <input
 //                     type="text"
 //                     placeholder="Spouse's Field of Study"
@@ -650,7 +650,7 @@ const Education = ({ globalMaritalStatus }) => {
 //                     value={education.spouseFieldOfStudy}
 //                     onChange={(e) => setEducation({ ...education, spouseFieldOfStudy: e.target.value })}
 //                   />
-//                   <label className="mt-2 font-medium text-blue-900">Spouse's Institution Attended</label>
+//                   <label className="mt-2 font-medium text-[#007fac]">Spouse's Institution Attended</label>
 //                   <input
 //                     type="text"
 //                     placeholder="Spouse's Institution Attended"
@@ -658,7 +658,7 @@ const Education = ({ globalMaritalStatus }) => {
 //                     value={education.spouseInstitution}
 //                     onChange={(e) => setEducation({ ...education, spouseInstitution: e.target.value })}
 //                   />
-//                   <label className="mt-2 font-medium text-blue-900">Spouse's Completion Year</label>
+//                   <label className="mt-2 font-medium text-[#007fac]">Spouse's Completion Year</label>
 //                   <input
 //                     type="date"
 //                     className="w-full p-2 border border-gray-300 rounded input-field"
@@ -767,9 +767,9 @@ const TravelInformation = () => {
   return (
     <>
       <div>
-        <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Travel Information</h3>
+        <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Travel Information</h3>
         <div className="grid grid-cols-1 gap-2">
-          <label className="mt-2 font-medium text-blue-900">Purpose of Visit</label>
+          <label className="mt-2 font-medium text-[#007fac]">Purpose of Visit</label>
           <input
             type="text"
             placeholder="Purpose of Visit"
@@ -777,7 +777,7 @@ const TravelInformation = () => {
             value={travelInfo.purposeOfVisit}
             onChange={(e) => setTravelInfo({ ...travelInfo, purposeOfVisit: e.target.value })}
           />
-          <label className="mt-2 font-medium text-blue-900">Duration of Stay</label>
+          <label className="mt-2 font-medium text-[#007fac]">Duration of Stay</label>
           <input
             type="text"
             placeholder="Duration of Stay"
@@ -786,7 +786,7 @@ const TravelInformation = () => {
             onChange={(e) => setTravelInfo({ ...travelInfo, durationOfStay: e.target.value })}
           />
 
-          <label className="mt-2 font-medium text-blue-900">Countries Traveled in Last 10 Years</label>
+          <label className="mt-2 font-medium text-[#007fac]">Countries Traveled in Last 10 Years</label>
           <select
             className="w-full h-10 p-2 border border-gray-300 rounded input-field"
             onChange={handleCountrySelect}
@@ -800,10 +800,10 @@ const TravelInformation = () => {
 
           {travelInfo.countriesTraveled.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-2">
-              <h1 className="w-full mb-4 text-lg font-bold tracking-normal text-blue-900">Selected Countries:</h1>
+              <h1 className="w-full mb-4 text-lg font-bold tracking-normal text-[#007fac]">Selected Countries:</h1>
               {travelInfo.countriesTraveled.map((country, index) => (
                 <div key={index} className="w-full mb-4">
-                  <div className="items-center inline-block px-3 py-1 text-white bg-blue-900 rounded-full">
+                  <div className="items-center inline-block px-3 py-1 text-white bg-[#007fac] rounded-full">
                     {country}
                     <button
                       className="px-2 py-1 ml-2 text-white bg-transparent rounded-full hover:bg-red-700 hover:text-white"
@@ -815,7 +815,7 @@ const TravelInformation = () => {
 
                   {/* Form for each country */}
                   <div className="mt-4">
-                    <label className="font-medium text-blue-900">Date Visited</label>
+                    <label className="font-medium text-[#007fac]">Date Visited</label>
                     <input
                       type="date"
                       className="w-full p-2 mb-2 border border-gray-300 rounded"
@@ -823,7 +823,7 @@ const TravelInformation = () => {
                       onChange={(e) => handleDetailChange(country, 'dateVisited', e.target.value)}
                     />
 
-                    <label className="font-medium text-blue-900">Date Return</label>
+                    <label className="font-medium text-[#007fac]">Date Return</label>
                     <input
                       type="date"
                       className="w-full p-2 mb-2 border border-gray-300 rounded"
@@ -831,7 +831,7 @@ const TravelInformation = () => {
                       onChange={(e) => handleDetailChange(country, 'dateReturn', e.target.value)}
                     />
 
-                    <label className="font-medium text-blue-900">Duration of Stay (days)</label>
+                    <label className="font-medium text-[#007fac]">Duration of Stay (days)</label>
                     <input
                       type="text"
                       className="w-full p-2 mb-2 border border-gray-300 rounded"
@@ -839,7 +839,7 @@ const TravelInformation = () => {
                       readOnly
                     />
 
-                    <label className="font-medium text-blue-900">Purpose</label>
+                    <label className="font-medium text-[#007fac]">Purpose</label>
                     <input
                       type="text"
                       placeholder="Purpose of Travel"
@@ -926,9 +926,9 @@ const Employment = () => {
 
   return (
     <div>
-      <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Employment</h3>
+      <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Employment</h3>
       <div className="grid grid-cols-1 gap-2">
-        <label className="mt-2 font-medium text-blue-900">Current Employment Status</label>
+        <label className="mt-2 font-medium text-[#007fac]">Current Employment Status</label>
         <select
           className="w-full p-2 border border-gray-300 rounded input-field"
           value={employmentStatus}
@@ -944,8 +944,8 @@ const Employment = () => {
           <>
             {employmentRecords.map((record, index) => (
               <div key={index} className="p-4 mt-4 border border-gray-300 rounded">
-                <h4 className="mb-2 text-xl font-semibold text-blue-900">Job {index + 1}</h4>
-                <label className="mt-2 font-medium text-blue-900">Employer Details</label>
+                <h4 className="mb-2 text-xl font-semibold text-[#007fac]">Job {index + 1}</h4>
+                <label className="mt-2 font-medium text-[#007fac]">Employer Details</label>
                 <input
                   type="text"
                   placeholder="Employer Details"
@@ -954,7 +954,7 @@ const Employment = () => {
                   onChange={(e) => updateEmploymentRecord(index, 'employerDetails', e.target.value)}
                 />
 
-                <label className="mt-2 font-medium text-blue-900">Job Title</label>
+                <label className="mt-2 font-medium text-[#007fac]">Job Title</label>
                 <input
                   type="text"
                   placeholder="Job Title"
@@ -963,7 +963,7 @@ const Employment = () => {
                   onChange={(e) => updateEmploymentRecord(index, 'jobTitle', e.target.value)}
                 />
 
-                <label className="mt-2 font-medium text-blue-900">Current Salary</label>
+                <label className="mt-2 font-medium text-[#007fac]">Current Salary</label>
                 <input
                   type="text"
                   placeholder="Current Salary"
@@ -972,7 +972,7 @@ const Employment = () => {
                   onChange={(e) => updateEmploymentRecord(index, 'salary', e.target.value)}
                 />
 
-                <label className="mt-2 font-medium text-blue-900">Employment History (Past 5 years)</label>
+                <label className="mt-2 font-medium text-[#007fac]">Employment History (Past 5 years)</label>
                 <input
                   type="text"
                   placeholder="Employment History"
@@ -981,7 +981,7 @@ const Employment = () => {
                   onChange={(e) => updateEmploymentRecord(index, 'employmentHistory', e.target.value)}
                 />
 
-                <label className="mt-2 font-medium text-blue-900">Job Start Date</label>
+                <label className="mt-2 font-medium text-[#007fac]">Job Start Date</label>
                 <input
                   type="date"
                   className="w-full p-2 border border-gray-300 rounded input-field"
@@ -989,7 +989,7 @@ const Employment = () => {
                   onChange={(e) => updateEmploymentRecord(index, 'jobStartDate', e.target.value)}
                 />
 
-                <label className="mt-2 font-medium text-blue-900">Job End Date (or Present)</label>
+                <label className="mt-2 font-medium text-[#007fac]">Job End Date (or Present)</label>
                 <input
                   type="date"
                   className="w-full p-2 border border-gray-300 rounded input-field"
@@ -1005,10 +1005,10 @@ const Employment = () => {
                     onChange={(e) => updateEmploymentRecord(index, 'isCurrentJob', e.target.checked)}
                     className="mr-2"
                   />
-                  <label className="font-medium text-blue-900">This is my current job</label>
+                  <label className="font-medium text-[#007fac]">This is my current job</label>
                 </div>
 
-                <label className="mt-2 font-medium text-blue-900">Country</label>
+                <label className="mt-2 font-medium text-[#007fac]">Country</label>
                 <select
                   className="w-full p-2 border border-gray-300 rounded input-field"
                   value={record.country}
@@ -1026,7 +1026,7 @@ const Employment = () => {
 
             <button
               onClick={addEmploymentRecord}
-              className="px-2 py-4 mt-4 w-[28%] ml-auto mr-auto text-white bg-blue-900 rounded hover:bg-blue-600 hover:scale-110 font-semibold hover:transition-all hover:duration-300"
+              className="px-2 py-4 mt-4 w-[28%] ml-auto mr-auto text-white bg-[#007fac] rounded hover:bg-[#007fac] hover:scale-110 font-semibold hover:transition-all hover:duration-300"
             >
             
               Add Job
@@ -1083,11 +1083,11 @@ const Finance = () => {
 
   return (
     <div>
-      <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Finance</h3>
+      <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Finance</h3>
       <div className="grid grid-cols-1 gap-2">
       
  
-        <label className="mt-2 font-medium text-blue-900">Bank Statement (Last 6 Months)</label>
+        <label className="mt-2 font-medium text-[#007fac]">Bank Statement (Last 6 Months)</label>
         <input
           type="text"
           name="bankBalance" 
@@ -1097,7 +1097,7 @@ const Finance = () => {
           className="w-full p-2 border border-gray-300 rounded input-field"
         />
 
-        <label className="mt-2 font-medium text-blue-900">
+        <label className="mt-2 font-medium text-[#007fac]">
           Financial Status (Balance Available/Cash or how much you can show off)
         </label>
         <input
@@ -1121,9 +1121,9 @@ const TiesToHomeCountry = () => {
   });
   return (
     <div>
-      <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Ties to Home Country</h3>
+      <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Ties to Home Country</h3>
       <div className="grid grid-cols-1 gap-2">
-        <label className="mt-2 font-medium text-blue-900">Family Members in Home Country</label>
+        <label className="mt-2 font-medium text-[#007fac]">Family Members in Home Country</label>
         <input
           type="number"
           min={1}
@@ -1132,7 +1132,7 @@ const TiesToHomeCountry = () => {
           value={tiesToCountry.familyMembers}
           onChange={(e) => setTiesToCountry({ ...tiesToCountry, familyMembers: e.target.value })}
         />
-        <label className="mt-2 font-medium text-blue-900">Property Ownership or Significant Assets</label>
+        <label className="mt-2 font-medium text-[#007fac]">Property Ownership or Significant Assets</label>
         <input
           type="text"
           placeholder="Property Ownership"
@@ -1140,7 +1140,7 @@ const TiesToHomeCountry = () => {
           value={tiesToCountry.propertyOwnership}
           onChange={(e) => setTiesToCountry({ ...tiesToCountry, propertyOwnership: e.target.value })}
         />
-        <label className="mt-2 font-medium text-blue-900">Long-term Commitments or Responsibilities</label>
+        <label className="mt-2 font-medium text-[#007fac]">Long-term Commitments or Responsibilities</label>
         <input
           type="text"
           placeholder="Long-term Commitments"
@@ -1293,21 +1293,20 @@ const ImmigrationHistory = () => {
 
   return (
     <div>
-      <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Immigration History</h3>
+      <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Immigration History</h3>
       <div className="grid grid-cols-1 gap-2">
        
  
 
       <div>
-      <label className="mt-4 mb-2 font-medium text-blue-900">
+      <label className="mt-4 mb-2 font-medium text-[#007fac]">
         Previous Visas to Canada or Other Countries:
       </label>
       <div className="flex mt-2 space-x-4">
         <button
           type="button"
           className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasPreviousVisas === 'yes'
-            ? 'bg-blue-900 text-white'
-            : 'bg-gray-200 text-blue-900'
+            ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'
             }`}
           onClick={() => handlePreviousVisaChange('yes')}
         >
@@ -1316,8 +1315,7 @@ const ImmigrationHistory = () => {
         <button
           type="button"
           className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasPreviousVisas === 'no'
-            ? 'bg-blue-900 text-white'
-            : 'bg-gray-200 text-blue-900'
+            ?'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'
             }`}
           onClick={() => handlePreviousVisaChange('no')}
         >
@@ -1327,7 +1325,7 @@ const ImmigrationHistory = () => {
 
       {immigrationHistory.hasPreviousVisas === 'yes' && (
         <>
-          <label className="mt-2 font-medium text-blue-900">Select Country</label>
+          <label className="mt-2 font-medium text-[#007fac]">Select Country</label>
           <select
             className="w-full p-2 border border-gray-300 rounded input-field"
             onChange={handleCountrySelect}
@@ -1345,8 +1343,8 @@ const ImmigrationHistory = () => {
               <h4 className="mt-4 text-xl font-bold">Countries and Visa Details</h4>
               {immigrationHistory.previousVisas.map((visa, index) => (
                 <div key={index} className="p-4 mt-4 border rounded">
-                  <h5 className="p-2 mb-6 text-xl font-bold text-center w-[30%] rounded-lg ml-auto mr-auto text-white bg-blue-900">{visa.country}</h5>
-                  <label className="mt-2 mb-2 font-medium text-blue-900">Visa Date</label>
+                  <h5 className="p-2 mb-6 text-xl font-bold text-center w-[30%] rounded-lg ml-auto mr-auto text-white bg-[#007fac]">{visa.country}</h5>
+                  <label className="mt-2 mb-2 font-medium text-[#007fac]">Visa Date</label>
                   <input
                     type="date"
                     className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
@@ -1354,7 +1352,7 @@ const ImmigrationHistory = () => {
                     onChange={(e) => handleInputChange(index, 'visaDate', e.target.value)}
                   />
 
-                  <label className="mt-2 font-medium text-blue-900">Return Date</label>
+                  <label className="mt-2 font-medium text-[#007fac]">Return Date</label>
                   <input
                     type="date"
                     className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
@@ -1362,7 +1360,7 @@ const ImmigrationHistory = () => {
                     onChange={(e) => handleInputChange(index, 'returnDate', e.target.value)}
                   />
 
-                  <label className="mt-2 font-medium text-blue-900">Duration of Stay</label>
+                  <label className="mt-2 font-medium text-[#007fac]">Duration of Stay</label>
                   <input
                     type="text"
                     className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
@@ -1370,7 +1368,7 @@ const ImmigrationHistory = () => {
                     readOnly
                   />
 
-                  <label className="mt-2 font-medium text-blue-900">Purpose</label>
+                  <label className="mt-2 font-medium text-[#007fac]">Purpose</label>
                   <input
                     type="text"
                     className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
@@ -1400,13 +1398,13 @@ const ImmigrationHistory = () => {
 
 
 <div>
-      <label className="mt-4 mb-2 font-medium text-blue-900">Previous Visa Refusals:</label>
+      <label className="mt-4 mb-2 font-medium text-[#007fac]">Previous Visa Refusals:</label>
       <div className="flex mt-2 space-x-4">
         <button
           type="button"
           className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasVisaRejections === 'yes'
-            ? 'bg-blue-900 text-white'
-            : 'bg-gray-200 text-blue-900'
+            ? 'bg-[#007fac] text-white'
+            : 'bg-gray-200 text-[#007fac]'
             }`}
           onClick={() => handleVisaRejectionChange('yes')}
         >
@@ -1415,8 +1413,8 @@ const ImmigrationHistory = () => {
         <button
           type="button"
           className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasVisaRejections === 'no'
-            ? 'bg-blue-900 text-white'
-            : 'bg-gray-200 text-blue-900'
+            ? 'bg-[#007fac] text-white'
+            : 'bg-gray-200 text-[#007fac]'
             }`}
           onClick={() => handleVisaRejectionChange('no')}
         >
@@ -1428,7 +1426,7 @@ const ImmigrationHistory = () => {
         <>
           {immigrationHistory.visaRejections.map((rejection, index) => (
             <div key={index} className="p-4 mt-4 border rounded">
-              <label className="mt-2 font-medium text-blue-900">Country Name</label>
+              <label className="mt-2 font-medium text-[#007fac]">Country Name</label>
               <select
                 className="w-full p-2 border border-gray-300 rounded input-field"
                 value={rejection.country}
@@ -1442,7 +1440,7 @@ const ImmigrationHistory = () => {
 
               {rejection.country === 'Other' && (
                 <>
-                  <label className="mt-2 font-medium text-blue-900">Enter Country Name</label>
+                  <label className="mt-2 font-medium text-[#007fac]">Enter Country Name</label>
                   <input
                     type="text"
                     placeholder="Enter Country Name"
@@ -1453,7 +1451,7 @@ const ImmigrationHistory = () => {
                 </>
               )}
 
-              <label className="mt-2 font-medium text-blue-900">Date Refused</label>
+              <label className="mt-2 font-medium text-[#007fac]">Date Refused</label>
               <input
                 type="date"
                 className="w-full p-2 border border-gray-300 rounded input-field"
@@ -1461,7 +1459,7 @@ const ImmigrationHistory = () => {
                 onChange={(e) => updateVisaRejection(index, 'refusalDate', e.target.value)}
               />
 
-              <label className="mt-2 font-medium text-blue-900">Reason for Refusal</label>
+              <label className="mt-2 font-medium text-[#007fac]">Reason for Refusal</label>
               <textarea
                 className="w-full p-2 border border-gray-300 rounded input-field"
                 value={rejection.refusalReason}
@@ -1470,7 +1468,7 @@ const ImmigrationHistory = () => {
             </div>
           ))}
           <button
-            className="px-4 py-2 mt-4 font-medium text-white bg-blue-900 rounded hover:bg-blue-800"
+            className="px-4 py-2 mt-4 font-medium text-white bg-[#007fac] rounded hover:bg-[#007fac]/50"
             onClick={addVisaRejection}
           >
             Add Another Visa Refusal
@@ -1529,20 +1527,20 @@ const HealthSecurity = () => {
   ];
   return (
     <div>
-      <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Health and Security</h3>
+      <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Health and Security</h3>
     
-      <label className="mt-4 font-medium text-blue-900">Do you have any significant health issues?</label>
+      <label className="mt-4 font-medium text-[#007fac]">Do you have any significant health issues?</label>
       <div className="flex mt-6 mb-6 space-x-6">
         <button
           type="button"
-          className={`px-4 py-2 font-medium rounded ${healthSecurity.hasHealthIssues === 'yes' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'}`}
+          className={`px-4 py-2 font-medium rounded ${healthSecurity.hasHealthIssues === 'yes' ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'}`}
           onClick={() => setHealthSecurity({ ...healthSecurity, hasHealthIssues: 'yes' })}
         >
           Yes
         </button>
         <button
           type="button"
-          className={`px-4 py-2 font-medium rounded ${healthSecurity.hasHealthIssues === 'no' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'}`}
+          className={`px-4 py-2 font-medium rounded ${healthSecurity.hasHealthIssues === 'no' ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'}`}
           onClick={() => setHealthSecurity({ ...healthSecurity, hasHealthIssues: 'no' })}
         >
           No
@@ -1551,7 +1549,7 @@ const HealthSecurity = () => {
     
       {healthSecurity.hasHealthIssues === 'yes' && (
         <>
-          <label className="mt-8 font-medium text-blue-900">Disease Name</label>
+          <label className="mt-8 font-medium text-[#007fac]">Disease Name</label>
           <select
             className="w-full p-2 mb-4 border border-gray-300 rounded"
             value={healthSecurity.diseaseName}
@@ -1576,18 +1574,18 @@ const HealthSecurity = () => {
         </>
       )}
       {/* Criminal Record Section */}
-      <label className="mt-4 font-medium text-blue-900">Do you have a criminal record?</label>
+      <label className="mt-4 font-medium text-[#007fac]">Do you have a criminal record?</label>
       <div className="flex mt-6 mb-6 space-x-6">
         <button
           type="button"
-          className={`px-4 py-2 font-medium rounded ${healthSecurity.hasCriminalRecord === 'yes' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'}`}
+          className={`px-4 py-2 font-medium rounded ${healthSecurity.hasCriminalRecord === 'yes' ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'}`}
           onClick={() => setHealthSecurity({ ...healthSecurity, hasCriminalRecord: 'yes' })}
         >
           Yes
         </button>
         <button
           type="button"
-          className={`px-4 py-2 font-medium rounded ${healthSecurity.hasCriminalRecord === 'no' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'}`}
+          className={`px-4 py-2 font-medium rounded ${healthSecurity.hasCriminalRecord === 'no' ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'}`}
           onClick={() => setHealthSecurity({ ...healthSecurity, hasCriminalRecord: 'no' })}
         >
           No
@@ -1596,7 +1594,7 @@ const HealthSecurity = () => {
       {/* Conditional input for criminal record */}
       {healthSecurity.hasCriminalRecord === 'yes' && (
         <>
-          <label className="mt-2 font-medium text-blue-900">Case Name</label>
+          <label className="mt-2 font-medium text-[#007fac]">Case Name</label>
           <select
             className="w-full p-2 mb-4 border border-gray-300 rounded"
             value={healthSecurity.caseName}
@@ -1643,20 +1641,20 @@ const AdditionalInformation = () => {
   };
   return (
     <div>
-      <h3 className="mb-8 text-3xl font-bold text-center text-blue-900">Additional Information</h3>
+      <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Additional Information</h3>
       <div className="grid grid-cols-1 gap-2">
-        <label className="mt-2 font-medium text-blue-900">Canadian Contacts or References</label>
+        <label className="mt-2 font-medium text-[#007fac]">Canadian Contacts or References</label>
         <div className="flex mt-2 space-x-4">
           <button
             type="button"
-            className={`px-4 py-2 font-medium rounded ${additionalInfo.hasCanadianContacts === 'yes' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'}`}
+            className={`px-4 py-2 font-medium rounded ${additionalInfo.hasCanadianContacts === 'yes' ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'}`}
             onClick={() => setAdditionalInfo({ ...additionalInfo, hasCanadianContacts: 'yes' })}
           >
             Yes
           </button>
           <button
             type="button"
-            className={`px-4 py-2 font-medium rounded ${additionalInfo.hasCanadianContacts === 'no' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'}`}
+            className={`px-4 py-2 font-medium rounded ${additionalInfo.hasCanadianContacts === 'no' ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'}`}
             onClick={() => setAdditionalInfo({ ...additionalInfo, hasCanadianContacts: 'no', contacts: [] })}
           >
             No
@@ -1665,7 +1663,7 @@ const AdditionalInformation = () => {
         {/* If user selects Yes for Canadian contacts, show dropdown */}
         {additionalInfo.hasCanadianContacts === 'yes' && (
           <>
-            <label className="mt-2 font-medium text-blue-900">Number of Contacts</label>
+            <label className="mt-2 font-medium text-[#007fac]">Number of Contacts</label>
             <select
               className="w-full p-2 mb-4 border border-gray-300 rounded input-field"
               value={additionalInfo.numberOfContacts}
@@ -1687,7 +1685,7 @@ const AdditionalInformation = () => {
             {additionalInfo.contacts.map((contact, index) => (
               <div key={index} className="flex mb-4 space-x-4">
                 <div className="w-1/2">
-                  <label className="font-medium text-blue-900">Contact {index + 1} Name</label>
+                  <label className="font-medium text-[#007fac]">Contact {index + 1} Name</label>
                   <input
                     type="text"
                     placeholder={`Contact ${index + 1} Name`}
@@ -1697,7 +1695,7 @@ const AdditionalInformation = () => {
                   />
                 </div>
                 <div className="w-1/2">
-                  <label className="font-medium text-blue-900">Contact {index + 1} Number</label>
+                  <label className="font-medium text-[#007fac]">Contact {index + 1} Number</label>
                   <input
                     type="text"
                     placeholder={`Contact ${index + 1} Number`}
@@ -1710,18 +1708,18 @@ const AdditionalInformation = () => {
             ))}
           </>
         )}
-        <label className="mt-2 font-medium text-blue-900">Accommodation in Canada</label>
+        <label className="mt-2 font-medium text-[#007fac]">Accommodation in Canada</label>
         <div className="flex mt-2 space-x-4">
           <button
             type="button"
-            className={`px-4 py-2 font-medium rounded ${additionalInfo.hasAccommodation === 'yes' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'}`}
+            className={`px-4 py-2 font-medium rounded ${additionalInfo.hasAccommodation === 'yes' ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'}`}
             onClick={() => setAdditionalInfo({ ...additionalInfo, hasAccommodation: 'yes' })}
           >
             Yes
           </button>
           <button
             type="button"
-            className={`px-4 py-2 font-medium rounded ${additionalInfo.hasAccommodation === 'no' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-blue-900'}`}
+            className={`px-4 py-2 font-medium rounded ${additionalInfo.hasAccommodation === 'no' ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'}`}
             onClick={() => setAdditionalInfo({ ...additionalInfo, hasAccommodation: 'no' })}
           >
             No
@@ -1729,7 +1727,7 @@ const AdditionalInformation = () => {
         </div>
         {additionalInfo.hasAccommodation === 'yes' && (
           <>
-            <label className="mt-2 font-medium text-blue-900">Address</label>
+            <label className="mt-2 font-medium text-[#007fac]">Address</label>
             <input
               type="text"
               placeholder="Accommodation Address"
@@ -1740,7 +1738,7 @@ const AdditionalInformation = () => {
           </>
         )}
         <div className="mt-4">
-          <label className="mt-2 font-medium text-blue-900">Additional Comments</label>
+          <label className="mt-2 font-medium text-[#007fac]">Additional Comments</label>
           <textarea
             placeholder="Additional Comments"
             className="w-full p-2 border border-gray-300 rounded input-field"
@@ -1808,10 +1806,16 @@ const Travel_Reg_Form = () => {
         return <PersonalInformation />;
     }
   };
+
+  // #f58d03 yellow
+
+  // #007fac blue
+
+
   return (
     <>
       <div className='w-full mt-20 mb-4 text-center'>
-        <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">Application Form</h2>
+        <h2 className="font-bold text-3xl leading-[1.1]  text-[#007fac] sm:text-3xl md:text-6xl">Application Form</h2>
       </div>
       <div className="container max-w-xl p-6 mx-auto mt-16 mb-24 bg-gray-100 rounded-lg shadow-md">
         <form className="space-y-6" onSubmit={handleSubmit}>
@@ -1821,7 +1825,7 @@ const Travel_Reg_Form = () => {
               <button
                 type="button"
                 onClick={prevStep}
-                className="px-4 py-2 font-semibold text-blue-900 bg-gray-300 rounded hover:bg-gray-500 hover:text-white hover:text-semibold"
+                className="px-4 py-2 font-semibold text-[#007fac] bg-gray-300 rounded hover:bg-gray-200 hover:border-[#007fac] hover:border-2 hover:text-[#007fac] hover:text-semibold"
               >
                 Previous
               </button>
@@ -1830,7 +1834,7 @@ const Travel_Reg_Form = () => {
               <button
                 type="button"
                 onClick={nextStep}
-                className="px-4 py-2 text-white bg-blue-900 rounded hover:bg-blue-700"
+                className="px-4 py-2 text-white bg-[#007fac] rounded hover:bg-[#007eacc2]"
               >
                 Next
               </button>

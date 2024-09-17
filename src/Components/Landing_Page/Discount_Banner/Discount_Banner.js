@@ -46,15 +46,15 @@ export default function Discount_Banner(){
   
 
     <div
-        class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900  sm:p-4  h-[250px]  rounded-2xl  text-white flex items-center justify-between w-full mx-auto mt-12">
+        class="bg-gradient-to-br from-[#007fac] via-[#2198c4] to-[#007fac]  sm:p-4  h-[250px]  rounded-2xl  text-white flex items-center justify-between w-full mx-auto mt-12">
         <div class="flex flex-col gap-2">
             <div class="">
-                <span class="text-gray-200">Holiday Special</span>
+                <span class="text-[#f58d03]">Holiday Special</span>
              <br/>
                 <span class=" text-4xl text-white font-semibold">Buy 2 Get 1 Free</span>
             </div>
             <a href="" target="_blank" rel="noreferrer"
-                class="text-black bg-white hover:bg-gray-50 px-4 py-2 rounded-lg w-fit ease duration-300 flex gap-1 items-center group">
+                class="hover:text-[#f58d03] hover:border hover:border-white text-md bg-[#f58d03] font-bold hover:bg-[#007fac] text-[#007fac] px-4 py-2 rounded-lg w-fit ease duration-300 flex gap-1 items-center group">
                 <span>Shop now</span>
                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"
                     class="group-hover:translate-x-1 transition-transform ease duration-200" width="1em" height="1em"

@@ -180,8 +180,8 @@ export default function Main_Slider() {
     <div className="w-full pt-2">
 
 
-  <h2 className="pb-2 mt-16 text-4xl font-bold text-center">Destination Gallery</h2>
-  <div class="w-[300px] h-1 mx-auto mt-2 mb-4  bg-blue-800"></div>
+  <h2 className="pb-2 mt-16 text-4xl font-bold text-[#007fac] text-center">Destination Gallery</h2>
+  <div class="w-[300px] h-1 mx-auto mt-2 mb-4  bg-[#f58d03] "></div>
 
   <p className="mb-8 text-xl text-center text-gray-500">These popular destinations have a lot to offer</p>
 
@@ -219,7 +219,7 @@ export default function Main_Slider() {
                 </div>
                 <div>
                   <h2 className="text-xl font-bold text-white sm:text-2xl md:text-4xl" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>{slide.title}</h2>
-                  <span className="block inline-block px-2 py-1 my-2 text-xs text-white bg-blue-600 rounded sm:text-sm">
+                  <span className="block inline-block px-2 py-1 my-2 text-xs text-white bg-[#007fac] rounded sm:text-sm">
                     {slide.date}
                   </span>
                   <div className="text-white">
@@ -233,13 +233,13 @@ export default function Main_Slider() {
           );
         })}
         <button
-          className="absolute z-30 text-3xl text-blue-800 left-4"
+          className="absolute z-30 text-3xl text-[#007fac] left-4"
           onClick={prevSlide}
         >
           <FaArrowLeft />
         </button>
         <button
-          className="absolute z-30 text-3xl text-blue-800 right-4"
+          className="absolute z-30 text-3xl text-[#007fac] right-4"
           onClick={nextSlide}
         >
           <FaArrowRight />

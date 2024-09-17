@@ -14,12 +14,15 @@ export default function Image_Component(){
         { name: "Venice", image: p4, flag: "🇵🇰" },
         { name: "Rome", image: p5, flag: "🇸🇦" },
       ];
+
+
+      
       const DestinationCard = ({ name, country, image }) => (
         <div
           className="relative z-10 w-full transition-all duration-300 bg-center bg-cover rounded-lg shadow-lg cursor-pointer h-96 hover:scale-110"
           style={{ backgroundImage: `url(${image})` }}
         >
-          <div className="absolute top-0 left-0 p-2 text-white bg-black bg-opacity-50 rounded-tl-lg rounded-br-lg">
+          <div className="absolute top-0 left-0 p-2 text-white bg-[#f58d03] bg-opacity-80 rounded-tl-lg rounded-br-lg">
           <span className='text-xl'>{name} </span>  <span className="ml-2">{country}</span>
           </div>
         </div>
@@ -30,7 +33,7 @@ export default function Image_Component(){
           className="relative z-10 w-full transition-all duration-300 bg-center bg-cover rounded-lg shadow-lg cursor-pointer h-72 hover:scale-110"
           style={{ backgroundImage: `url(${image})` }}
         >
-          <div className="absolute top-0 left-0 p-2 text-white bg-black bg-opacity-50 rounded-tl-lg rounded-br-lg">
+          <div className="absolute top-0 left-0 p-2 text-white bg-[#f58d03] bg-opacity-80 rounded-tl-lg rounded-br-lg">
           <span className='text-xl'>{name} </span>  <span className="ml-2">{country}</span>
           </div>
         </div>
@@ -38,8 +41,8 @@ export default function Image_Component(){
     return(
         <>
 <div className="p-4 mt-20 mb-4 bg-gray-100">
-<h2 className="pt-12 pb-2 mt-4 text-4xl font-bold text-center">Explore the World</h2>
-  <div class="w-[300px] h-1 mx-auto mt-2 mb-4 bg-blue-800"></div>
+<h2 className="pt-12 pb-2 mt-4 text-4xl font-bold text-center text-[#007fac]">Explore the World</h2>
+  <div class="w-[300px] h-1 mx-auto mt-2 mb-4 bg-[#f58d03]"></div>
   <p className="mb-12 text-xl text-center text-gray-500 ">Immerse yourself in breathtaking destinations!</p>
     <div className="grid grid-cols-1 gap-4">
       <div className="grid grid-cols-1 gap-12 mt-4 sm:grid-cols-2">

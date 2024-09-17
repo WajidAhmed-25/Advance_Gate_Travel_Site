@@ -94,10 +94,15 @@ const PopularSelections = () => {
     setActiveIndex(swiper.realIndex);
   };
 
+
+//   #f58d03 yellow
+
+// #007fac blue
+
   return (
     <div className="w-full h-[550px] mt-24">
-      <h2 className="pb-2 mt-12 text-4xl font-bold text-center">Popular Selections</h2>
-      <div className="w-[300px] h-1 mx-auto mt-2 mb-4 bg-blue-800"></div>
+      <h2 className="pb-2 mt-12 text-4xl font-bold text-center text-[#007fac]">Popular Selections</h2>
+      <div className="w-[300px] h-1 mx-auto mt-2 mb-4 bg-[#f58d03]"></div>
       <p className="text-xl text-center text-gray-500">Explore the Best, Experience the Extraordinary!</p>
       <Swiper
         navigation
@@ -128,7 +133,7 @@ const PopularSelections = () => {
                 }`}
               />
               <div className="absolute w-full p-4 text-center text-white bottom-[25%]">
-                <div className="p-2 mb-4 text-xl font-bold text-white bg-blue-900 rounded-md shadow-lg cursor-pointer hover:scale-110">
+                <div className="p-2 mb-4 text-xl font-bold text-white bg-[#007fac] rounded-md shadow-lg cursor-pointer hover:scale-110">
                   {item.title}
                 </div>
               </div>

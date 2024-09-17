@@ -185,6 +185,10 @@ const articles = [
   }
 ];
 
+// #f58d03 yellow
+
+// #007fac blue
+
 const News = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -196,8 +200,8 @@ const News = () => {
         </div>
         <div className="relative mx-auto max-w-[90%] ">
           <div className="mt-8 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Latest in Travel News!</h2>
-            <div className="w-[310px] h-1 mx-auto mt-4 mb-4 bg-blue-800"></div>
+            <h2 className="text-3xl font-bold tracking-tight text-[#007fac] sm:text-4xl">Latest in Travel News!</h2>
+            <div className="w-[310px] h-1 mx-auto mt-4 mb-4 bg-[#f58d03]"></div>
             <p className="max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4">
               Latest travel news, deals, and trends!
             </p>
@@ -206,7 +210,7 @@ const News = () => {
             {articles.map((article, index) => (
               <div
                 key={index}
-                className="flex flex-col overflow-hidden transition-all duration-300 border-2 rounded-lg shadow-lg border-black/20 hover:scale-105"
+                className="flex flex-col overflow-hidden transition-all duration-300 border-2 rounded-lg shadow-lg border-[#007fac]/70 hover:scale-105"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -219,26 +223,26 @@ const News = () => {
                 </div>
                 <div className="flex flex-col justify-between flex-1 p-6 bg-white">
                   <div className="flex-1">
-                    <p className="text-sm font-medium text-blue-800">
+                    <p className="text-sm font-medium text-[#f58d03]">
                       <a href="#" className="hover:underline">{article.type}</a>
                     </p>
                     <a href="#" className="block mt-2">
-                      <p className="text-xl font-semibold text-gray-900">{article.title}</p>
-                      <p className="mt-3 text-base text-gray-500">{article.description}</p>
+                      <p className="text-xl font-semibold text-[#007fac]">{article.title}</p>
+                      <p className="mt-3 text-base text-[#007fac]">{article.description}</p>
                     </a>
                   </div>
                   <div className="flex items-center mt-6">
                     <div className="flex-shrink-0">
                       <a href={article.author.profileUrl}>
-                        <span className="sr-only">{article.author.name}</span>
+                        <span className="sr-only text-[#007fac]">{article.author.name}</span>
                         <img className="w-10 h-10 rounded-full" src={article.author.avatarUrl} alt="" />
                       </a>
                     </div>
                     <div className="ml-3">
                       <p className="text-sm font-medium text-gray-900">
-                        <a href={article.author.profileUrl} className="hover:underline">{article.author.name}</a>
+                        <a href={article.author.profileUrl} className="hover:underline text-[#007fac]">{article.author.name}</a>
                       </p>
-                      <div className="flex space-x-1 text-sm text-gray-500">
+                      <div className="flex space-x-1 text-sm text-[#007fac]">
                         <time dateTime={article.date}>{article.date}</time>
                         <span aria-hidden="true">·</span>
                         <span>{article.readTime}</span>

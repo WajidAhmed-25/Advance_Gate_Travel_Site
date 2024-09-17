@@ -1,5 +1,11 @@
 export default function Travel_Blogs(){
 
+
+//   #f58d03 yellow
+
+// #007fac blue
+
+
     return(
         <>
         
@@ -10,8 +16,8 @@ export default function Travel_Blogs(){
 
 
       
-  <h2 className="pb-2 mt-4 text-4xl font-bold text-center">This Week Blogs</h2>
-  <div class="w-[300px] h-1 mx-auto mt-2 mb-4  bg-blue-800"></div>
+  <h2 className="pb-2 mt-4 text-4xl font-bold text-center text-[#007fac]">This Week Blogs</h2>
+  <div class="w-[300px] h-1 mx-auto mt-2 mb-4  bg-[#f58d03]"></div>
 
   <p className="mb-8 text-xl text-center text-gray-500">If you're looking for random paragraphs, you've come to the right place. When a random word or a random sentence isn't quite enough.</p>
     </div>
@@ -20,7 +26,7 @@ export default function Travel_Blogs(){
         <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6">
           <div class="sm:w-1/2 relative hover:scale-110 transition-all duration-300 cursor-pointer">
             <div>
-              <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>12 April 2021</p>
+              <p class="p-6 text-lg font-medium leading-3 text-[#f58d03] absolute top-0 right-0"  >12 April 2021</p>
               <div class="absolute bottom-0 left-0 p-6">
                 <h2 class="text-xl font-semibold 5 text-white"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}> The Decorated Ways</h2>
                 <p class="text-base leading-4 text-white mt-2"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
@@ -29,7 +35,7 @@ export default function Travel_Blogs(){
                   <div class="p-4 flex flex-col items-center justify-center">
     <div class="cursor-pointer">
         <button class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
-      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-900 group-hover:translate-x-0 ease">
+      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#007fac] group-hover:translate-x-0 ease">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
       </span>
       <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>
@@ -47,7 +53,7 @@ export default function Travel_Blogs(){
           </div>
           <div class="sm:w-1/2 sm:mt-0 mt-4 relative  hover:scale-110 transition-all duration-300 cursor-pointer">
             <div className="">
-              <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>12 April 2021</p>
+              <p class="p-6 text-lg font-medium leading-3 text-[#f58d03] absolute top-0 right-0"  >12 April 2021</p>
               <div class="absolute bottom-0 left-0 p-6 ">
                 <h2 class="text-xl font-semibold 5 text-white"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>The Decorated Ways</h2>
                 <p class="text-base leading-4 text-white mt-2"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
@@ -55,7 +61,7 @@ export default function Travel_Blogs(){
                 <div class="p-4 flex flex-col items-center justify-center">
     <div class="cursor-pointer">
         <button class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
-      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-900 group-hover:translate-x-0 ease">
+      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#007fac] group-hover:translate-x-0 ease">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
       </span>
       <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>
@@ -74,7 +80,7 @@ export default function Travel_Blogs(){
         </div>
         <div class="relative hover:scale-105 transition-all duration-300 cursor-pointer">
           <div>
-            <p class="md:p-10 p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>12 April 2021</p>
+            <p class="p-6 text-lg font-medium leading-3 text-[#f58d03] absolute top-0 right-0"  >12 April 2021</p>
             <div class="absolute bottom-0 left-0 md:p-10 p-6">
               <h2 class="text-xl font-semibold 5 text-white"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>The Decorated Ways</h2>
               <p class="text-base leading-4 text-white mt-2"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
@@ -82,7 +88,7 @@ export default function Travel_Blogs(){
               <div class="p-4 flex flex-col items-center justify-center">
     <div class="cursor-pointer">
         <button class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
-      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-900 group-hover:translate-x-0 ease">
+      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#007fac] group-hover:translate-x-0 ease">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
       </span>
       <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>
@@ -103,7 +109,7 @@ export default function Travel_Blogs(){
       <div class="lg:w-1/2 xl:ml-8 lg:ml-4 lg:mt-0 md:mt-6 mt-4 lg:flex flex-col justify-between ">
         <div class="relative hover:scale-105 transition-all duration-300 cursor-pointer">
           <div>
-            <p class="md:p-10 p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>12 April 2021</p>
+            <p class="p-6 text-lg font-medium leading-3 text-[#f58d03] absolute top-0 right-0"  >12 April 2021</p>
             <div class="absolute bottom-0 left-0 md:p-10 p-6">
               <h2 class="text-xl font-semibold 5 text-white" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>The Decorated Ways</h2>
               <p class="text-base leading-4 text-white mt-2" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
@@ -111,7 +117,7 @@ export default function Travel_Blogs(){
               <div class="p-4 flex flex-col items-center justify-center">
     <div class="cursor-pointer">
         <button class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
-      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-900 group-hover:translate-x-0 ease">
+      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#007fac] group-hover:translate-x-0 ease">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
       </span>
       <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>
@@ -131,7 +137,7 @@ export default function Travel_Blogs(){
         <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6 md:mt-6 mt-4">
           <div class="relative w-full hover:scale-110 transition-all duration-300 cursor-pointer">
             <div>
-              <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>12 April 2021</p>
+              <p class="p-6 text-lg font-medium leading-3 text-[#f58d03] absolute top-0 right-0">12 April 2021</p>
               <div class="absolute bottom-0 left-0 p-6">
                 <h2 class="text-xl font-semibold 5 text-white"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>The Decorated Ways</h2>
                 <p class="text-base leading-4 text-white mt-2"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
@@ -139,7 +145,7 @@ export default function Travel_Blogs(){
                 <div class="p-4 flex flex-col items-center justify-center">
     <div class="cursor-pointer">
         <button class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
-      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-900 group-hover:translate-x-0 ease">
+      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#007fac] group-hover:translate-x-0 ease">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
       </span>
       <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>
@@ -157,7 +163,7 @@ export default function Travel_Blogs(){
           </div>
           <div class="relative w-full sm:mt-0 mt-4 hover:scale-110 transition-all duration-300 cursor-pointer">
             <div>
-              <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>12 April 2021</p>
+              <p class="p-6 text-lg font-medium leading-3 text-[#f58d03] absolute top-0 right-0"  >12 April 2021</p>
               <div class="absolute bottom-0 left-0 p-6">
                 <h2 class="text-xl font-semibold 5 text-white"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>The Decorated Ways</h2>
                 <p class="text-base leading-4 text-white mt-2"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
@@ -165,7 +171,7 @@ export default function Travel_Blogs(){
                 <div class="p-4 flex flex-col items-center justify-center">
     <div class="cursor-pointer">
         <button class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
-      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-900 group-hover:translate-x-0 ease">
+      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#007fac] group-hover:translate-x-0 ease">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
       </span>
       <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>

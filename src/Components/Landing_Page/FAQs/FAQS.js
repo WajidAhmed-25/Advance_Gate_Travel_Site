@@ -103,7 +103,9 @@
 
 
 
+// #f58d03 yellow
 
+// #007fac blue
 
 
 
@@ -123,8 +125,8 @@ export default function FAQs() {
                     <div className="max-w-2xl mx-auto text-center">
                  
                     <div className="mb-8 -my-6 text-center">
-        <h2 className="text-3xl font-bold text-black md:text-4xl">Get Answered Now!</h2>
-        <div className="w-[300px] h-1 mx-auto mt-6 mb-4 bg-blue-800"></div>
+        <h2 className="text-3xl font-bold text-[#007fac] md:text-4xl">Get Answered Now!</h2>
+        <div className="w-[300px] h-1 mx-auto mt-6 mb-4 bg-[#f58d03]"></div>
         <p className="text-xl text-center text-gray-500">Quick, reliable insights at your fingertips — ask away!</p>
       </div>
                     </div>
@@ -139,14 +141,14 @@ export default function FAQs() {
                                     onClick={() => handleToggle(index)}
                                     className="flex items-center justify-between w-full px-4 py-5 sm:p-6"
                                 >
-                                    <span className="flex text-lg font-semibold text-blue-900">{item.question}</span>
+                                    <span className="flex text-lg font-semibold text-[#007fac] ">{item.question}</span>
                                     <svg
                                         id={`arrow${index + 1}`}
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
-                                        className={`w-6 h-6 text-gray-400 transform transition-transform duration-200 ${
+                                        className={`w-6 h-6 text-[#f58d03] transform transition-transform duration-200 ${
                                             openIndex === index ? 'rotate-0' : 'rotate-180'
                                         }`}
                                     >
@@ -159,7 +161,7 @@ export default function FAQs() {
                                         openIndex === index ? 'block' : 'hidden'
                                     }`}
                                 >
-                                    <p>{item.answer}</p>
+                                    <p className='text-[#007fac]'>{item.answer}</p>
                                 </div>
                             </div>
                         ))}

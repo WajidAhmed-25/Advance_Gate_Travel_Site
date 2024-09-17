@@ -50,30 +50,30 @@ import hour from './hour.png';
 
 const InfoSection = () => {
   return (
-    <div className="w-full p-4 bg-blue-100">
+    <div className="w-full p-4 bg-[#007fac]">
       <div className="flex flex-wrap items-center justify-between mx-auto max-w-8xl max-lgg:flex-col max-lgg:items-center max-lgg:justify-center ">
         
         <div className="flex items-center p-4 space-x-4 sm:w-auto max-sm:justify-center">
-          <img src={ten} alt="10+" className="w-24 h-12" />
+          <img src={ten} alt="10+" className="w-24 h-12 text-[#cb4a2d]" />
           <div className="flex flex-col">
-            <span className="text-lg font-semibold text-blue-700">YEARS ON THE MARKET</span>
-            <span className="text-base text-black/80">We work with air tickets since 2010.</span>
+            <span className="text-lg font-semibold text-white ">YEARS ON THE MARKET</span>
+            <span className="text-base text-white/90">We work with air tickets since 2010.</span>
           </div>
         </div>
         
         <div className="flex items-center p-4 space-x-1 sm:w-auto max-sm:justify-center max-lgg:-ml-16">
-          <img src={hour} alt="24/7" className="w-24 h-18" />
+          <img src={hour} alt="24/7" className="w-24 h-18 text-[#cb4a2d]" />
           <div className="flex flex-col">
-            <span className="text-lg font-semibold text-blue-700">CUSTOMER CARE 24/7</span>
-            <span className="text-base">We are here to Serve you.</span>
+            <span className="text-lg font-semibold text-white">CUSTOMER CARE 24/7</span>
+            <span className="text-base text-white/90">We are here to Serve you.</span>
           </div>
         </div>
         
         <div className="flex items-center p-4 space-x-1 max-md:ml-0 sm:w-auto max-sm:justify-center max-lgg:ml-8">
-          <img src={plane} alt="Globe" className="w-24 h-18" />
+          <img src={plane} alt="Globe" className="w-24 h-18 text-[#cb4a2d]" />
           <div className="flex flex-col">
-            <span className="text-lg font-semibold text-blue-700">100 THOUSAND FLIGHTS</span>
-            <span className="text-base">That’s how many tickets were brought from us.</span>
+            <span className="text-lg font-semibold text-white">100 THOUSAND FLIGHTS</span>
+            <span className="text-base text-white/90">That’s how many tickets were brought from us.</span>
           </div>
         </div>
         

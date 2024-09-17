@@ -136,6 +136,8 @@ import { FaCalendarAlt } from 'react-icons/fa';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
+
+
 export default function My_Banner() {
   const [passportCountry, setPassportCountry] = useState('UNITED STATES (USA)');
   const [destination, setDestination] = useState('ISTANBUL, TURKEY');
@@ -175,6 +177,11 @@ export default function My_Banner() {
     'Medical',
   ];
 
+
+  //   #f58d03 yellow
+
+// #007fac blue
+
   return (
     <>
       <div
@@ -188,9 +195,9 @@ export default function My_Banner() {
 
         <div className="relative z-10 lg:-mt-32 text-center text-white w-[80%] max-md:mt-32 max-md:mb-4 max-md:w-[60%]">
           <div className="text-center">
-            <h1 className="text-3xl xxs:text-3xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-[67px] font-medium text-gray-900">
+            <h1 className="text-3xl xxs:text-3xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-[67px] font-medium text-[#007fac]">
               Visas Made
-              <span className="font-medium text-blue-800"> Easier</span>
+              <span className="font-medium text-[#f58d03]"> Easier</span>
             </h1>
             <p className="mt-4 text-base text-gray-600 xxs:text-base xs:text-lg sm:text-lg md:text-xl lg:text-2xl">
               Accurate and Expedited Visa and Passport Solutions
@@ -202,10 +209,10 @@ export default function My_Banner() {
               <select
                 value={passportCountry}
                 onChange={(e) => setPassportCountry(e.target.value)}
-                className="p-2.5 mt-1 text-center text-white bg-blue-800 md:mt-2 rounded-md focus:ring cursor-pointer"
+                className="p-2.5 mt-1 text-center text-white bg-[#007fac] md:mt-2 rounded-md focus:ring cursor-pointer"
               >
                 {countries.map((country, index) => (
-                  <option key={index} value={country} className='text-sm font-semibold text-center text-blue-800 bg-white cursor-pointer'>
+                  <option key={index} value={country} className='text-sm font-semibold text-center hover:bg-[#f58d03] hover:text-[#007fac]  text-[#007fac] bg-white cursor-pointer'>
                     {country}
                   </option>
                 ))}
@@ -216,10 +223,10 @@ export default function My_Banner() {
               <select
                 value={destination}
                 onChange={(e) => setDestination(e.target.value)}
-                className="p-2.5 mt-1 text-center text-white bg-blue-800 md:mt-2 rounded-md focus:ring cursor-pointer"
+                className="p-2.5 mt-1 text-center text-white bg-[#007fac] md:mt-2 rounded-md focus:ring cursor-pointer"
               >
                 {destinations.map((place, index) => (
-                  <option key={index} value={place} className='text-sm font-semibold text-center text-blue-800 bg-white cursor-pointer'>
+                  <option key={index} value={place} className='text-sm font-semibold text-center text-[#007fac] bg-white cursor-pointer hover:bg-[#f58d03] hover:text-[#007fac]'>
                     {place}
                   </option>
                 ))}
@@ -230,10 +237,10 @@ export default function My_Banner() {
               <select
                 value={tripPurpose}
                 onChange={(e) => setTripPurpose(e.target.value)}
-                className="p-2.5 mt-1 text-center text-white bg-blue-800 md:mt-2 rounded-md focus:ring cursor-pointer"
+                className="p-2.5 mt-1 text-center text-white bg-[#007fac] md:mt-2 rounded-md focus:ring cursor-pointer"
               >
                 {purposes.map((purpose, index) => (
-                  <option key={index} value={purpose} className='font-semibold text-center text-blue-800 bg-white cursor-pointer text-md'>
+                  <option key={index} value={purpose} className=' font-semibold text-center text-[#007fac] bg-white cursor-pointer text-md hover:bg-[#f58d03] hover:text-[#007fac]'>
                     {purpose}
                   </option>
                 ))}
@@ -249,26 +256,16 @@ export default function My_Banner() {
                   endDate={dates.endDate}
                   selectsRange
                   inline={false}
-                  className="w-full p-2.5 mt-1 text-center text-white bg-blue-800 md:mt-2 rounded-md focus:ring focus:ring-blue-400"
+                  className="w-full p-2.5 mt-1 text-center text-white bg-[#007fac] md:mt-2 rounded-md focus:ring focus:ring-blue-400"
                   dateFormat="MM/dd/yyyy"
                 />
                 {/* <FaCalendarAlt className="absolute text-white transform -translate-y-1/2 right-2 top-[55%]" /> */}
               </div>
             </div>
-            {/* <div className="flex flex-col w-full md:w-[26%] lg:w-[23%]">
-              <label className="text-xs font-semibold text-gray-700 md:text-sm">Date of Entry/Departure</label>
-              <div className="relative">
-                <input
-                  type="text"
-                  value={`${dates.startDate} - ${dates.endDate}`}
-                  onChange={() => {}}
-                  className="w-full p-2.5 mt-1 text-center text-white bg-blue-800 md:mt-2 rounded-md focus:ring focus:ring-blue-400"
-                />
-                <FaCalendarAlt className="absolute text-white transform -translate-y-1/2 right-2 top-[55%]" />
-              </div>
-            </div> */}
+         
+      
             <div className="">
-              <button className="bg-blue-800 rounded-full w-48 h-12 mt-[22px] text-white font-semibold hover:bg-blue-900 transition-all duration-300">
+              <button className="bg-[#007fac] rounded-full w-48 h-12 mt-[22px] text-white font-bold hover:text-[#007fac] hover:bg-[#f58d03] transition-all duration-300">
                 <div className="flex items-center justify-center gap-3">
                   <span className="text-md">Get Visa Options</span>
                 </div>

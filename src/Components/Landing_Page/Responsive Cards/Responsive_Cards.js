@@ -91,7 +91,9 @@
 
 
 
+// #f58d03 yellow
 
+// #007fac blue
 
 export default function Res_Cards() {
     return (
@@ -103,8 +105,8 @@ export default function Res_Cards() {
 
         
             <div className='w-full mt-16 text-center'>
-                <h2 className="pb-2 mt-12 text-4xl font-bold text-center">Discover Your Next Adventure</h2>
-                <div className="w-[480px] h-1 mx-auto mt-2 mb-4 bg-blue-800"></div>
+                <h2 className="pb-2 mt-12 text-4xl font-bold text-center text-[#007fac]">Discover Your Next Adventure</h2>
+                <div className="w-[480px] h-1 mx-auto mt-2 mb-4 bg-[#f58d03]"></div>
                 <p className="text-xl text-center text-gray-500">
                     Unleash your wanderlust and explore the globe with our curated travel experiences!
                 </p>
@@ -126,7 +128,7 @@ export default function Res_Cards() {
                                 </div>
                             </div>
                         </div>
-                        <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+                        <h3 className="mt-3 text-lg font-semibold leading-6 text-[#f58d03]">
                             <a href="#"><span className="absolute inset-0"></span>Explore the Romantic Streets of Paris</a>
                         </h3>
                     </article>
@@ -145,7 +147,7 @@ export default function Res_Cards() {
                                 </div>
                             </div>
                         </div>
-                        <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+                        <h3 className="mt-3 text-lg font-semibold leading-6 text-[#f58d03]">
                             <a href="#"><span className="absolute inset-0"></span>Experience the Thrill of a Serengeti Safari</a>
                         </h3>
                     </article>
@@ -164,7 +166,7 @@ export default function Res_Cards() {
                                 </div>
                             </div>
                         </div>
-                        <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+                        <h3 className="mt-3 text-lg font-semibold leading-6 text-[#f58d03]">
                             <a href="#"><span className="absolute inset-0"></span>Relax in the Serene Beauty of a Tropical Paradise</a>
                         </h3>
                     </article>

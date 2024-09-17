@@ -1,5 +1,10 @@
 export default function Contact(){
 
+
+
+//     #f58d03 yellow
+
+// #007fac blue
     return(
 
         <>
@@ -11,14 +16,14 @@ export default function Contact(){
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div class="mb-4">
             <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-                <p class="text-base font-semibold uppercase tracking-wide text-blue-800 ">
+                <p class="text-base font-semibold uppercase tracking-wide text-[#007fac] ">
                     Contact
                 </p>
                 <h2
-                    class="font-heading mb-4 font-bold tracking-tight text-gray-900 text-3xl sm:text-5xl">
+                    class="font-heading mb-4 font-bold tracking-tight text-[#007fac] text-3xl sm:text-5xl">
                     Get in Touch
                 </h2>
-                <div className="h-[4px] w-[880px] md:w-[230px]  sm:w-[180px]  max-xs:w-[260px] mx-auto bg-blue-800 mt-[18px]"></div>
+                <div className="h-[4px] w-[880px] md:w-[230px]  sm:w-[180px]  max-xs:w-[260px] mx-auto bg-[#f58d03] mt-[18px]"></div>
                 <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600 ">In hac habitasse platea
                     dictumst
                 </p>
@@ -27,17 +32,17 @@ export default function Contact(){
         <div class="flex items-stretch justify-center">
             <div class="grid md:grid-cols-2">
                 <div class="h-full pr-6">
-                    <p class="mt-3 mb-12 text-lg text-gray-600 ">
+                    <p class="mt-3 mb-12 text-lg text-[#007fac] ">
                         Class aptent taciti sociosqu ad
                         litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque
                         sagittis ante, ac tincidunt sem venenatis ut.
                     </p>
                     <ul class="mb-6 md:mb-0">
                         <li class="flex">
-                            <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-800 text-gray-50">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            <div class="flex h-10 w-10 items-center justify-center rounded bg-[#007fac]  text-gray-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="h-6 w-6">
+                                    stroke-linejoin="round" class="h-6 w-6 ">
                                     <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
                                     <path
                                         d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z">
@@ -45,14 +50,14 @@ export default function Contact(){
                                 </svg>
                             </div>
                             <div class="ml-4 mb-4">
-                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 ">Our Address
+                                <h3 class="mb-2 text-lg font-medium leading-6 text-[#007fac] ">Our Address
                                 </h3>
-                                <p class="text-gray-600 ">1230 Maecenas Street Donec Road</p>
-                                <p class="text-gray-600 ">New York, EEUU</p>
+                                <p class="text-[#007fac] ">1230 Maecenas Street Donec Road</p>
+                                <p class="text-[#007fac] ">New York, EEUU</p>
                             </div>
                         </li>
                         <li class="flex">
-                            <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-800 text-gray-50">
+                            <div class="flex h-10 w-10 items-center justify-center rounded bg-[#007fac] text-gray-50">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="h-6 w-6">
@@ -64,14 +69,14 @@ export default function Contact(){
                                 </svg>
                             </div>
                             <div class="ml-4 mb-4">
-                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 ">Contact
+                                <h3 class="mb-2 text-lg font-medium leading-6 text-[#007fac] ">Contact
                                 </h3>
-                                <p class="text-gray-600 ">Mobile: +1 (123) 456-7890</p>
-                                <p class="text-gray-600 ">Mail: tailnext@gmail.com</p>
+                                <p class="text-[#007fac] ">Mobile: +1 (123) 456-7890</p>
+                                <p class="text-[#007fac] ">Mail: tailnext@gmail.com</p>
                             </div>
                         </li>
                         <li class="flex">
-                            <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-800 text-gray-50">
+                            <div class="flex h-10 w-10 items-center justify-center rounded bg-[#007fac] text-gray-50">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="h-6 w-6">
@@ -80,16 +85,16 @@ export default function Contact(){
                                 </svg>
                             </div>
                             <div class="ml-4 mb-4">
-                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 ">Working
+                                <h3 class="mb-2 text-lg font-medium leading-6 text-[#007fac] ">Working
                                     hours</h3>
-                                <p class="text-gray-600 ">Monday - Friday: 08:00 - 17:00</p>
-                                <p class="text-gray-600 ">Saturday &amp; Sunday: 08:00 - 12:00</p>
+                                <p class="text-[#007fac] ">Monday - Friday: 08:00 - 17:00</p>
+                                <p class="text-[#007fac] ">Saturday &amp; Sunday: 08:00 - 12:00</p>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <div class="card h-fit max-w-6xl p-5 md:p-12 bg-white border-2 border-blue-800 rounded-2xl shadow-xl" id="form">
-                    <h2 class="mb-4 text-2xl font-bold ">Ready to Get Started?</h2>
+                <div class="card h-fit max-w-6xl p-5 md:p-12 bg-white border-2 border-[#f58d03] rounded-2xl shadow-xl" id="form">
+                    <h2 class="mb-4 text-2xl font-bold text-[#007fac] ">Ready to Get Started?</h2>
                     <form id="contactForm">
                         <div class="mb-6">
                             <div class="mx-0 mb-1 sm:mb-4">
@@ -105,7 +110,7 @@ export default function Contact(){
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="w-[30%] font-semibold  transform hover:scale-110 active:scale-95  bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send Message</button>
+                            <button type="submit" class="w-[30%] font-semibold  transform hover:scale-110 active:scale-95  bg-[#007fac] hover:bg-[#f58d03] hover:text-[#007fac] text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send Message</button>
                         </div>
                     </form>
                 </div>

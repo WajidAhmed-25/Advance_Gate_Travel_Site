@@ -3,14 +3,20 @@ import plane from './plane.png';
 import './cards.css'
 
 export default function Cards_Visa() {
+
+  // #f58d03 yellow
+
+  // #007fac blue
+
   return (
+    
     <>
 
 <div className='pt-2 pb-6 bg-gray-100'>
 
 <div className="mt-12 text-center ">
-<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Services we offer</h2>
-<div class="w-[470px] h-1 mx-auto mt-4 mb-4 bg-blue-800"></div>
+<h2 className="text-3xl font-bold tracking-tight text-[#007fac] sm:text-4xl">Services we offer</h2>
+<div class="w-[470px] h-1 mx-auto mt-4 mb-4 bg-[#f58d03]"></div>
 <p className="max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4">
    A One Stop Shop that can bring colors to life
 </p>
@@ -28,12 +34,12 @@ export default function Cards_Visa() {
     </div>
     <div class="content">
       <div>
-        <h2 className='font-semibold tracking-wide underline underline-offset-8'  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Fast Passport Renewal</h2>
-        <p  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Need your passport quickly? we can renew your US passport in a day.   
+        <h2 className='font-semibold tracking-wide underline underline-offset-8 text-[#007fac]'  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Fast Passport Renewal</h2>
+        <p  className='text-[#007fac]' style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Need your passport quickly? we can renew your US passport in a day.   
         </p>
         <div class="flex gap-4 flex-wrap justify-center">
  
-    <button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border-b-4 border-blue-700 rounded transform transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-110">Explore</button>
+    <button  class="bg-blue-500 hover:bg-blue-700 text-[#007fac] font-bold py-2 px-4 border-b-4 border-blue-700 rounded transform transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-110">Explore</button>
 </div>
       </div>
     </div>
@@ -44,7 +50,7 @@ export default function Cards_Visa() {
     </div>
     <div class="content">
       <div>
-        <h2 className='font-semibold tracking-wide underline underline-offset-8'  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Visa Check Quick</h2>
+        <h2 className='font-semibold tracking-wide underline underline-offset-8 '  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Visa Check Quick</h2>
         <p  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>US Passport Holders: See if your destination requires a visa.
         </p>
 

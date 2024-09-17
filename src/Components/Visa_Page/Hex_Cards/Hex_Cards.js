@@ -22,6 +22,8 @@ import v17 from  './sydney.jpg'
 
 import './hex.css';
 
+
+
 export default function Hex_Cards() {
     const cards = [
    
@@ -44,13 +46,17 @@ export default function Hex_Cards() {
         { image:v17, name: 'Australia' },
     ];
 
+    //   #f58d03 yellow
+
+// #007fac blue
+
     return (
 
 <>
 
 <div className="mt-20 text-center">
-<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Explore the True Beauty of the World</h2>
-<div class="w-[480px] h-1 mx-auto mt-4 mb-4 bg-blue-800"></div>
+<h2 className="text-3xl font-bold tracking-tight text-[#007fac] sm:text-4xl">Explore the True Beauty of the World</h2>
+<div class="w-[480px] h-1 mx-auto mt-4 mb-4 bg-[#f58d03]"></div>
 <p className="max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4">
    Top Tourist Destinations On Finger Tips
 </p>

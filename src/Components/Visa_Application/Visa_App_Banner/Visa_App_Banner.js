@@ -8,6 +8,9 @@ import e from './e.jpg'
 export default function Visa_Application_Banner(){
 
 
+//   #f58d03 yellow
+
+// #007fac blue
 
     return(
 
@@ -20,83 +23,27 @@ export default function Visa_Application_Banner(){
 
 
 
-<div className='bg-blue-800'>
+<div className='bg-[#007fac]'>
 
 
 <div className="container flex items-center justify-center px-4 py-3 mx-auto">
-{/* <nav className='pt-6 '>
-      <ul className="flex flex-wrap justify-center space-x-0 md:space-x-12">
 
-
-
-
-<li className="px-2 mb-2 md:px-0">
-  <a
-    href="/"
-    className="relative transition-all duration-300 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"
-  >
-    <span className="text-xl text-white transition-all duration-300 hover:scale-125"> Home</span>
-  </a>
-</li>
-
-
-
-  <li className="px-2 mb-4 md:px-0">
-    <a
-    href="/visa"
-    className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]"
-  >
-    <span className="text-xl text-white">Visa Portal</span>
-  </a>
-  </li>
-  <li className="px-2 mb-4 md:px-0">
-    <a href="/visa_application" className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]">
-      <span className="text-xl text-white">Visa Application</span>
-    </a>
-  </li>
-  <li className="px-2 mb-4 md:px-0">
-    <a href="#" className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]">
-      <span className="text-xl text-white">Regular Flights</span>
-    </a>
-  </li>
-  <li className="px-2 mb-4 md:px-0">
-    <a href="#" className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]">
-      <span className="text-xl text-white">News</span>
-    </a>
-  </li>
-  <li className="px-2 mb-4 md:px-0">
-    <a href="#" className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]">
-      <span className="text-xl text-white">Blog</span>
-    </a>
-  </li>
-  <li className="px-2 mb-4 md:px-0">
-    <a href="#" className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]">
-      <span className="text-xl text-white">Contact Us</span>
-    </a>
-  </li>
-  <li className="px-2 mb-4 md:px-0">
-    <a href="#" className="relative hover:scale-125 transition-all duration-300 hover:text-white cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-white before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-[-8px] before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-white after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-[-8px] after:right-[50%]">
-      <span className="text-xl text-white">Destination</span>
-    </a>
-  </li>
-</ul>
-    </nav> */}
   </div>
 
-<div className="relative flex flex-col items-center justify-between h-auto p-4 text-white pt-28 lg:flex-row">
+<div className="relative flex flex-col items-center justify-between h-auto p-4 text-[#f58d03] pt-28 lg:flex-row">
       <div className="w-[70%] pb-[118px] text-center lg:w-1/2 lg:pr-8 lg:px-4  ">
-        <h1 className="text-5xl font-bold md:text-6xl" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+        <h1 className="text-5xl font-bold md:text-6xl text-[#f58d03]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
           Online E-Visa <br />
-          <span className="block mt-4 text-white " style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Application</span>
+          <span className="block mt-4 text-[#f58d03] " style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Application</span>
         </h1>
-        <p className="mt-12 text-base md:text-lg">
+        <p className="mt-12 text-base text-white md:text-lg">
           A foreign national traveling to the United States for tourism needs a visitor visa (B-2 or combined B1/B2) unless qualifying for entry under the Visa Waiver Program. Travel for pleasure or tourism may include a short visit for vacation, visiting family and friends, or for medical treatment.
         </p>
         <div className="flex flex-col justify-center w-[40%] ml-auto mr-auto mt-8 space-y-6 lg:w-full md:w-full  items md:flex-row lg:justify-center md:space-y-0 md:space-x-16">
-          <a  href="/application_form" className="px-8 py-4 font-semibold text-white transition-all transform bg-blue-800 border-2 border-white rounded-md hover:bg-blue-800 hover:border-white/60 hover:border-2 hover:scale-125 active:scale-95">
+          <a  href="/application_form" className="px-8 py-4 font-bold text-white transition-all transform bg-[#007fac] border-2 border-white hover:text-[#007fac] rounded-md hover:bg-[#f58d03] hover:border-white/60 hover:border-2 hover:scale-125 active:scale-95">
             APPLY NOW
           </a>
-          <button className="px-8 py-4 font-semibold text-blue-800 transform bg-white rounded-md hover:bg-gray-100 hover:scale-110 active:scale-95">
+          <button className="px-8 py-4 font-bold tracking-wide text-[#007fac] transform bg-[#f58d03] hover:text-[#f58d03] rounded-md hover:bg-[#007fac] hover:scale-110 active:scale-95">
             LEARN MORE
           </button>
         </div>
@@ -117,7 +64,7 @@ export default function Visa_Application_Banner(){
               {[...Array(5)].map((_, i) => (
                 <svg
                   key={i}
-                  className="w-4 h-4 text-yellow-500"
+                  className="w-4 h-4 text-[#f58d03]"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -129,7 +76,7 @@ export default function Visa_Application_Banner(){
         </div>
         {/* Live Chat Icon */}
         <div className="absolute bottom-12 right-4">
-          <button className="flex items-center px-4 py-2 space-x-2 font-semibold text-blue-800 bg-white rounded-full shadow-md">
+          <button className="flex items-center px-4 py-2 space-x-2 font-semibold text-[#007fac] bg-white rounded-full shadow-md">
             <svg
               className="w-5 h-5"
               fill="currentColor"

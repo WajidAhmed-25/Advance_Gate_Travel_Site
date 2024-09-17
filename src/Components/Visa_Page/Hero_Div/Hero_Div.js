@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 export default function Hero_Divs(){
 
 
+//   #f58d03 yellow
+
+// #007fac blue
+
+
+  
     return(
 
         <>
@@ -20,13 +26,13 @@ export default function Hero_Divs(){
         {/* <div className="absolute px-10 py-4 text-sm font-semibold text-black bg-yellow-400 cursor-pointer hover:border-yellow-400 hover:border-2 hover:bg-black hover:text-yellow-400 bottom-4 left-4 md:bottom-10 md:left-10 md:text-lg">
           Apply Now &#8250;
         </div> */}
-        <Link to="/visa_application" className="absolute px-10 py-4 text-sm font-semibold text-black bg-yellow-400 cursor-pointer hover:border-yellow-400 hover:border-2 hover:bg-black hover:text-yellow-400 bottom-4 left-4 md:bottom-10 md:left-10 md:text-lg">
+        <Link to="/visa_application" className="absolute px-10 py-4 text-sm font-semibold text-white bg-[#f58d03] cursor-pointer hover:border-[#007fac] hover:border-2 hover:bg-[#f58d03] hover:text-[#007fac] bottom-4 left-4 md:bottom-10 md:left-10 md:text-lg">
   Apply Now &#8250;
 </Link>
       </div>
 
       {/* Right Side Content */}
-      <div className="flex flex-col justify-center w-full p-6 text-white bg-blue-900 md:w-1/2 md:p-10">
+    <div className="flex flex-col justify-center w-full p-6 text-white bg-[#007fac] md:w-1/2 md:p-10">
         <h2 className="text-sm font-semibold md:text-lg">OUR PROMISE</h2>
         <h1 className="mt-2 mb-4 text-2xl font-bold md:text-5xl md:mb-8">
           WHAT WE STAND FOR
