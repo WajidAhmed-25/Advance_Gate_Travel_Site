@@ -23,7 +23,7 @@ export default function Contact(){
                     class="font-heading mb-4 font-bold tracking-tight text-[#007fac] text-3xl sm:text-5xl">
                     Get in Touch
                 </h2>
-                <div className="h-[4px] w-[880px] md:w-[230px]  sm:w-[180px]  max-xs:w-[260px] mx-auto bg-[#f58d03] mt-[18px]"></div>
+                <div className="h-[4px] w-[140px] md:w-[230px]  sm:w-[180px]  max-xs:w-[260px] mx-auto bg-[#f58d03] mt-[18px]"></div>
                 <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600 ">In hac habitasse platea
                     dictumst
                 </p>

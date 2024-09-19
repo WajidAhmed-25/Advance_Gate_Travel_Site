@@ -14,11 +14,9 @@ export default function Travel_Contact(){
 
   <p className="mb-6 text-xl text-center text-gray-500">We Offer 24/7 Customer support</p>
         
-        <div class="flex flex-wrap justify-center items-center h-auto p-5 pl-[6%] pt-[3%] mb-12" >
+        <div class="flex flex-wrap justify-center items-center h-auto  pl-[6%] pt-[3%] mb-12" >
             
         <div class="w-full md:w-2/5 p-4">
-
-
 
 
 
@@ -34,7 +32,7 @@ export default function Travel_Contact(){
             <div>
               <textarea id="message" name="message" placeholder='Message' class="mt-1 p-4 w-full  rounded-md border-2 border-[#007fac]/50" rows="4"></textarea>
             </div>
-            <button type="submit" class="px-6 py-4 text-lg rounded-md bg-[#007fac] text-white tracking-wide hover:bg-[#007eaccc] ml-[80%] font-bold">Submit</button>
+            <button type="submit" class="px-6 py-4 text-lg rounded-md bg-[#007fac] text-white tracking-wide hover:bg-[#007eaccc] md:ml-[80%] ml-[65%] font-bold">Submit</button>
           </form>
         </div>
         <div class="w-full md:w-1/2 p-4 flex justify-center">

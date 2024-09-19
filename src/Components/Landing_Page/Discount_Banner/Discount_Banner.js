@@ -13,23 +13,25 @@ export default function Discount_Banner(){
 
 
 
-<section class="px-4 mt-80 md:mt-24 mb-16 w-full ">
+<section class="px-4 mt-16 md:mt-24 mb-16 w-full ">
   
 
     <div
-        class="bg-gradient-to-br from-[#007fac] via-[#2198c4] to-[#007fac]  sm:p-4  h-[250px]  rounded-2xl  text-white flex items-center justify-between w-full mx-auto mt-12">
+        class="bg-gradient-to-br from-[#007fac] via-[#2198c4] to-[#007fac]  sm:p-4  h-[250px] pr-4 md:pr-4 rounded-2xl  text-white flex items-center justify-between w-full mx-auto mt-12">
         <div class="flex flex-col gap-2">
             <div class="">
-                <span class="text-[#f58d03]">Holiday Special</span>
+                <span class="text-[#f58d03] pl-4 md:pl-0">Holiday Special</span>
              <br/>
-                <span class=" text-4xl text-white font-semibold">Buy 2 Get 1 Free</span>
+                <span class=" md:text-4xl text-2xl pl-4 md:pl-0 text-white font-semibold">Buy 2 Get 1 Free</span>
             </div>
             <a href="" target="_blank" rel="noreferrer"
                 class="hover:text-[#f58d03] hover:border p-4 mt-6 ml-16 hover:border-white text-md bg-[#f58d03] hover:scale-125 hover:transition-all hover:duration-300 font-bold hover:bg-[#007fac] text-[#007fac] px-4 py-2 rounded-lg w-fit ease duration-300 flex gap-1 items-center group">
                 <span>Shop now</span>
                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"
                     class="group-hover:translate-x-1 transition-transform ease duration-200" width="1em" height="1em"
-                    viewBox="0 0 256 256">
+                    viewBox="0 0 256 256" 
+                    
+                    >
                     <path fill="currentColor"
                         d="m221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32Z">
                     </path>

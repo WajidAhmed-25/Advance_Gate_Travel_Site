@@ -19,10 +19,12 @@ export default function Price({ pricingData,name }) {
 <div className='w-full mt-20 mb-4 text-center'>
         <h2 className="font-bold text-3xl leading-[1.1] sm:text-2xl md:text-5xl text-[#007fac]">{name} Visa Categories</h2>
 
-        <div class="w-[500px] h-1 mx-auto mt-6 mb-12  bg-[#f58d03]"></div>
+        {/* <div class="w-[500px] h-1 mx-auto mt-6 mb-12  bg-[#f58d03]"></div> */}
+
+       <div className="h-[4px] w-[280px] md:w-[400px]  sm:w-[180px]  max-xs:w-[260px] mx-auto bg-[#f58d03] mt-[18px]"></div>
       </div>
         
-      <ul className="grid gap-6 p-16 mt-4 md:gap-8 md:grid-cols-3">
+      <ul className="grid gap-6 p-4 mt-4 sm:p-8 md:p-16 md:gap-8 md:grid-cols-3">
         {pricingData.map((plan, index) => (
           <li
             key={index}

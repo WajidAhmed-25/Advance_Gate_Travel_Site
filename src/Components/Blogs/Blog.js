@@ -5,193 +5,157 @@ export default function Travel_Blogs(){
 
 // #007fac blue
 
+        
+
 
     return(
         <>
         
-        <div class="flex justify-center items-center">
-
-  <div class="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
-    <div role="main" class="flex flex-col items-center justify-center">
 
 
-      
-  <h2 className="pb-2 mt-4 text-4xl font-bold text-center text-[#007fac]">This Week Blogs</h2>
+
+
+
+
+{/* <section class="bg-white mb-80 md:mb-0">
+	<div class="py-4 px-2 mx-auto max-w-screen-2xl sm:py-4 lg:px-6">
+		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-[800px] mb-20 pt-24 ">
+			<div class="col-span-2 sm:col-span-1 md:col-span-2 bg-gray-50 h-auto md:h-full flex flex-col">
+				<a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
+					<img src="https://images.pexels.com/photos/3140204/pexels-photo-3140204.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"/>
+					<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+					<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Wines</h3>
+          <p class="text-base leading-4 text-white z-50 -mt-20 mb-6"   style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
+<button className="w-24  p-2 text-white bg-[#007fac] z-50 hover:scale-110 rounded-lg hover:transition-all hover:duration-300" >
+  Click Me
+  
+  </button>      
+  
+				</a>
+			</div>
+			<div class="col-span-2 sm:col-span-1 md:col-span-2  pt-6">
+				<a href="" class="group relative flex flex-col overflow-hidden h-[350px] rounded-lg px-4 pb-4 pt-40 mb-4">
+					<img src="https://images.pexels.com/photos/3493777/pexels-photo-3493777.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"/>
+					<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+					<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Gin</h3>
+          <p class="text-base leading-4 text-white z-50 -mt-20 mb-6"   style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
+<button className="w-24  p-2 text-white bg-[#007fac] z-50 hover:scale-110 rounded-lg hover:transition-all hover:duration-300" >
+  Click Me
+  
+  </button>   
+				</a>
+				<div class="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
+					<a href="" class="group relative flex flex-col overflow-hidden h-[250px] rounded-lg px-4 pb-4 pt-40">
+						<img src="https://images.pexels.com/photos/14795458/pexels-photo-14795458.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"/>
+						<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+						<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Whiskey</h3>
+            <p class="text-base leading-4 text-white z-50 -mt-20 mb-6"   style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
+<button className="w-24  p-2 text-white bg-[#007fac] z-50 hover:scale-110 rounded-lg hover:transition-all hover:duration-300" >
+  Click Me
+  
+  </button>   
+					</a>
+					<a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40">
+						<img src="https://images.pexels.com/photos/2215380/pexels-photo-2215380.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"/>
+						<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+						<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Vodka</h3>
+            <p class="text-base leading-4 text-white z-50 -mt-20 mb-6"   style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
+<button className="w-24  p-2 text-white bg-[#007fac] z-50 hover:scale-110 rounded-lg hover:transition-all hover:duration-300" >
+  Click Me
+  
+  </button>   
+					</a>
+				</div>
+			</div>
+			<div class="col-span-2 sm:col-span-1 md:col-span-1 bg-sky-50 h-auto md:h-full flex flex-col">
+				<a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
+					<img src="https://images.pexels.com/photos/842687/pexels-photo-842687.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"/>
+					<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+					<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Brandy</h3>
+                   <p class="text-base leading-4 text-white z-50 -mt-20 mb-6"   style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
+<button className="w-24  p-2 text-white bg-[#007fac] z-50 hover:scale-110 rounded-lg hover:transition-all hover:duration-300" >
+  Click Me
+  
+  </button>   
+				</a>
+			</div>
+		</div>
+	</div>
+</section> */}
+
+
+
+<h2 className="pb-2 mt-32 text-4xl font-bold text-center text-[#007fac]">Read Travel Related Now !!</h2>
   <div class="w-[300px] h-1 mx-auto mt-2 mb-4  bg-[#f58d03]"></div>
 
-  <p className="mb-8 text-xl text-center text-gray-500">If you're looking for random paragraphs, you've come to the right place. When a random word or a random sentence isn't quite enough.</p>
-    </div>
-   <div class="lg:flex items-stretch md:mt-12 mt-8">
-      <div class="lg:w-1/2">
-        <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6">
-          <div class="sm:w-1/2 relative hover:scale-110 transition-all duration-300 cursor-pointer">
-            <div>
-              <p class="p-6 text-lg font-medium leading-3 text-[#f58d03] absolute top-0 right-0"  >12 April 2021</p>
-              <div class="absolute bottom-0 left-0 p-6">
-                <h2 class="text-xl font-semibold 5 text-white"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}> The Decorated Ways</h2>
-                <p class="text-base leading-4 text-white mt-2"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
-                <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                  {/* <p class="pr-2 text-sm font-medium leading-none"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Read More</p> */}
-                  <div class="p-4 flex flex-col items-center justify-center">
-    <div class="cursor-pointer">
-        <button class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
-      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#007fac] group-hover:translate-x-0 ease">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-      </span>
-      <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>
-      <span class="relative invisible">Continue</span>
-    </button>
-    </div>
-</div>
-                  <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <img src="https://images.pexels.com/photos/3140204/pexels-photo-3140204.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full" alt="chair" />
-          </div>
-          <div class="sm:w-1/2 sm:mt-0 mt-4 relative  hover:scale-110 transition-all duration-300 cursor-pointer">
-            <div className="">
-              <p class="p-6 text-lg font-medium leading-3 text-[#f58d03] absolute top-0 right-0"  >12 April 2021</p>
-              <div class="absolute bottom-0 left-0 p-6 ">
-                <h2 class="text-xl font-semibold 5 text-white"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>The Decorated Ways</h2>
-                <p class="text-base leading-4 text-white mt-2"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
-                <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                <div class="p-4 flex flex-col items-center justify-center">
-    <div class="cursor-pointer">
-        <button class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
-      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#007fac] group-hover:translate-x-0 ease">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-      </span>
-      <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>
-      <span class="relative invisible">Continue</span>
-    </button>
-    </div>
-</div>
-                  <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <img src="https://images.pexels.com/photos/3493777/pexels-photo-3493777.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full " alt="wall design" />
-          </div>
-        </div>
-        <div class="relative hover:scale-105 transition-all duration-300 cursor-pointer">
-          <div>
-            <p class="p-6 text-lg font-medium leading-3 text-[#f58d03] absolute top-0 right-0"  >12 April 2021</p>
-            <div class="absolute bottom-0 left-0 md:p-10 p-6">
-              <h2 class="text-xl font-semibold 5 text-white"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>The Decorated Ways</h2>
-              <p class="text-base leading-4 text-white mt-2"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
-              <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-              <div class="p-4 flex flex-col items-center justify-center">
-    <div class="cursor-pointer">
-        <button class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
-      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#007fac] group-hover:translate-x-0 ease">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-      </span>
-      <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>
-      <span class="relative invisible">Continue</span>
-    </button>
-    </div>
-</div>
-                <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <img src="https://images.pexels.com/photos/14795458/pexels-photo-14795458.jpeg?auto=compress&cs=tinysrgb&w=600" alt="sitting place" class="w-full mt-8 md:mt-6 hidden sm:block" />
-          <img class="w-full mt-4 sm:hidden" src="https://i.ibb.co/6XYbN7f/Rectangle-29.png" alt="sitting place" />
+  <p className="text-xl text-center text-gray-500 ">Know the latest in the world</p>
+
+
+<section class="bg-white md:mb-16 mb-12">
+
+  <div class="py-4 px-2 mx-auto max-w-screen-2xl sm:py-4 lg:px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 md:h-[800px]  mb-20 pt-24 ">
+      <div class="col-span-2 sm:col-span-1 md:col-span-2 bg-gray-50 h-[300px] md:h-full flex flex-col">
+        <a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
+          <img src="https://images.pexels.com/photos/3140204/pexels-photo-3140204.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"/>
+          <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+          <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Tropical Getaway</h3>
+          <p class="text-base leading-4 text-white z-50 -mt-20 mb-6" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Relax on pristine beaches</p>
+          <button className="w-24 p-2 text-white bg-[#007fac] z-50 hover:scale-110 rounded-lg hover:transition-all hover:duration-300">
+            Book Now
+          </button>      
+        </a>
+      </div>
+
+      <div class="col-span-2 sm:col-span-1 md:col-span-2 md:pt-12 pt-4">
+        <a href="" class="group relative flex flex-col overflow-hidden h-[350px] rounded-lg px-4 pb-4 pt-40 mb-4">
+          <img src="https://images.pexels.com/photos/3493777/pexels-photo-3493777.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"/>
+          <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+          <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Mountain Adventure</h3>
+          <p class="text-base leading-4 text-white z-50 -mt-20 mb-6" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Explore the heights</p>
+          <button className="w-32 p-2 text-white bg-[#007fac] z-50 hover:scale-110 rounded-lg hover:transition-all hover:duration-300">
+            Learn More
+          </button>   
+        </a>
+
+        <div class="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
+          <a href="" class="group relative flex flex-col overflow-hidden h-[250px] rounded-lg px-4 pb-4 pt-40">
+            <img src="https://images.pexels.com/photos/14795458/pexels-photo-14795458.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"/>
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+            <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">City Break</h3>
+            <p class="text-base leading-4 text-white z-50 -mt-20 mb-6" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Discover vibrant cities</p>
+            <button className="w-24 p-2 text-white bg-[#007fac] z-50 hover:scale-110 rounded-lg hover:transition-all hover:duration-300">
+              Book Now
+            </button>   
+          </a>
+          <a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40">
+            <img src="https://images.pexels.com/photos/2215380/pexels-photo-2215380.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"/>
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+            <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Desert Safari</h3>
+            <p class="text-base leading-4 text-white z-50 -mt-20 mb-6" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Experience the wilderness</p>
+            <button className="w-24 p-2 text-white bg-[#007fac] z-50 hover:scale-110 rounded-lg hover:transition-all hover:duration-300">
+              Explore
+            </button>   
+          </a>
         </div>
       </div>
-      <div class="lg:w-1/2 xl:ml-8 lg:ml-4 lg:mt-0 md:mt-6 mt-4 lg:flex flex-col justify-between ">
-        <div class="relative hover:scale-105 transition-all duration-300 cursor-pointer">
-          <div>
-            <p class="p-6 text-lg font-medium leading-3 text-[#f58d03] absolute top-0 right-0"  >12 April 2021</p>
-            <div class="absolute bottom-0 left-0 md:p-10 p-6">
-              <h2 class="text-xl font-semibold 5 text-white" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>The Decorated Ways</h2>
-              <p class="text-base leading-4 text-white mt-2" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
-              <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-              <div class="p-4 flex flex-col items-center justify-center">
-    <div class="cursor-pointer">
-        <button class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
-      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#007fac] group-hover:translate-x-0 ease">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-      </span>
-      <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>
-      <span class="relative invisible">Continue</span>
-    </button>
-    </div>
-</div>
-                <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <img src="https://images.pexels.com/photos/2215380/pexels-photo-2215380.jpeg?auto=compress&cs=tinysrgb&w=600" alt="sitting place" class="w-full sm:block hidden" />
-          <img class="w-full sm:hidden" src="hhttps://images.pexels.com/photos/2215380/pexels-photo-2215380.jpeg?auto=compress&cs=tinysrgb&w=600" alt="sitting place" />
-        </div>
-        <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6 md:mt-6 mt-4">
-          <div class="relative w-full hover:scale-110 transition-all duration-300 cursor-pointer">
-            <div>
-              <p class="p-6 text-lg font-medium leading-3 text-[#f58d03] absolute top-0 right-0">12 April 2021</p>
-              <div class="absolute bottom-0 left-0 p-6">
-                <h2 class="text-xl font-semibold 5 text-white"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>The Decorated Ways</h2>
-                <p class="text-base leading-4 text-white mt-2"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
-                <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                <div class="p-4 flex flex-col items-center justify-center">
-    <div class="cursor-pointer">
-        <button class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
-      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#007fac] group-hover:translate-x-0 ease">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-      </span>
-      <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>
-      <span class="relative invisible">Continue</span>
-    </button>
-    </div>
-</div>
-                  <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <img src="https://images.pexels.com/photos/3551207/pexels-photo-3551207.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full" alt="chair" />
-          </div>
-          <div class="relative w-full sm:mt-0 mt-4 hover:scale-110 transition-all duration-300 cursor-pointer">
-            <div>
-              <p class="p-6 text-lg font-medium leading-3 text-[#f58d03] absolute top-0 right-0"  >12 April 2021</p>
-              <div class="absolute bottom-0 left-0 p-6">
-                <h2 class="text-xl font-semibold 5 text-white"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>The Decorated Ways</h2>
-                <p class="text-base leading-4 text-white mt-2"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Dive into minimalism</p>
-                <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                <div class="p-4 flex flex-col items-center justify-center">
-    <div class="cursor-pointer">
-        <button class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
-      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#007fac] group-hover:translate-x-0 ease">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-      </span>
-      <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Continue</span>
-      <span class="relative invisible">Continue</span>
-    </button>
-    </div>
-</div>
-                  <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <img src="https://images.pexels.com/photos/842687/pexels-photo-842687.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full" alt="wall design" />
-          </div>
-        </div>
+
+      <div class="col-span-2 sm:col-span-1 md:col-span-1 bg-sky-50 h-[300px] md:h-full flex flex-col">
+        <a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
+          <img src="https://images.pexels.com/photos/842687/pexels-photo-842687.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"/>
+          <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+          <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Cruise Holiday</h3>
+          <p class="text-base leading-4 text-white z-50 -mt-20 mb-6" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Sail in style</p>
+          <button className="w-24 p-2 text-white bg-[#007fac] z-50 hover:scale-110 rounded-lg hover:transition-all hover:duration-300">
+            Book Now
+          </button>   
+        </a>
       </div>
-    </div> 
+    </div>
   </div>
-</div>
+</section>
+
+
         
         
         </>

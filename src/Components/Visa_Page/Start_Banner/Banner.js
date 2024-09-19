@@ -195,7 +195,7 @@ export default function My_Banner() {
 
         <div className="relative z-10 lg:-mt-32 text-center text-white w-[80%] max-md:mt-32 max-md:mb-4 max-md:w-[60%]">
           <div className="text-center">
-            <h1 className="text-3xl xxs:text-3xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-[67px] font-medium text-[#007fac]">
+            <h1 className=" xxs:text-5xl xs:text-4xl sm:text-6xl md:text-5xl lg:text-2xl text-3xl font-medium text-[#007fac]">
               Visas Made
               <span className="font-medium text-[#f58d03]"> Easier</span>
             </h1>
@@ -218,7 +218,7 @@ export default function My_Banner() {
                 ))}
               </select>
             </div>
-            <div className="flex flex-col w-full md:w-[22%] lg:w-[18%]">
+            <div className="flex flex-col w-full md:w-[22%] lg:w-[18%] ">
               <label className="text-xs font-semibold text-gray-700 md:text-sm">I am going to</label>
               <select
                 value={destination}

@@ -198,7 +198,7 @@ const News = () => {
         <div className="absolute inset-0">
           <div className="bg-gray-100 h-1/3 sm:h-2/3"></div>
         </div>
-        <div className="relative mx-auto max-w-[90%] ">
+        <div className="relative mx-auto md:max-w-[90%]  w-full">
           <div className="mt-8 text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#007fac] sm:text-4xl">Latest in Travel News!</h2>
             <div className="w-[310px] h-1 mx-auto mt-4 mb-4 bg-[#f58d03]"></div>

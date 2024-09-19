@@ -31,7 +31,7 @@ export default function Visa_Application_Banner(){
   </div>
 
 <div className="relative flex flex-col items-center justify-between h-auto p-4 text-[#f58d03] pt-28 lg:flex-row">
-      <div className="w-[70%] pb-[118px] text-center lg:w-1/2 lg:pr-8 lg:px-4  ">
+      <div className="md:w-[70%] w-full pb-[118px] text-center lg:w-1/2 lg:pr-8 lg:px-4  ">
         <h1 className="text-5xl font-bold md:text-6xl text-[#f58d03]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
           Online E-Visa <br />
           <span className="block mt-4 text-[#f58d03] " style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>Application</span>
@@ -39,7 +39,7 @@ export default function Visa_Application_Banner(){
         <p className="mt-12 text-base text-white md:text-lg">
           A foreign national traveling to the United States for tourism needs a visitor visa (B-2 or combined B1/B2) unless qualifying for entry under the Visa Waiver Program. Travel for pleasure or tourism may include a short visit for vacation, visiting family and friends, or for medical treatment.
         </p>
-        <div className="flex flex-col justify-center w-[40%] ml-auto mr-auto mt-8 space-y-6 lg:w-full md:w-full  items md:flex-row lg:justify-center md:space-y-0 md:space-x-16">
+        <div className="flex flex-col justify-center w-[60%] md:w-full ml-auto mr-auto mt-8 space-y-6 lg:w-full   items md:flex-row lg:justify-center md:space-y-0 md:space-x-16">
           <a  href="/application_form" className="px-8 py-4 font-bold text-white transition-all transform bg-[#007fac] border-2 border-white hover:text-[#007fac] rounded-md hover:bg-[#f58d03] hover:border-white/60 hover:border-2 hover:scale-125 active:scale-95">
             APPLY NOW
           </a>

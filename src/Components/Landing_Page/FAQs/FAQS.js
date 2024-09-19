@@ -148,7 +148,7 @@ export default function FAQs() {
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
-                                        className={`w-6 h-6 text-[#f58d03] transform transition-transform duration-200 ${
+                                        className={`w-6 h-6 text-[#007fac] transform transition-transform duration-200 ${
                                             openIndex === index ? 'rotate-0' : 'rotate-180'
                                         }`}
                                     >

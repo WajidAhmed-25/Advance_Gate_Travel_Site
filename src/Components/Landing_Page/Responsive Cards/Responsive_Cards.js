@@ -106,13 +106,13 @@ export default function Res_Cards() {
         
             <div className='w-full mt-16 text-center'>
                 <h2 className="pb-2 mt-12 text-4xl font-bold text-center text-[#007fac]">Discover Your Next Adventure</h2>
-                <div className="w-[480px] h-1 mx-auto mt-2 mb-4 bg-[#f58d03]"></div>
+                <div className="w-[200px] h-1 mx-auto mt-2 mb-4 bg-[#f58d03] sm:w-[300px]"></div>
                 <p className="text-xl text-center text-gray-500">
                     Unleash your wanderlust and explore the globe with our curated travel experiences!
                 </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-8 p-6 mt-4">
-                <div className="grid max-w-2xl grid-cols-1 gap-8 mx-auto mt-8 auto-rows-fr sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
+            <div className="flex flex-wrap justify-center gap-8 mt-4">
+                <div className="grid grid-cols-1 gap-8 mx-auto mt-8 w0 auto-rows-fr sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
                     <article className="relative flex flex-col justify-end px-8 py-8 pb-8 overflow-hidden transition-transform duration-300 ease-in-out bg-gray-900 hover:rotate-3 isolate rounded-2xl">
                         <img src="https://images.pexels.com/photos/1815385/pexels-photo-1815385.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className="absolute inset-0 object-cover w-full h-full -z-10"/>
                         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>

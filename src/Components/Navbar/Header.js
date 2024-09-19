@@ -48,16 +48,16 @@ export default function My_Header() {
   return (
     <>
       <div className='flex items-center justify-between px-8 bg-white border-b-4 border-[#007fac]/80'>
-        {/* Logo Section */}
+
         <div className='flex-shrink-0 mt-1 mb-2'>
           <img src={paa2} alt="Logo" className="w-36 h-28" />
         </div>
 
-        {/* Hamburger Icon for Mobile View */}
+    
         <div className="block lg:hidden">
           <button
             onClick={toggleMobileMenu}
-            className="text-2xl text-white focus:outline-none"
+            className="text-2xl text-white bg-[#007fac] focus:outline-none"
           >
             {showMobileMenu ? <IoClose /> : <IoMenu />}
           </button>
@@ -134,8 +134,8 @@ export default function My_Header() {
               <IoClose />
             </button>
 
-          <div className='flex justify-center flex-shrink-0 w-full mt-1 mb-16 bg-blue-900'>
-          <img src={logoos} alt="Logo" className="items-center justify-center w-32 h-24" />
+          <div className='flex justify-center flex-shrink-0 w-full mt-1 mb-16 '>
+          <img src={paa2} alt="Logo" className="items-center justify-center w-32 h-24" />
         </div>
 
             

@@ -100,48 +100,107 @@ const PopularSelections = () => {
 // #007fac blue
 
   return (
+    // <div className="w-full h-[550px] mt-24">
+    //   <h2 className="pb-2 mt-12 text-4xl font-bold text-center text-[#007fac]">Popular Selections</h2>
+    //   <div className="w-[300px] h-1 mx-auto mt-2 mb-4 bg-[#f58d03]"></div>
+    //   <p className="text-xl text-center text-gray-500">Explore the Best, Experience the Extraordinary!</p>
+    //   <Swiper
+    //     navigation
+    //     modules={[Navigation, Autoplay]}
+    //     spaceBetween={12} 
+    //     slidesPerView={3}
+    //     loop={true}
+    //     centeredSlides={true}
+    //     autoplay={{
+    //       delay: 3000,
+    //       disableOnInteraction: false,
+    //     }}
+    //     pagination={{
+    //       clickable: true,
+    //     }}
+    //     onSlideChange={handleSlideChange}
+    //     className="w-full h-[70vh]"
+    //     style={{ padding: '0 15px' }} 
+    //   >
+    //     {data.map((item, index) => (
+    //       <SwiperSlide key={index} className="flex justify-center h-full p-2">
+    //         <div className="relative flex items-center justify-center w-full h-full">
+    //           <img
+    //             src={item.image}
+    //             alt={item.title}
+    //             className={`object-cover w-[90%] h-[60%] rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer border-black/40 border-2 ${
+    //               index === activeIndex ? 'brightness-100' : 'brightness-50'
+    //             }`}
+    //           />
+    //           <div className="absolute w-full p-4 text-center text-white bottom-[25%]">
+    //             <div className="p-2 mb-4 text-xl font-bold text-white bg-[#007fac] rounded-md shadow-lg cursor-pointer hover:scale-110">
+    //               {item.title}
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </SwiperSlide>
+    //     ))}
+    //   </Swiper>
+    // </div>
+
+
+
     <div className="w-full h-[550px] mt-24">
-      <h2 className="pb-2 mt-12 text-4xl font-bold text-center text-[#007fac]">Popular Selections</h2>
-      <div className="w-[300px] h-1 mx-auto mt-2 mb-4 bg-[#f58d03]"></div>
-      <p className="text-xl text-center text-gray-500">Explore the Best, Experience the Extraordinary!</p>
-      <Swiper
-        navigation
-        modules={[Navigation, Autoplay]}
-        spaceBetween={12} 
-        slidesPerView={3}
-        loop={true}
-        centeredSlides={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        onSlideChange={handleSlideChange}
-        className="w-full h-[70vh]"
-        style={{ padding: '0 15px' }} 
-      >
-        {data.map((item, index) => (
-          <SwiperSlide key={index} className="flex justify-center h-full p-2">
-            <div className="relative flex items-center justify-center w-full h-full">
-              <img
-                src={item.image}
-                alt={item.title}
-                className={`object-cover w-[90%] h-[60%] rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer border-black/40 border-2 ${
-                  index === activeIndex ? 'brightness-100' : 'brightness-50'
-                }`}
-              />
-              <div className="absolute w-full p-4 text-center text-white bottom-[25%]">
-                <div className="p-2 mb-4 text-xl font-bold text-white bg-[#007fac] rounded-md shadow-lg cursor-pointer hover:scale-110">
-                  {item.title}
-                </div>
-              </div>
+  <h2 className="pb-2 mt-12 text-4xl font-bold text-center text-[#007fac]">Popular Selections</h2>
+  <div className="w-[300px] h-1 mx-auto mt-2 mb-4 bg-[#f58d03]"></div>
+  <p className="text-xl text-center text-gray-500">Explore the Best, Experience the Extraordinary!</p>
+  
+  <Swiper
+    navigation
+    modules={[Navigation, Autoplay]}
+    spaceBetween={12}
+    slidesPerView={3} // Default for larger screens
+    loop={true}
+    centeredSlides={true}
+    autoplay={{
+      delay: 3000,
+      disableOnInteraction: false,
+    }}
+    pagination={{
+      clickable: true,
+    }}
+    onSlideChange={handleSlideChange}
+    className="w-full h-[70vh]"
+    style={{ padding: '0 15px' }}
+    breakpoints={{
+      // Configure breakpoints
+      0: {   // From 0px to larger screens
+        slidesPerView: 1,  // Only 1 slide on small screens
+      },
+      640: { // From 640px upwards (small screens)
+        slidesPerView: 2,  // 2 slides on slightly larger screens
+      },
+      1024: { // From 1024px upwards (larger screens)
+        slidesPerView: 3,  // Default 3 slides for larger screens
+      },
+    }}
+  >
+    {data.map((item, index) => (
+      <SwiperSlide key={index} className="flex justify-center h-full p-2">
+        <div className="relative flex items-center justify-center w-full h-full">
+          <img
+            src={item.image}
+            alt={item.title}
+            className={`object-cover w-[90%] h-[60%] rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer border-black/40 border-2 ${
+              index === activeIndex ? 'brightness-100' : 'brightness-50'
+            }`}
+          />
+          <div className="absolute w-full p-4 text-center text-white bottom-[25%]">
+            <div className="p-2 mb-4 text-xl font-bold text-white bg-[#007fac] rounded-md shadow-lg cursor-pointer hover:scale-110">
+              {item.title}
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+          </div>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+
   );
 };
 
