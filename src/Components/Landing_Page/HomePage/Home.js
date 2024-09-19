@@ -82,7 +82,7 @@ const My_Home = () => {
 
  <div className="flex flex-col mt-12 md:mb-32 pt-6 sm:flex-row items-center justify-between border-2 border-[#f58d03] bg-white p-2 xs:w-[40%] xxs:w-full max-xxs:bg-white xxs:p-2.5 rounded-xl md:rounded-full shadow-lg w-full sm:w-[80%] mx-auto space-y-4 sm:space-y-0 relative z-10">
  
-  <div className="flex flex-col w-full text-left sm:w-[50%] xs:w-[70%] items-center xxs:justify-center md:pt-0 pt-2 pb-4 md:pb-0">
+  <div className="flex flex-col w-full text-left sm:w-[50%] xs:w-[70%]  items-center xxs:justify-center md:pt-0 pt-2 pb-4 md:pb-0">
     <label className="text-gray-700 text-[24px] sm:text-lg lg:text-sm xs:underline xs:underline-offset-2 font-bold lg:no-underline md:no-underline">
       Location
     </label>
@@ -96,7 +96,7 @@ const My_Home = () => {
   {/* Divider for larger screens */}
   <div className="hidden h-10 border-l border-gray-300 sm:block"></div>
 
-  <div className="flex flex-col md:pt-2 w-full sm:w-1/3 xs:w-[70%] items-center xxs:justify-center">
+  <div className="flex flex-col md:pt-2 w-full sm:w-1/3 xs:w-[70%] items-center xxs:justify-center ">
     <label className="text-gray-700 text-[18px] sm:text-xs lg:text-sm font-bold xs:underline xs:underline-offset-2 lg:no-underline md:no-underline">
       Check in &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check out
     </label>
@@ -127,14 +127,14 @@ const My_Home = () => {
   {/* Divider for larger screens */}
   <div className="hidden h-10 border-l border-gray-300 sm:block"></div>
 
-  <div className="flex flex-col  pt-2 w-full sm:w-1/3 xs:w-[70%] items-center xxs:justify-center ">
-    <label className="text-gray-700 text-[18px] sm:text-xs lg:text-sm mt-2 font-bold xs:underline lg:no-underline xs:underline-offset-2 md:no-underline">
+  <div className="flex flex-col  w-full sm:w-1/3 xs:w-[70%] items-center xxs:justify-center  ">
+    <label className="text-gray-700 text-[18px] sm:text-xs lg:text-sm mt-2 md:mt-0 font-bold xs:underline lg:no-underline xs:underline-offset-2 md:no-underline">
       Guest
     </label>
     <input
       type="text"
       value="2 adults - 1 child - 1 room"
-      className="placeholder:ml-2 mb-6 text-[11px]  xs:w-[70%] xxs:w-full xxs:text-center xxs:bg-transparent xs:text-center sm:text-xs lg:text-[13px] ml-6 outline-none text-gray-900 mt-1 w-full"
+      className="placeholder:ml-2 mb-6 md:mb-0 text-[11px]  xs:w-[70%] xxs:w-full xxs:text-center xxs:bg-transparent xs:text-center sm:text-xs lg:text-[13px] ml-6 outline-none text-gray-900 mt-1 w-full"
     />
   </div>
 
