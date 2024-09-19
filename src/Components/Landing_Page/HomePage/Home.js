@@ -27,7 +27,7 @@ const My_Home = () => {
     loop
   ></video>
         <main className="flex-grow bg-transparent bg-opacity-50 bg-center bg-cover ">
-          <div className="container px-4 py-16 mx-auto mt-8 xxs:mt-2 md:-mt-2 sm:mt-20 xs:mt-12 max-xxs:mt-4">
+          <div className="px-4 py-16 mx-auto mt-8 xxs:mt-2 md:-mt-2 sm:mt-20 xs:mt-12 max-xxs:mt-4">
             <div className="px-4 mb-8 text-center xxs:mb-4 ">
  <h1
   className="relative mb-2 pt-8 md:pt-8 text-4xl font-bold text-[#f58d03] sm:text-6xl md:text-9xl xxs:text-5xl -z-[1]"
@@ -45,86 +45,33 @@ const My_Home = () => {
     Discover Amazing Places At Exclusive Deals
   </p>
 </div>
-            <div className="max-w-4xl mx-auto bg-transparent">
+            <div className="mx-auto max-w-7xl">
 
               
-         {/* <div className="flex flex-wrap justify-center py-3 mt-6 mb-2 space-x-8 space-y-2 sm:space-x-6 md:space-x-6 lg:space-x-6">
- 
-  <button className="font-semibold border-white/70 border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white  transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Hotel
-  </button>
-  <button className="font-semibold border-white/70 border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white  transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Tour
-  </button>
-  <button className="font-semibold border-white/70 border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white  transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Activity
-  </button>
-  <button className="font-semibold border-white/70 border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white  transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Holiday Rentals
-  </button>
-  <button className="font-semibold border-white/70 border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white  transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Car
-  </button>
-  <button className="font-semibold border-white/70 border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white  transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Cruise
-  </button>
-  <button className="font-semibold border-white/70 border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white  transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Flights
-  </button>
-</div> */}
 
-
-
-{/* <div className="grid grid-cols-2 gap-6 py-2 mt-6 mb-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7">
-  <button className="font-semibold  border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] border-[#f58d03] border-2 hover:text-white transition-all duration-200 hover:scale-125 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Hotel
-  </button>
-  <button className="font-semibold  border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Tour
-  </button>
-  <button className="font-semibold  border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Activity
-  </button>
-  <button className="font-semibold border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Holiday Rentals
-  </button>
-  <button className="font-semibold border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Car
-  </button>
-  <button className="font-semibold  border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Cruise
-  </button>
-  <button className="font-semibold  border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
-    Flights
-  </button>
-</div> */}
-
-
-
-
-<div className="grid grid-cols-2 gap-6 py-2 mt-6 mb-2 md:gap-32 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7">
-  <button className="flex r font-semibold justify-center items-center border-2 pl-6 pr-6 rounded-3xl w-32 bg-[#007fac] py-2 md:py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+<div className="grid items-center grid-cols-2 gap-6 py-2 pl-6 mt-6 mb-2 md:pl-28 md:gap-32 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7">
+  <button className="flex  font-semibold justify-center items-center border-2 pl-6 pr-6 rounded-3xl w-32 bg-[#007fac] py-2 md:py-2.5 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
   <FontAwesomeIcon icon={faHotel} className="mr-2" />
     Hotel
   </button>
-  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-2.5 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
   <FontAwesomeIcon icon={faSuitcaseRolling} className="mr-2" />
     Tour
   </button>
-  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-2.5 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
   <FontAwesomeIcon icon={faHiking} className="mr-2" /> 
     Activity
   </button>
-  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-2.5 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
   <FontAwesomeIcon icon={faHome} className="mr-2" />
-    Holiday Rentals
+    Holiday 
   </button>
-  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-2.5 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
   <FontAwesomeIcon icon={faCar} className="mr-2" />
     Car
   </button>
 
-  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-2.5 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
   <FontAwesomeIcon icon={faPlane} className="mr-2" />
     Flights
   </button>
@@ -133,25 +80,25 @@ const My_Home = () => {
 
 
 
- <div className="flex flex-col mt-12 md:mb-32 sm:flex-row items-center justify-between border-2 border-[#f58d03] bg-white p-2 xs:w-[80%] xxs:w-full max-xxs:bg-white xxs:p-2.5 rounded-full shadow-lg w-full sm:w-[90%] mx-auto space-y-4 sm:space-y-0 relative z-10">
+ <div className="flex flex-col mt-12 md:mb-32 pt-6 sm:flex-row items-center justify-between border-2 border-[#f58d03] bg-white p-2 xs:w-[40%] xxs:w-full max-xxs:bg-white xxs:p-2.5 rounded-xl md:rounded-full shadow-lg w-full sm:w-[80%] mx-auto space-y-4 sm:space-y-0 relative z-10">
  
-  <div className="flex flex-col w-full text-left sm:w-1/3 xs:w-[70%] items-center xxs:justify-center">
-    <label className="text-gray-700 text-[14px] sm:text-xs lg:text-sm xs:underline xs:underline-offset-2 font-bold lg:no-underline md:no-underline">
+  <div className="flex flex-col w-full text-left sm:w-[50%] xs:w-[70%] items-center xxs:justify-center md:pt-0 pt-2 pb-4 md:pb-0">
+    <label className="text-gray-700 text-[24px] sm:text-lg lg:text-sm xs:underline xs:underline-offset-2 font-bold lg:no-underline md:no-underline">
       Location
     </label>
     <input
       type="text"
       placeholder="Where are you going?"
-      className="placeholder:pl-6 text-[11px] sm:text-xs xs:w-[70%] xxs:w-full xxs:text-center xs:text-center lg:text-[13px] bg-transparent outline-none text-gray-900 mt-1 w-full"
+      className="placeholder:pl-2 text-[11px] sm:text-xs xs:w-[70%] xxs:w-full xxs:text-center xs:text-center lg:text-[13px] bg-transparent outline-none text-gray-900 mt-1 w-full"
     />
   </div>
 
   {/* Divider for larger screens */}
   <div className="hidden h-10 border-l border-gray-300 sm:block"></div>
 
-  <div className="flex flex-col w-full sm:w-1/3 xs:w-[70%] items-center xxs:justify-center">
-    <label className="text-gray-700 text-[11px] sm:text-xs lg:text-sm font-bold xs:underline xs:underline-offset-2 lg:no-underline md:no-underline">
-      Check in &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check out
+  <div className="flex flex-col md:pt-2 w-full sm:w-1/3 xs:w-[70%] items-center xxs:justify-center">
+    <label className="text-gray-700 text-[18px] sm:text-xs lg:text-sm font-bold xs:underline xs:underline-offset-2 lg:no-underline md:no-underline">
+      Check in &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check out
     </label>
     <div className="flex justify-between w-full mt-1 text-center z-100">
       <DatePicker
@@ -180,18 +127,18 @@ const My_Home = () => {
   {/* Divider for larger screens */}
   <div className="hidden h-10 border-l border-gray-300 sm:block"></div>
 
-  <div className="flex flex-col w-full sm:w-1/3 xs:w-[70%] items-center xxs:justify-center">
-    <label className="text-gray-700 text-[11px] sm:text-xs lg:text-sm font-bold xs:underline lg:no-underline xs:underline-offset-2 md:no-underline">
+  <div className="flex flex-col  pt-2 w-full sm:w-1/3 xs:w-[70%] items-center xxs:justify-center ">
+    <label className="text-gray-700 text-[18px] sm:text-xs lg:text-sm mt-2 font-bold xs:underline lg:no-underline xs:underline-offset-2 md:no-underline">
       Guest
     </label>
     <input
       type="text"
       value="2 adults - 1 child - 1 room"
-      className="placeholder:ml-2 text-[11px] xs:w-[70%] xxs:w-full xxs:text-center xxs:bg-transparent xs:text-center sm:text-xs lg:text-[13px] ml-6 outline-none text-gray-900 mt-1 w-full"
+      className="placeholder:ml-2 mb-6 text-[11px]  xs:w-[70%] xxs:w-full xxs:text-center xxs:bg-transparent xs:text-center sm:text-xs lg:text-[13px] ml-6 outline-none text-gray-900 mt-1 w-full"
     />
   </div>
 
-  <button className="bg-blue-800 xxs:w-[30%] xxs:mt-2 xs:w-[30%] xxs:bg-[#007fac] xs:py-2.5 xxs:px-4 xs:text-[13px] sm:bg-[#007fac] sm:px-4 sm:py-2.5 md:px-6 md:py-4 lg:bg-[#007fac] lg:px-8 text-white text-[11px] sm:text-sm font-medium py-4 px-6 rounded-full w-full sm:w-auto">
+  <button className="bg-blue-800 xxs:w-[60%]  xxs:mt-5 xs:w-[30%] xxs:bg-[#007fac] border-[#f58d03] border-2 xs:py-2.5 xxs:px-4 xs:text-[15px] sm:bg-[#007fac] sm:px-4 sm:py-2.5 md:px-6 md:py-4 lg:bg-[#007fac] lg:px-8 text-white text-[16px] sm:text-sm font-medium py-4 px-6 rounded-full w-full sm:w-auto">
     Search
   </button>
 </div>

@@ -213,7 +213,7 @@ const TestimonialCarousel = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className={`transition-all duration-500 ease-in-out flex-shrink-0 w-3/5 ${
+              className={`transition-all duration-500 ease-in-out flex-shrink-0 md:w-3/5 w-[75.5%] ${
                 index === currentIndex
                   ? 'scale-100 z-10 opacity-100 blur-0 translate-x-0'
                   : 'scale-90 z-0 opacity-50 blur-sm translate-x-4'
