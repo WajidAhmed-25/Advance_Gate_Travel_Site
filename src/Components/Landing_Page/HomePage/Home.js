@@ -7,7 +7,8 @@ import logoos from './fdf.png'
 import 'react-datepicker/dist/react-datepicker.css';
 
 
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHotel, faPlane, faShip, faCar, faSuitcaseRolling, faHiking, faHome } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -45,7 +46,10 @@ const My_Home = () => {
   </p>
 </div>
             <div className="max-w-4xl mx-auto bg-transparent">
-         <div className="flex flex-wrap justify-center py-3 mt-6 mb-2 space-x-8 space-y-2 sm:space-x-6 md:space-x-6 lg:space-x-6">
+
+              
+         {/* <div className="flex flex-wrap justify-center py-3 mt-6 mb-2 space-x-8 space-y-2 sm:space-x-6 md:space-x-6 lg:space-x-6">
+ 
   <button className="font-semibold border-white/70 border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white  transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Hotel
   </button>
@@ -67,11 +71,68 @@ const My_Home = () => {
   <button className="font-semibold border-white/70 border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] p-2 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white  transition-all duration-200 hover:scale-125" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
     Flights
   </button>
+</div> */}
+
+
+
+{/* <div className="grid grid-cols-2 gap-6 py-2 mt-6 mb-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7">
+  <button className="font-semibold  border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] border-[#f58d03] border-2 hover:text-white transition-all duration-200 hover:scale-125 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+    Hotel
+  </button>
+  <button className="font-semibold  border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+    Tour
+  </button>
+  <button className="font-semibold  border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+    Activity
+  </button>
+  <button className="font-semibold border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+    Holiday Rentals
+  </button>
+  <button className="font-semibold border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+    Car
+  </button>
+  <button className="font-semibold  border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+    Cruise
+  </button>
+  <button className="font-semibold  border-2 pl-6 pr-6 rounded-3xl bg-[#007fac] py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+    Flights
+  </button>
+</div> */}
+
+
+
+
+<div className="grid grid-cols-2 gap-6 py-2 mt-6 mb-2 md:gap-32 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7">
+  <button className="flex r font-semibold justify-center items-center border-2 pl-6 pr-6 rounded-3xl w-32 bg-[#007fac] py-2 md:py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <FontAwesomeIcon icon={faHotel} className="mr-2" />
+    Hotel
+  </button>
+  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <FontAwesomeIcon icon={faSuitcaseRolling} className="mr-2" />
+    Tour
+  </button>
+  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <FontAwesomeIcon icon={faHiking} className="mr-2" /> 
+    Activity
+  </button>
+  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <FontAwesomeIcon icon={faHome} className="mr-2" />
+    Holiday Rentals
+  </button>
+  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <FontAwesomeIcon icon={faCar} className="mr-2" />
+    Car
+  </button>
+
+  <button className="flex items-center font-semibold border-2 pl-6 pr-6 w-32 justify-center rounded-3xl bg-[#007fac] py-2 md:py-1 text-white text-[clamp(0.7rem, 1.5vw, 1rem)] sm:text-[clamp(0.8rem, 1.5vw, 1.2rem)] lg:text-[clamp(1rem, 1.5vw, 1.5rem)] hover:bg-[#f58d03] hover:text-white transition-all duration-200 hover:scale-125 border-[#f58d03] border-2 hover:border-[#007fac]" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+  <FontAwesomeIcon icon={faPlane} className="mr-2" />
+    Flights
+  </button>
 </div>
 
 
-{/* <div className="flex flex-col mt-12 sm:flex-row items-center justify-between bg-pink-400 p-2 xs:w-[80%] xxs:w-full max-xxs:bg-white xxs:p-2.5 rounded-full shadow-lg w-full sm:w-[90%] mx-auto  space-y-4 sm:space-y-0">
-  */}
+
+
  <div className="flex flex-col mt-12 md:mb-32 sm:flex-row items-center justify-between border-2 border-[#f58d03] bg-white p-2 xs:w-[80%] xxs:w-full max-xxs:bg-white xxs:p-2.5 rounded-full shadow-lg w-full sm:w-[90%] mx-auto space-y-4 sm:space-y-0 relative z-10">
  
   <div className="flex flex-col w-full text-left sm:w-1/3 xs:w-[70%] items-center xxs:justify-center">
