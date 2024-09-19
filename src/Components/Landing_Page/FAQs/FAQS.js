@@ -161,7 +161,7 @@ export default function FAQs() {
                                         openIndex === index ? 'block' : 'hidden'
                                     }`}
                                 >
-                                    <p className='text-[#007fac]'>{item.answer}</p>
+                                    <p className='text-[#007fac] md:text-left text-center'>{item.answer}</p>
                                 </div>
                             </div>
                         ))}
