@@ -193,9 +193,9 @@ export default function My_Banner() {
         <div className="absolute inset-0 bg-white opacity-60"></div>
 
 
-        <div className="relative z-10 lg:-mt-32 text-center text-white w-[80%] max-md:mt-32 max-md:mb-4 max-md:w-[60%]">
+        <div className="relative z-10 lg:-mt-24 text-center text-white w-[80%] max-md:mt-32 max-md:mb-4 max-md:w-[60%]">
           <div className="text-center">
-            <h1 className=" xxs:text-5xl xs:text-4xl sm:text-6xl md:text-5xl lg:text-2xl text-3xl font-medium text-[#007fac]">
+            <h1 className=" xxs:text-5xl xs:text-4xl sm:text-6xl md:text-5xl lg:text-8xl text-3xl font-medium text-[#007fac]">
               Visas Made
               <span className="font-medium text-[#f58d03]"> Easier</span>
             </h1>
@@ -203,8 +203,8 @@ export default function My_Banner() {
               Accurate and Expedited Visa and Passport Solutions
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center w-full p-4 mt-8 space-y-4 bg-white rounded-lg shadow-lg sm:p-6 md:p-8 sm:mt-10 md:mt-12 md:space-y-0 md:space-x-4 lg:space-x-8 bg-opacity-30 backdrop-blur-md md:flex-row">
-            <div className="flex flex-col w-full md:w-[22%] lg:w-[18%]">
+          <div className="flex flex-col items-center justify-center w-full p-4 mt-8 mb-8 space-y-4 bg-white rounded-lg shadow-lg sm:p-6 md:p-8 sm:mt-10 md:mt-12 md:space-y-0 md:space-x-4 lg:space-x-8 bg-opacity-30 backdrop-blur-md md:flex-row">
+            <div className="flex flex-col  md:w-[22%]  lg:w-[18%] w-full">
               <label className="text-xs font-semibold text-gray-700 md:text-sm">My Passport is from</label>
               <select
                 value={passportCountry}

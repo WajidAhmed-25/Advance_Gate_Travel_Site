@@ -1,4 +1,4 @@
-
+/* 
  .hex-grid {
     display: flex;
     flex-direction: column;
@@ -72,6 +72,114 @@
 
 
 
+
+
+@media (min-width: 710px) {
+  
+    .hex-grid {
+        background-color: pink;
+    }
+ 
+}
+
+@media (min-width: 768px) {
+    .hex {
+        width: 150px;
+        height: 170.61px;
+    
+    }
+
+    .hex:before {
+        width: 150px;
+        height: 130.61px;
+        
+    }
+}
+
+@media (min-width: 1024px) {
+    .hex {
+        width: 200px;
+        height: 215.94px;
+    }
+
+    .hex:before {
+        width: 180px;
+        height: 170.94px;
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hexagon shape for larger screens */
+.hex-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 37.87px; 
+}
+
+.hex-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: -89px; 
+}
+
+.hex {
+    position: relative;
+    width: 100px; 
+    height: 57.74px;
+    margin: 24.87px 4px;
+    background-color: #521616;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hex:nth-child(odd) {
+    margin-left: 0; 
+}
+
+.hex:before {
+    content: "";
+    position: absolute;
+    top: -28.87px;
+    left: 0;
+    width: 100px;
+    height: 57.74px;
+    background-color: inherit;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transform: rotate(60deg);
+}
+
+.hex-in {
+    width: 100%;
+    height: 100%;
+    background-color: #823434;
+    clip-path: inherit;
+    position: relative;
+}
+
+.hex-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    clip-path: inherit;
+}
+
+/* Responsive hexagon shapes for larger screens */
 @media (min-width: 609px) {
     .hex {
         width: 110px;
@@ -112,6 +220,7 @@
     }
 }
 
+/* Larger screens */
 @media (min-width: 1024px) {
     .hex {
         width: 200px;
@@ -121,6 +230,246 @@
     .hex:before {
         width: 180px;
         height: 170.94px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hex {
+        width: 130px;
+        height: 140px;
+        margin-top: 40px;
+       
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);/* Circle shape */
+    }
+
+    .hex:before {
+        display: none; /* Remove the extra before element for the circle */
+    }
+
+    .hex-in {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hex-bg {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+}
+
+
+@media (max-width: 679px) {
+    .hex {
+        width: 120px;
+        height: 130px;
+        margin-top: 40px;
+       
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);/* Circle shape */
+    }
+
+    .hex:before {
+        display: none; /* Remove the extra before element for the circle */
+    }
+
+    .hex-in {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hex-bg {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+}
+
+
+@media (max-width: 635px) {
+    .hex {
+        width: 110px;
+        height: 120px;
+        margin-top: 40px;
+       
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);/* Circle shape */
+    }
+
+    .hex:before {
+        display: none; /* Remove the extra before element for the circle */
+    }
+
+    .hex-in {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hex-bg {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+}
+
+
+
+@media (max-width: 584px) {
+    .hex {
+        width: 95px;
+        height: 110px;
+        margin-top: 45px;
+       
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);/* Circle shape */
+    }
+
+    .hex:before {
+        display: none; /* Remove the extra before element for the circle */
+    }
+
+    .hex-in {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hex-bg {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+}
+
+
+
+
+@media (max-width: 518px) {
+    .hex {
+        width: 90px;
+        height: 100px;
+        margin-top: 45px;
+       
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);/* Circle shape */
+    }
+
+    .hex:before {
+        display: none; /* Remove the extra before element for the circle */
+    }
+
+    .hex-in {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hex-bg {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+}
+
+
+@media (max-width: 481px) {
+    .hex {
+        width: 80px;
+        height: 95px;
+        margin-top: 45px;
+       
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);/* Circle shape */
+    }
+
+    .hex:before {
+        display: none; /* Remove the extra before element for the circle */
+    }
+
+    .hex-in {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hex-bg {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+}
+
+
+
+
+/* @media (max-width: 435px) {
+
+    .hex-grid {
+        flex-direction: row;
+        animation: move-left 10s linear infinite;
+    }
+
+    .hex {
+        width: 160px;
+        height: 105px;
+        margin-top: 45px;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+    }
+
+    .hex:before {
+        display: none;
+    }
+
+    .hex-in {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hex-bg {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+
+    @keyframes move-left {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%); 
+        }
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 435px) {
+
+    .hex-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 5px; /* Optional: Adjust gap between hexagons */
+        animation: move-left 10s linear infinite;
+    }
+
+    .hex {
+        width: 180px;
+        height: 105px;
+
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hex:before {
+        display: none; 
+    }
+
+    .hex-in {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hex-bg {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+ 
+    @keyframes move-left {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+ 
+    .hex-grid::after {
+        content: '';
+        display: flex;
+    }
+
+    .hex-grid::after {
+        content: attr(data-clone); 
     }
 }
 
@@ -137,3 +486,53 @@
 
 
 
+
+@media (max-width: 413px) {
+
+    .hex-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 5px; /* Optional: Adjust gap between hexagons */
+        animation: move-left 10s linear infinite;
+    }
+
+    .hex {
+        width: 120px;
+        height: 105px;
+
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hex:before {
+        display: none; 
+    }
+
+    .hex-in {
+        
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hex-bg {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+ 
+    @keyframes move-left {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+ 
+    .hex-grid::after {
+        content: '';
+        display: flex;
+    }
+
+    .hex-grid::after {
+        content: attr(data-clone); 
+    }
+}

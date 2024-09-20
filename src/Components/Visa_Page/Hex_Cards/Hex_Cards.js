@@ -32,7 +32,7 @@ export default function Hex_Cards() {
         { image: v3, name: 'Denmark' },
         { image: v4, name: 'Egypt' },
         { image:v5 , name: 'France' },
-        { image: v6, name: 'Germany' },
+        { image: v6, name: 'Japan' },
         { image: v7, name: 'India' },
         { image: v8 , name: 'Japan' },
         { image: v9, name: 'Kenya' },
@@ -73,7 +73,7 @@ export default function Hex_Cards() {
                                     className="relative transition duration-300 ease-in-out cursor-pointer hex-bg brightness-[70%] hover:brightness-100"
                                     style={{ backgroundImage: `url(${card.image})` }}
                                 >
-                                    <div className="absolute inset-0 flex items-center justify-center text-3xl font-semibold text-white transition duration-100 ease-in-out opacity-0 hover:opacity-100"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+                                    <div className="absolute inset-0 flex items-center justify-center text-xl font-semibold text-white transition duration-100 ease-in-out opacity-0 hover:opacity-100"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
                                         {card.name}  
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@ export default function Hex_Cards() {
                                     className="relative transition duration-300 ease-in-out cursor-pointer hex-bg brightness-[70%] hover:brightness-100"
                                     style={{ backgroundImage: `url(${card.image})` }}
                                 >
-                                    <div className="absolute inset-0 flex items-center justify-center text-3xl font-semibold text-white transition duration-300 ease-in-out opacity-0 hover:opacity-100" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+                                    <div className="absolute inset-0 flex items-center justify-center text-xl font-semibold text-white transition duration-300 ease-in-out opacity-0 hover:opacity-100" style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
                                         {card.name}
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@ export default function Hex_Cards() {
                                     className="relative transition duration-300 ease-in-out cursor-pointer hex-bg brightness-[70%] hover:brightness-100"
                                     style={{ backgroundImage: `url(${card.image})` }}
                                 >
-                                    <div className="absolute inset-0 flex items-center justify-center text-3xl font-semibold text-white transition duration-300 ease-in-out opacity-0 hover:opacity-100"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
+                                    <div className="absolute inset-0 flex items-center justify-center text-xl font-semibold text-white transition duration-300 ease-in-out opacity-0 hover:opacity-100"  style={{ textShadow: '3px 3px 3px rgba(0, 0, 0, 0.8)' }}>
                                         {card.name}
                                     </div>
                                 </div>
