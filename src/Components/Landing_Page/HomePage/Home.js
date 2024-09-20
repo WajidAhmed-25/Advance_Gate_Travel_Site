@@ -145,7 +145,7 @@ const My_Home = () => {
                   <input
                     type="text"
                     value="2 adults - 1 child - 1 room"
-                    className="placeholder:ml-2 mb-6 md:mb-0 text-[11px] border-[#f58c038d] rounded-md border-dashed p-2  border-2 xs:w-[70%] xxs:w-full xxs:text-center xxs:bg-transparent xs:text-center sm:text-xs lg:text-[13px] ml-6 outline-none text-gray-900 mt-1 w-full"
+                    className="placeholder:ml-2  mb-6 md:mb-0 text-[11px] border-[#f58c038d] rounded-md border-dashed p-2  border-2 xs:w-[70%] xxs:w-full xxs:text-center xxs:bg-transparent xs:text-center sm:text-xs lg:text-[13px]  outline-none text-gray-900 mt-1 w-full"
                   />
                 </div>
 
