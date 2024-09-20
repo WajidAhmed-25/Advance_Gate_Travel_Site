@@ -1,18 +1,8 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { MapPin } from 'lucide-react';
 
-const PersonalInformation = () => {
-  const [personalInfo, setPersonalInfo] = useState({
-    fullName: '',
-    dateOfBirth: '',
-    nationality: '',
-    passportNumber: '',
-    passportExpiry: '',
-    email: '',
-    contactNumber: '',
-    address: ''
-  });
+const PersonalInformation = ({ personalInfo, setPersonalInfo }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -111,8 +101,8 @@ const PersonalInformation = () => {
           value={personalInfo.contactNumber}
           onChange={handleChange}
         />
-     
-     <label className="mt-2 font-medium text-[#007fac]">Address</label>
+
+        <label className="mt-2 font-medium text-[#007fac]">Address</label>
         <div className="flex items-center">
           <textarea
             name="address"
@@ -130,9 +120,9 @@ const PersonalInformation = () => {
             <MapPin size={24} />
           </button>
 
-     
+
+        </div>
       </div>
-    </div>
 
     </div>
   );
@@ -141,62 +131,14 @@ const PersonalInformation = () => {
 
 
 
+const MaritalStatus = ({ maritalStatus, setMaritalStatus, onMaritalStatusChange }) => {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const MaritalStatus = ({ onMaritalStatusChange }) => {
-  const [maritalStatus, setMaritalStatus] = useState({
-    maritalStatus: '',
-    spouseName: '',
-    spouseDob: '',
-    spouseNationality: '',
-    children: '',
-    numberOfChildren: 1,
-    childrenDetails: [{ name: '', dob: '', nationality: '', gender: '' }]
-  });
   const [hasChildren, setHasChildren] = useState(null);
 
   const handleMaritalStatusChange = (e) => {
     const newStatus = e.target.value;
     setMaritalStatus({ ...maritalStatus, maritalStatus: newStatus });
-    onMaritalStatusChange(newStatus);  // Update global state
+    onMaritalStatusChange(newStatus);
   };
 
 
@@ -221,8 +163,6 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
         <label className="mt-2 font-medium text-[#007fac]">Marital Status</label>
         <select
           className="w-full p-2 border border-gray-300 rounded input-field"
-          // value={maritalStatus.maritalStatus}
-          // onChange={(e) => setMaritalStatus({ ...maritalStatus, maritalStatus: e.target.value })}
           value={maritalStatus.maritalStatus}
           onChange={handleMaritalStatusChange}
         >
@@ -232,7 +172,7 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
           <option value="Separated">Separated</option>
         </select>
         {/* Conditionally render spouse-related fields if marital status is Married or Separated */}
-        {(maritalStatus.maritalStatus === 'Married' ) && (
+        {(maritalStatus.maritalStatus === 'Married') && (
           <>
             <label className="mt-2 font-medium text-[#007fac]">Spouse's Full Name</label>
             <input
@@ -258,7 +198,7 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
               value={maritalStatus.spouseNationality}
               onChange={(e) => setMaritalStatus({ ...maritalStatus, spouseNationality: e.target.value })}
             />
-   
+
           </>
         )}
         {/* Do you have children? */}
@@ -343,13 +283,7 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
                               Other
                             </button>
                           </div>
-                      </div>
-
-
-
-
-
-
+                        </div>
                         <div className="flex-1">
                           <label className="block mb-2 font-medium text-blue-800">Date of Birth</label>
                           <input
@@ -369,12 +303,6 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
                             onChange={(e) => handleChildrenDetailsChange(index, 'nationality', e.target.value)}
                           />
                         </div>
-
-
-                 
-
-
-
                       </div>
                     </div>
                   ))}
@@ -390,12 +318,7 @@ const MaritalStatus = ({ onMaritalStatusChange }) => {
 
 
 
-
-
-
-const Education = ({ globalMaritalStatus }) => {
-  const [userEducationForms, setUserEducationForms] = useState([]);
-  const [spouseEducationForms, setSpouseEducationForms] = useState([]);
+const Education = ({ globalMaritalStatus, userEducationForms, setUserEducationForms, spouseEducationForms, setSpouseEducationForms }) => {
 
   const degreeOptions = ['Intermediate', 'Bachelors', 'Masters', 'Uneducated'];
 
@@ -408,11 +331,11 @@ const Education = ({ globalMaritalStatus }) => {
         completionYear: '',
       };
       if (isSpouse) {
-        setSpouseEducationForms(prevForms => 
+        setSpouseEducationForms(prevForms =>
           [...prevForms.filter(form => form.degree !== degree), newForm]
         );
       } else {
-        setUserEducationForms(prevForms => 
+        setUserEducationForms(prevForms =>
           [...prevForms.filter(form => form.degree !== degree), newForm]
         );
       }
@@ -474,7 +397,7 @@ const Education = ({ globalMaritalStatus }) => {
   return (
     <div>
       <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Education</h3>
-      
+
       <div className="grid grid-cols-1 gap-2">
         <label className="mt-2 font-medium text-[#007fac]">Your Highest Degree(s)</label>
         <select
@@ -623,7 +546,7 @@ const Education = ({ globalMaritalStatus }) => {
 //               />
 //             </>
 //           )}
-      
+
 // {['Married'].includes(globalMaritalStatus) && (
 //             <>
 //               <label className="mt-4 font-medium text-[#007fac]">Spouse's Highest Degree</label>
@@ -669,8 +592,8 @@ const Education = ({ globalMaritalStatus }) => {
 //               )}
 //             </>
 //           )}
-      
-          
+
+
 //         </div>
 //       </div>
 //     </>
@@ -701,12 +624,7 @@ const Education = ({ globalMaritalStatus }) => {
 
 
 
-const TravelInformation = () => {
-  const [travelInfo, setTravelInfo] = useState({
-    purposeOfVisit: '',
-    durationOfStay: '',
-    countriesTraveled: []
-  });
+const TravelInformation = ({ travelInfo, setTravelInfo }) => {
 
   const countryList = [
     'United States', 'Canada', 'Mexico', 'Germany', 'France', 'Italy', 'Spain', 'United Kingdom', 'China', 'Japan',
@@ -884,7 +802,7 @@ const TravelInformation = () => {
 
 
 const countries = [
-  'United States', 'Canada', 'United Kingdom', 'Australia', 'Germany', 'France', 'India', 
+  'United States', 'Canada', 'United Kingdom', 'Australia', 'Germany', 'France', 'India',
   'China', 'Japan', 'Brazil', 'South Africa', 'Mexico', 'Russia', 'Italy', 'Spain', 'Netherlands',
   'Pakistan', 'Nigeria', 'Saudi Arabia', 'South Korea'
 ];
@@ -893,9 +811,7 @@ const countries = [
 
 
 
-const Employment = () => {
-  const [employmentStatus, setEmploymentStatus] = useState('');
-  const [employmentRecords, setEmploymentRecords] = useState([]);
+const Employment = ({ employmentStatus, setEmploymentStatus, employmentRecords, setEmploymentRecords }) => {
 
   const handleEmploymentStatusChange = (e) => {
     const selectedStatus = e.target.value;
@@ -1028,7 +944,7 @@ const Employment = () => {
               onClick={addEmploymentRecord}
               className="px-2 py-4 mt-4 w-[28%] ml-auto mr-auto text-white bg-[#007fac] rounded hover:bg-[#007fac] hover:scale-110 font-semibold hover:transition-all hover:duration-300"
             >
-            
+
               Add Job
             </button>
           </>
@@ -1066,18 +982,15 @@ const Employment = () => {
 
 
 
-const Finance = () => {
-  const [finance, setFinance] = useState({
-    financialStatus: '',
-    bankBalance: ''
-  });
+const Finance = ({ finance, setFinance }) => {
 
-  
+
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFinance((prevState) => ({
       ...prevState,
-      [name]: value, 
+      [name]: value,
     }));
   };
 
@@ -1085,15 +998,15 @@ const Finance = () => {
     <div>
       <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Finance</h3>
       <div className="grid grid-cols-1 gap-2">
-      
- 
+
+
         <label className="mt-2 font-medium text-[#007fac]">Bank Statement (Last 6 Months)</label>
         <input
           type="text"
-          name="bankBalance" 
+          name="bankBalance"
           placeholder="Bank Balance"
-          value={finance.bankBalance} 
-          onChange={handleInputChange} 
+          value={finance.bankBalance}
+          onChange={handleInputChange}
           className="w-full p-2 border border-gray-300 rounded input-field"
         />
 
@@ -1102,10 +1015,10 @@ const Finance = () => {
         </label>
         <input
           type="text"
-          name="financialStatus" 
+          name="financialStatus"
           placeholder="Financial Status"
-          value={finance.financialStatus} 
-          onChange={handleInputChange} 
+          value={finance.financialStatus}
+          onChange={handleInputChange}
           className="w-full p-2 border border-gray-300 rounded input-field"
         />
       </div>
@@ -1113,12 +1026,8 @@ const Finance = () => {
   );
 };
 
-const TiesToHomeCountry = () => {
-  const [tiesToCountry, setTiesToCountry] = useState({
-    familyMembers: '',
-    propertyOwnership: '',
-    longTermCommitments: ''
-  });
+const TiesToHomeCountry = ({ tiesToCountry, setTiesToCountry }) => {
+
   return (
     <div>
       <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Ties to Home Country</h3>
@@ -1178,7 +1087,7 @@ const TiesToHomeCountry = () => {
 
 
 
-const ImmigrationHistory = () => {
+const ImmigrationHistory = ({ immigrationHistory, setImmigrationHistory }) => {
   const countries = [
     "Canada", "USA", "UK", "Australia", "Germany", "France",
     "Italy", "Spain", "New Zealand", "Japan", "China", "India",
@@ -1186,18 +1095,6 @@ const ImmigrationHistory = () => {
     "Netherlands", "Russia", "Singapore", "Other"
   ];
 
-  const [immigrationHistory, setImmigrationHistory] = useState({
-    previousApplications: '',
-    visaRejections: '',
-    hasPreviousVisas: '',
-    visaDate: '',
-    hasVisaRejections: '',
-    visaRejections: [],
-    refusalCountry: '',
-    refusalDate: '',
-    refusalReason: '',
-    otherCountryName: '', // For custom country name input
-  });
 
   const [selectedCountries, setSelectedCountries] = useState([]);
   const [availableCountries, setAvailableCountries] = useState(countries);
@@ -1289,148 +1186,47 @@ const ImmigrationHistory = () => {
 
 
 
-  
+
 
   return (
     <div>
       <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Immigration History</h3>
       <div className="grid grid-cols-1 gap-2">
-       
- 
 
-      <div>
-      <label className="mt-4 mb-2 font-medium text-[#007fac]">
-        Previous Visas to Canada or Other Countries:
-      </label>
-      <div className="flex mt-2 space-x-4">
-        <button
-          type="button"
-          className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasPreviousVisas === 'yes'
-            ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'
-            }`}
-          onClick={() => handlePreviousVisaChange('yes')}
-        >
-          Yes
-        </button>
-        <button
-          type="button"
-          className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasPreviousVisas === 'no'
-            ?'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'
-            }`}
-          onClick={() => handlePreviousVisaChange('no')}
-        >
-          No
-        </button>
-      </div>
 
-      {immigrationHistory.hasPreviousVisas === 'yes' && (
-        <>
-          <label className="mt-2 font-medium text-[#007fac]">Select Country</label>
-          <select
-            className="w-full p-2 border border-gray-300 rounded input-field"
-            onChange={handleCountrySelect}
-            value="" // Reset the dropdown value after selection
-          >
-            <option value="" disabled>Select Country</option>
-            {countries.map((country) => (
-              <option key={country} value={country}>{country}</option>
-            ))}
-          </select>
 
-          {/* Display form for each selected country */}
-          {immigrationHistory.previousVisas.length > 0 && (
+        <div>
+          <label className="mt-4 mb-2 font-medium text-[#007fac]">
+            Previous Visas to Canada or Other Countries:
+          </label>
+          <div className="flex mt-2 space-x-4">
+            <button
+              type="button"
+              className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasPreviousVisas === 'yes'
+                ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'
+                }`}
+              onClick={() => handlePreviousVisaChange('yes')}
+            >
+              Yes
+            </button>
+            <button
+              type="button"
+              className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasPreviousVisas === 'no'
+                ? 'bg-[#007fac] text-white' : 'bg-gray-300 text-[#007fac]'
+                }`}
+              onClick={() => handlePreviousVisaChange('no')}
+            >
+              No
+            </button>
+          </div>
+
+          {immigrationHistory.hasPreviousVisas === 'yes' && (
             <>
-              <h4 className="mt-4 text-xl font-bold">Countries and Visa Details</h4>
-              {immigrationHistory.previousVisas.map((visa, index) => (
-                <div key={index} className="p-4 mt-4 border rounded">
-                  <h5 className="p-2 mb-6 text-xl font-bold text-center w-[30%] rounded-lg ml-auto mr-auto text-white bg-[#007fac]">{visa.country}</h5>
-                  <label className="mt-2 mb-2 font-medium text-[#007fac]">Visa Date</label>
-                  <input
-                    type="date"
-                    className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
-                    value={visa.visaDate}
-                    onChange={(e) => handleInputChange(index, 'visaDate', e.target.value)}
-                  />
-
-                  <label className="mt-2 font-medium text-[#007fac]">Return Date</label>
-                  <input
-                    type="date"
-                    className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
-                    value={visa.returnDate}
-                    onChange={(e) => handleInputChange(index, 'returnDate', e.target.value)}
-                  />
-
-                  <label className="mt-2 font-medium text-[#007fac]">Duration of Stay</label>
-                  <input
-                    type="text"
-                    className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
-                    value={calculateDuration(visa.visaDate, visa.returnDate)}
-                    readOnly
-                  />
-
-                  <label className="mt-2 font-medium text-[#007fac]">Purpose</label>
-                  <input
-                    type="text"
-                    className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
-                    value={visa.purpose}
-                    onChange={(e) => handleInputChange(index, 'purpose', e.target.value)}
-                  />
-
-                  <button
-                    className="px-2 py-2 font-bold text-white transition-all duration-300 bg-red-800 rounded hover:scale-110"
-                    onClick={() => handleRemoveCountry(index)}
-                  >
-                    Remove Country
-                  </button>
-                </div>
-              ))}
-            </>
-          )}
-        </>
-      )}
-    </div>
-
-
-    
-
-    
-
-
-
-<div>
-      <label className="mt-4 mb-2 font-medium text-[#007fac]">Previous Visa Refusals:</label>
-      <div className="flex mt-2 space-x-4">
-        <button
-          type="button"
-          className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasVisaRejections === 'yes'
-            ? 'bg-[#007fac] text-white'
-            : 'bg-gray-200 text-[#007fac]'
-            }`}
-          onClick={() => handleVisaRejectionChange('yes')}
-        >
-          Yes
-        </button>
-        <button
-          type="button"
-          className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasVisaRejections === 'no'
-            ? 'bg-[#007fac] text-white'
-            : 'bg-gray-200 text-[#007fac]'
-            }`}
-          onClick={() => handleVisaRejectionChange('no')}
-        >
-          No
-        </button>
-      </div>
-
-      {immigrationHistory.hasVisaRejections === 'yes' && (
-        <>
-          {immigrationHistory.visaRejections.map((rejection, index) => (
-            <div key={index} className="p-4 mt-4 border rounded">
-              <label className="mt-2 font-medium text-[#007fac]">Country Name</label>
+              <label className="mt-2 font-medium text-[#007fac]">Select Country</label>
               <select
                 className="w-full p-2 border border-gray-300 rounded input-field"
-                value={rejection.country}
-                onChange={(e) => updateVisaRejection(index, 'country', e.target.value)}
+                onChange={handleCountrySelect}
+                value="" // Reset the dropdown value after selection
               >
                 <option value="" disabled>Select Country</option>
                 {countries.map((country) => (
@@ -1438,44 +1234,145 @@ const ImmigrationHistory = () => {
                 ))}
               </select>
 
-              {rejection.country === 'Other' && (
+              {/* Display form for each selected country */}
+              {immigrationHistory.previousVisas.length > 0 && (
                 <>
-                  <label className="mt-2 font-medium text-[#007fac]">Enter Country Name</label>
-                  <input
-                    type="text"
-                    placeholder="Enter Country Name"
-                    className="w-full p-2 border border-gray-300 rounded input-field"
-                    value={rejection.otherCountryName || ''}
-                    onChange={(e) => updateVisaRejection(index, 'otherCountryName', e.target.value)}
-                  />
+                  <h4 className="mt-4 text-xl font-bold">Countries and Visa Details</h4>
+                  {immigrationHistory.previousVisas.map((visa, index) => (
+                    <div key={index} className="p-4 mt-4 border rounded">
+                      <h5 className="p-2 mb-6 text-xl font-bold text-center w-[30%] rounded-lg ml-auto mr-auto text-white bg-[#007fac]">{visa.country}</h5>
+                      <label className="mt-2 mb-2 font-medium text-[#007fac]">Visa Date</label>
+                      <input
+                        type="date"
+                        className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
+                        value={visa.visaDate}
+                        onChange={(e) => handleInputChange(index, 'visaDate', e.target.value)}
+                      />
+
+                      <label className="mt-2 font-medium text-[#007fac]">Return Date</label>
+                      <input
+                        type="date"
+                        className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
+                        value={visa.returnDate}
+                        onChange={(e) => handleInputChange(index, 'returnDate', e.target.value)}
+                      />
+
+                      <label className="mt-2 font-medium text-[#007fac]">Duration of Stay</label>
+                      <input
+                        type="text"
+                        className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
+                        value={calculateDuration(visa.visaDate, visa.returnDate)}
+                        readOnly
+                      />
+
+                      <label className="mt-2 font-medium text-[#007fac]">Purpose</label>
+                      <input
+                        type="text"
+                        className="w-full p-2 mb-2 border border-gray-300 rounded input-field"
+                        value={visa.purpose}
+                        onChange={(e) => handleInputChange(index, 'purpose', e.target.value)}
+                      />
+
+                      <button
+                        className="px-2 py-2 font-bold text-white transition-all duration-300 bg-red-800 rounded hover:scale-110"
+                        onClick={() => handleRemoveCountry(index)}
+                      >
+                        Remove Country
+                      </button>
+                    </div>
+                  ))}
                 </>
               )}
+            </>
+          )}
+        </div>
 
-              <label className="mt-2 font-medium text-[#007fac]">Date Refused</label>
-              <input
-                type="date"
-                className="w-full p-2 border border-gray-300 rounded input-field"
-                value={rejection.refusalDate}
-                onChange={(e) => updateVisaRejection(index, 'refusalDate', e.target.value)}
-              />
 
-              <label className="mt-2 font-medium text-[#007fac]">Reason for Refusal</label>
-              <textarea
-                className="w-full p-2 border border-gray-300 rounded input-field"
-                value={rejection.refusalReason}
-                onChange={(e) => updateVisaRejection(index, 'refusalReason', e.target.value)}
-              />
-            </div>
-          ))}
-          <button
-            className="px-4 py-2 mt-4 font-medium text-white bg-[#007fac] rounded hover:bg-[#007fac]/50"
-            onClick={addVisaRejection}
-          >
-            Add Another Visa Refusal
-          </button>
-        </>
-      )}
-    </div>
+
+
+
+
+
+
+        <div>
+          <label className="mt-4 mb-2 font-medium text-[#007fac]">Previous Visa Refusals:</label>
+          <div className="flex mt-2 space-x-4">
+            <button
+              type="button"
+              className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasVisaRejections === 'yes'
+                ? 'bg-[#007fac] text-white'
+                : 'bg-gray-200 text-[#007fac]'
+                }`}
+              onClick={() => handleVisaRejectionChange('yes')}
+            >
+              Yes
+            </button>
+            <button
+              type="button"
+              className={`px-4 py-2 font-medium rounded ${immigrationHistory.hasVisaRejections === 'no'
+                ? 'bg-[#007fac] text-white'
+                : 'bg-gray-200 text-[#007fac]'
+                }`}
+              onClick={() => handleVisaRejectionChange('no')}
+            >
+              No
+            </button>
+          </div>
+
+          {immigrationHistory.hasVisaRejections === 'yes' && (
+            <>
+              {immigrationHistory.visaRejections.map((rejection, index) => (
+                <div key={index} className="p-4 mt-4 border rounded">
+                  <label className="mt-2 font-medium text-[#007fac]">Country Name</label>
+                  <select
+                    className="w-full p-2 border border-gray-300 rounded input-field"
+                    value={rejection.country}
+                    onChange={(e) => updateVisaRejection(index, 'country', e.target.value)}
+                  >
+                    <option value="" disabled>Select Country</option>
+                    {countries.map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+
+                  {rejection.country === 'Other' && (
+                    <>
+                      <label className="mt-2 font-medium text-[#007fac]">Enter Country Name</label>
+                      <input
+                        type="text"
+                        placeholder="Enter Country Name"
+                        className="w-full p-2 border border-gray-300 rounded input-field"
+                        value={rejection.otherCountryName || ''}
+                        onChange={(e) => updateVisaRejection(index, 'otherCountryName', e.target.value)}
+                      />
+                    </>
+                  )}
+
+                  <label className="mt-2 font-medium text-[#007fac]">Date Refused</label>
+                  <input
+                    type="date"
+                    className="w-full p-2 border border-gray-300 rounded input-field"
+                    value={rejection.refusalDate}
+                    onChange={(e) => updateVisaRejection(index, 'refusalDate', e.target.value)}
+                  />
+
+                  <label className="mt-2 font-medium text-[#007fac]">Reason for Refusal</label>
+                  <textarea
+                    className="w-full p-2 border border-gray-300 rounded input-field"
+                    value={rejection.refusalReason}
+                    onChange={(e) => updateVisaRejection(index, 'refusalReason', e.target.value)}
+                  />
+                </div>
+              ))}
+              <button
+                className="px-4 py-2 mt-4 font-medium text-white bg-[#007fac] rounded hover:bg-[#007fac]/50"
+                onClick={addVisaRejection}
+              >
+                Add Another Visa Refusal
+              </button>
+            </>
+          )}
+        </div>
 
 
       </div>
@@ -1506,29 +1403,22 @@ const ImmigrationHistory = () => {
 
 
 
-const HealthSecurity = () => {
-  const [healthSecurity, setHealthSecurity] = useState({
-    hasHealthIssues: '',
-    diseaseName: '',
-    customDisease: '',
-    hasCriminalRecord: '',
-    caseName: '',
-    customCase: '',
-  });
+const HealthSecurity = ({ healthSecurity, setHealthSecurity }) => {
+
   const diseaseOptions = [
-    'Tuberculosis', 'HIV', 'Hepatitis B', 'Hepatitis C', 'Malaria', 'Cancer', 
-    'Diabetes', 'Heart Disease', 'Lung Disease', 'Kidney Disease', 'Liver Disease', 
+    'Tuberculosis', 'HIV', 'Hepatitis B', 'Hepatitis C', 'Malaria', 'Cancer',
+    'Diabetes', 'Heart Disease', 'Lung Disease', 'Kidney Disease', 'Liver Disease',
     'Mental Health Issues', 'Stroke', 'Severe Asthma', 'Epilepsy', 'Other'
   ];
   const caseOptions = [
-    'Fraud', 'Drug Trafficking', 'Human Trafficking', 'Money Laundering', 
-    'Violent Crime', 'Theft', 'Bribery', 'Terrorism', 'Smuggling', 'Forgery', 
+    'Fraud', 'Drug Trafficking', 'Human Trafficking', 'Money Laundering',
+    'Violent Crime', 'Theft', 'Bribery', 'Terrorism', 'Smuggling', 'Forgery',
     'Cyber Crime', 'Arson', 'Tax Evasion', 'Assault', 'Corruption', 'Other'
   ];
   return (
     <div>
       <h3 className="mb-8 text-3xl font-bold text-center text-[#007fac]">Health and Security</h3>
-    
+
       <label className="mt-4 font-medium text-[#007fac]">Do you have any significant health issues?</label>
       <div className="flex mt-6 mb-6 space-x-6">
         <button
@@ -1546,7 +1436,7 @@ const HealthSecurity = () => {
           No
         </button>
       </div>
-    
+
       {healthSecurity.hasHealthIssues === 'yes' && (
         <>
           <label className="mt-8 font-medium text-[#007fac]">Disease Name</label>
@@ -1621,15 +1511,9 @@ const HealthSecurity = () => {
     </div>
   );
 };
-const AdditionalInformation = () => {
-  const [additionalInfo, setAdditionalInfo] = useState({
-    hasCanadianContacts: '',
-    numberOfContacts: '',
-    contacts: [],
-    hasAccommodation: '',
-    accommodationAddress: '',
-    comments: ''
-  });
+
+
+const AdditionalInformation = ({ additionalInfo, setAdditionalInfo }) => {
   // Handle changing the contact name and number
   const handleContactChange = (index, field, value) => {
     const updatedContacts = [...additionalInfo.contacts];
@@ -1751,6 +1635,8 @@ const AdditionalInformation = () => {
     </div>
   );
 };
+
+
 const Travel_Reg_Form = () => {
   const [step, setStep] = useState(1);
   const nextStep = () => setStep(step + 1);
@@ -1768,48 +1654,134 @@ const Travel_Reg_Form = () => {
     setGlobalMaritalStatus(status);
   };
 
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
 
+  const [maritalStatus, setMaritalStatus] = useState({
+    maritalStatus: '',
+    spouseName: '',
+    spouseDob: '',
+    spouseNationality: '',
+    children: '',
+    numberOfChildren: 1,
+    childrenDetails: [{ name: '', dob: '', nationality: '', gender: '' }]
+  });
+
+  const [personalInfo, setPersonalInfo] = useState({
+    fullName: '',
+    dateOfBirth: '',
+    nationality: '',
+    passportNumber: '',
+    passportExpiry: '',
+    email: '',
+    contactNumber: '',
+    address: ''
+  });
+
+
+  const [userEducationForms, setUserEducationForms] = useState([]);
+  const [spouseEducationForms, setSpouseEducationForms] = useState([]);
+
+  const [travelInfo, setTravelInfo] = useState({
+    purposeOfVisit: '',
+    durationOfStay: '',
+    countriesTraveled: []
+  });
+
+  const [employmentStatus, setEmploymentStatus] = useState('');
+  const [employmentRecords, setEmploymentRecords] = useState([]);
+
+  const [finance, setFinance] = useState({
+    financialStatus: '',
+    bankBalance: ''
+  });
+
+  const [tiesToCountry, setTiesToCountry] = useState({
+    familyMembers: '',
+    propertyOwnership: '',
+    longTermCommitments: ''
+  });
+
+  const [immigrationHistory, setImmigrationHistory] = useState({
+    previousApplications: '',
+    visaRejections: '',
+    hasPreviousVisas: '',
+    visaDate: '',
+    hasVisaRejections: '',
+    visaRejections: [],
+    refusalCountry: '',
+    refusalDate: '',
+    refusalReason: '',
+    otherCountryName: '',
+  });
+
+
+  const [healthSecurity, setHealthSecurity] = useState({
+    hasHealthIssues: '',
+    diseaseName: '',
+    customDisease: '',
+    hasCriminalRecord: '',
+    caseName: '',
+    customCase: '',
+  });
+
+  const [additionalInfo, setAdditionalInfo] = useState({
+    hasCanadianContacts: '',
+    numberOfContacts: '',
+    contacts: [],
+    hasAccommodation: '',
+    accommodationAddress: '',
+    comments: ''
+  });
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted!");
-    // You can add your form submission logic here, such as sending data to a server
+    console.log("Form submitted with Personal Info:", personalInfo);
+    console.log("Marital Status Data:", maritalStatus);
+    console.log("User Education Data:", userEducationForms);
+    console.log("Spouse Education Data:", spouseEducationForms);
+    console.log("Travel Info Data:", travelInfo);
+    console.log("Employment Status:", employmentStatus);
+    console.log("Employment Records:", employmentRecords);
+    console.log("Finance Data:", finance);
+    console.log("Ties to Home Country Data:", tiesToCountry);
+    console.log("Immigration History Data:", immigrationHistory);
+    console.log("Health and Security Data:", healthSecurity);
+    console.log("Additional Information Data:", additionalInfo);
   };
+
+
   const renderStep = () => {
     switch (step) {
       case 1:
-        return <PersonalInformation />;
+        return <PersonalInformation personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} />;
       case 2:
-        return <MaritalStatus  onMaritalStatusChange={handleMaritalStatusChange}/>;
+        return <MaritalStatus maritalStatus={maritalStatus} setMaritalStatus={setMaritalStatus} onMaritalStatusChange={handleMaritalStatusChange} />;
       case 3:
-        return <Education globalMaritalStatus={globalMaritalStatus}/>;
+        return <Education globalMaritalStatus={globalMaritalStatus} userEducationForms={userEducationForms} setUserEducationForms={setUserEducationForms} spouseEducationForms={spouseEducationForms} setSpouseEducationForms={setSpouseEducationForms}
+        />
       case 4:
-        return <TravelInformation />;
+        return <TravelInformation travelInfo={travelInfo} setTravelInfo={setTravelInfo} />;
       case 5:
-        return <Employment />;
+        return <Employment employmentStatus={employmentStatus} setEmploymentStatus={setEmploymentStatus} employmentRecords={employmentRecords} setEmploymentRecords={setEmploymentRecords} />;
       case 6:
-          return <Finance />;
+        return <Finance finance={finance} setFinance={setFinance} />;
       case 7:
-        return <TiesToHomeCountry />;
+        return <TiesToHomeCountry tiesToCountry={tiesToCountry} setTiesToCountry={setTiesToCountry} />;
       case 8:
-        return <ImmigrationHistory />;
+        return <ImmigrationHistory immigrationHistory={immigrationHistory} setImmigrationHistory={setImmigrationHistory} />;
       case 9:
-        return <HealthSecurity />;
+        return <HealthSecurity healthSecurity={healthSecurity} setHealthSecurity={setHealthSecurity} />;
       case 10:
-        return <AdditionalInformation />;
+        return <AdditionalInformation additionalInfo={additionalInfo} setAdditionalInfo={setAdditionalInfo} />
       default:
-        return <PersonalInformation />;
+        return <PersonalInformation personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} />;
     }
   };
-
-  // #f58d03 yellow
-
-  // #007fac blue
 
 
   return (
