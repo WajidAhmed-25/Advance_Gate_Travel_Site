@@ -50,7 +50,7 @@ import hour from './hour.png';
 
 const InfoSection = () => {
   return (
-    <div className="w-full p-4 bg-[#007fac] md:mt-0 ">
+    <div className="w-full p-4 bg-[#007fac] md:-mt-12 ">
       <div className="flex flex-wrap items-center justify-between mx-auto max-w-8xl max-lgg:flex-col max-lgg:items-center max-lgg:justify-center ">
         
         <div className="flex items-center p-4 space-x-4 sm:w-auto max-sm:justify-center">
