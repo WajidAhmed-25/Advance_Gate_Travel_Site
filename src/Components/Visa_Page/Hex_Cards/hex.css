@@ -433,23 +433,26 @@
         animation: move-left 10s linear infinite;
     }
 
-    .hex {
-        width: 180px;
-        height: 105px;
+ 
 
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    .hex {
+     
+
+        clip-path: inset(0% round 0%);
     }
+
+    
 
     .hex:before {
         display: none; 
     }
 
     .hex-in {
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        clip-path: inset(0% round 0%);
     }
 
     .hex-bg {
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        clip-path: inset(0% round 0%);
     }
 
  
@@ -496,24 +499,80 @@
         animation: move-left 10s linear infinite;
     }
 
-    .hex {
-        width: 120px;
-        height: 105px;
+ 
 
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    .hex {
+     
+
+        clip-path: inset(0% round 0%);
     }
+
+    
 
     .hex:before {
         display: none; 
     }
 
     .hex-in {
-        
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        clip-path: inset(0% round 0%);
     }
 
     .hex-bg {
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        clip-path: inset(0% round 0%);
+    }
+
+ 
+    @keyframes move-left {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+ 
+    .hex-grid::after {
+        content: '';
+        display: flex;
+    }
+
+    .hex-grid::after {
+        content: attr(data-clone); 
+    }
+}
+
+
+
+@media (max-width: 367px) {
+
+    .hex-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 5px; /* Optional: Adjust gap between hexagons */
+        animation: move-left 10s linear infinite;
+    }
+
+ 
+
+    .hex {
+     
+
+        clip-path: inset(0% round 0%);
+    }
+
+    
+
+    .hex:before {
+        display: none; 
+    }
+
+    .hex-in {
+        clip-path: inset(0% round 0%);
+    }
+
+    .hex-bg {
+        clip-path: inset(0% round 0%);
     }
 
  
