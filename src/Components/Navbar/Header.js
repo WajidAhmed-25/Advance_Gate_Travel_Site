@@ -129,7 +129,7 @@ export default function My_Header() {
 
           <button
               onClick={toggleMobileMenu}
-              className="flex justify-end w-full mb-6 text-2xl text-blue-900 "
+              className="flex justify-end w-full mb-6 text-2xl text-[#007fac] "
             >
               <IoClose />
             </button>
@@ -154,7 +154,7 @@ export default function My_Header() {
                 <li key={index} className=''>
                   <a
                     href={item.href}
-                    className="text-lg font-semibold text-blue-900 transition-all duration-300 hover:scale-105 hover:text-blue-900"
+                    className="text-lg font-semibold text-[#007fac] transition-all duration-300 hover:scale-105 hover:text-[#007fac]"
                     onClick={() => setShowMobileMenu(false)}
                   >
                     {item.text}
