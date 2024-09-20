@@ -82,7 +82,7 @@ const My_Home = () => {
 
               <div className="flex flex-col mt-12 md:mb-32 pt-6 sm:flex-row items-center justify-between border-2 border-[#f58d03] bg-white p-2 xs:w-[40%] xxs:w-full max-xxs:bg-white xxs:p-2.5 rounded-xl md:rounded-full shadow-lg w-full sm:w-[80%] mx-auto space-y-4 sm:space-y-0 relative z-10">
 
-                <div className="flex flex-col w-full text-left sm:w-[50%] xs:w-[70%]  items-center xxs:justify-center md:pt-0 pt-2 pb-4 md:pb-0">
+                <div className="flex flex-col w-full text-left sm:w-[45%] xs:w-[70%]  items-center xxs:justify-center md:pt-0 pt-2 pb-4 md:pb-0">
                   <label className="text-gray-700 text-[24px] sm:text-lg lg:text-sm xs:underline xs:underline-offset-2 font-bold lg:no-underline md:no-underline">
                     Location
                   </label>
@@ -128,7 +128,7 @@ const My_Home = () => {
                         endDate={checkOutDate}
                         minDate={checkInDate}
                         placeholderText="Check out"
-                        className="text-[14px] cursor-pointer sm:text-xs border-2 p-2 border-[#f58c038d] border-dashed rounded-md lg:text-[13px] xxs:text-center xs:w-[70%] xxs:w-full placeholder:pl-0 sm:text-[9.5px] w-[48%] outline-none text-gray-900"
+                        className="text-[14px] cursor-pointer -ml-2 sm:text-xs border-2 p-2 border-[#f58c038d] border-dashed rounded-md lg:text-[13px] xxs:text-center xs:w-[70%] xxs:w-full placeholder:pl-0 sm:text-[9.5px] w-[48%] outline-none text-gray-900"
                       />
                     </div> 
 
