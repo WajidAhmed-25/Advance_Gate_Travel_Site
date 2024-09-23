@@ -6,11 +6,11 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminInfoController;
 
-Route::get('/admin-info', [AdminInfoController::class, 'index']); // Get all
-Route::get('/admin-info/{id}', [AdminInfoController::class, 'show']); // Get by ID
-Route::put('/admin-info/{id}', [AdminInfoController::class, 'update']); // Update by ID
-Route::delete('/admin-info/{id}', [AdminInfoController::class, 'destroy']); // Delete by ID
-Route::post('/admin-info', [AdminInfoController::class, 'store']); 
+// Route::get('/admin-info', [AdminInfoController::class, 'index']); // Get all
+// Route::get('/admin-info/{id}', [AdminInfoController::class, 'show']); // Get by ID
+// Route::put('/admin-info/{id}', [AdminInfoController::class, 'update']); // Update by ID
+// Route::delete('/admin-info/{id}', [AdminInfoController::class, 'destroy']); // Delete by ID
+// Route::post('/admin-info', [AdminInfoController::class, 'store']); 
 
 
 Route::post('/send-user-details', [AdminInfoController::class, 'sendUserDetails']);

@@ -22,6 +22,7 @@ import Travel_Contact from "./Components/Contact Us/Contact";
 import Assistance_Btn from "./Components/Chat_Button/Assistance";
 import Admin_Login from "./Components/Admin_Login/Admin_Login";
 import Admin_Dashboard from "./Components/Admin_Dashboard/Admin_Dashboard";
+import Query from "./Components/Query_Form/Query";
 
 function App() {
   useEffect(() => {
@@ -51,7 +52,7 @@ function App() {
           <Route path="/Contact_Us" element={<Travel_Contact />} />
           <Route path="/Admin_Login" element={<Admin_Login />} />
           <Route path="/Admin_Dashboard" element={<Admin_Dashboard />} />
-          <Route path="/" element={<Turkey_Visa />} />
+          <Route path="/query_form" element={<Query />} />
         </Routes>
 
         <Assistance_Btn />

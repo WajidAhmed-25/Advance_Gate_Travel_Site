@@ -16,11 +16,14 @@ import FAQs from './Components/Landing_Page/FAQs/FAQS';
 import Discount_Banner from './Components/Landing_Page/Discount_Banner/Discount_Banner';
 // import Footer from './Components/Footer/footer';
 // import My_Header from './Components/Navbar/Header';
-
+import { useEffect } from 'react';
 
 
 export default function My_HomePage(){
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
 return(
     <>

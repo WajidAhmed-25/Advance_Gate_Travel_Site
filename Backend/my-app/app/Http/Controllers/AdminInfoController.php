@@ -92,59 +92,92 @@ class AdminInfoController extends Controller
     }
     
 
+
+
+
     public function sendUserDetails(Request $request)
-    {
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|email',
-            'password' => 'required',
-            'businessId' => 'required|integer',
-        ]);
+{
+    // Validate the request data
+    $validator = Validator::make($request->all(), [
+        'email' => 'required|email',
+        'name' => 'required|string',
+        'country' => 'required|string',
+        'purpose' => 'required|string',
+        'message' => 'required|string',
+        'age' => 'required|integer',
+        'phone' => 'required|string'
+    ]);
 
-        if ($validator->fails()) {
-            return response()->json(['message' => 'Invalid data', 'errors' => $validator->errors()], 400);
-        }
 
-        $email = $request->email;
-        $password = $request->password;
-        $businessId = $request->businessId;
-
-        // Create HTML content for the email
-        $htmlContent = "
-        <html>
-        <head>
-            <title>SANTE Account Details</title>
-        </head>
-        <body>
-            <h1>Welcome to SANTE !</h1>
-            <br/>
-            <p>Here are your account details:</p>
-            <ul>
-                <li><b>Email:</b> {$email}</li>
-                <li><b>Password:</b> {$password}</li>
-                <li><b>Business ID:</b> {$businessId}</li>
-                <br/>
-                <li><b>Login URL:</b>  <a>http://localhost:3000/login</a> </li>
-            </ul>
-            <p><b>Note:</b> Please keep this information safe and secure. We recommend changing your password after your first login.</p>
-        </body>
-        </html>
-        ";
-
-        try {
-            // Send email with user details
-            Mail::html($htmlContent, function ($message) use ($email) {
-                $message->to($email)
-                    ->subject('SANTE Account Details');
-            });
-
-            return response()->json(['message' => 'User details sent to email']);
-        } catch (\Exception $e) {
-            \Log::error('Failed to send email: ' . $e->getMessage());
-            return response()->json(['message' => 'Failed to send email'], 500);
-        }
+    if ($validator->fails()) {
+        return response()->json(['message' => 'Invalid data', 'errors' => $validator->errors()], 400);
     }
 
+ 
+    $email = $request->email;
+    $name = $request->name;
+    $country = $request->country;
+    $purpose = $request->purpose;
+    $messageContent = $request->message; 
+    $age = $request->age;
+    $phone=$request->phone;
 
+    $adminHtmlContent = "
+    <html>
+    <head>
+        <title>User Details</title>
+    </head>
+    <body>
+        <h1>User Form Submission Details</h1>
+        <p><strong>Name:</strong> {$name}</p>
+        <p><strong>Email:</strong> {$email}</p>
+        <p><strong>Country:</strong> {$country}</p>
+        <p><strong>Purpose:</strong> {$purpose}</p>
+        <p><strong>Message:</strong> {$messageContent}</p>
+        <p><strong>Age:</strong> {$age}</p>
+        <p><strong>Phone:</strong> {$phone}</p>
+
+    </body>
+    </html>
+    ";
+
+ 
+    $userHtmlContent = "
+    <html>
+    <head>
+        <title>Thank You for Contacting Us</title>
+    </head>
+    <body>
+        <h1>Thank You for Contacting Us!</h1>
+        <p>Dear {$name},</p>
+        <p>Thank you for reaching out to us. We appreciate your interest and will contact you soon.</p>
+        <p>If you have any further questions, feel free to reply to this email.</p>
+        <p>Best regards,<br>Advance Gate</p>
+    </body>
+    </html>
+    ";
+
+    try {
+     
+        Mail::html($adminHtmlContent, function ($message) use ($email) {
+            $message->to('wajidsaleem693@gmail.com')
+                ->subject('User Form Submission Details')
+                ->replyTo($email); 
+        });
+
+        Mail::html($userHtmlContent, function ($message) use ($email) {
+            $message->to($email)
+                ->subject('Thank You for Contacting Us');
+        });
+
+   
+        return response()->json(['message' => 'User details sent to email']);
+    } catch (\Exception $e) {
+        
+        \Log::error('Failed to send email: ' . $e->getMessage());
+        return response()->json(['message' => 'Failed to send email'], 500);
+    }
+}
 
 
 
